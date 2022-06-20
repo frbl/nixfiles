@@ -7,27 +7,31 @@
   home.homeDirectory = "/home/frbl";
 
   # Packages to install
-  home.packages = [
-    pkgs.htop
-    pkgs.curl
-    pkgs.neovim
-    pkgs.xautolock
-    pkgs.fzf
-    pkgs.htop
-    pkgs.patch
-    pkgs.git
-    pkgs.rofi
-    pkgs.silver-searcher
-    pkgs.feh
-    pkgs.xclip
-    pkgs.zathura
-    pkgs.ranger
-    pkgs.python3
-    pkgs.fail2ban
-    pkgs.asdf-vm
-    pkgs.zsh
-    pkgs.tmux
-    pkgs.i3lock
+  home.packages = with pkgs; [
+    google-chrome
+    htop
+    curl
+    neovim
+    xautolock
+    fzf
+    htop
+    patch
+    git
+    rofi
+    silver-searcher
+    feh
+    xclip
+    zathura
+    ranger
+    python3
+    fail2ban
+    asdf-vm
+    zsh
+    tmux
+    vscode
+    i3lock
+    i3-gaps
+    i3status
   ];
 
   # This value determines the Home Manager release that your
@@ -42,4 +46,11 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  # Raw configuration files
+  home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
+
+  imports = [
+    ./config/git.nix
+  ];
 }
