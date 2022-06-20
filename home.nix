@@ -8,7 +8,9 @@
 
   # Packages to install
   home.packages = with pkgs; [
+    gcc
     google-chrome
+    zsh-z
     htop
     curl
     neovim
@@ -49,6 +51,7 @@
 
   # Raw configuration files
   home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
+  home.file.".tmux.conf".source = ./config/raw/tmux.conf;
 
   imports = [
     ./config/git.nix

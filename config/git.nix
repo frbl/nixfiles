@@ -4,7 +4,7 @@
     userEmail = "f.j.blaauw@researchable.nl";
     userName = "Frank Blaauw";
     signing = {
-      signByDefault = true;
+      signByDefault = false;
       key = "433A4D006D0344B08D6502FD7013901F19B263CF";
     };
     aliases = {
