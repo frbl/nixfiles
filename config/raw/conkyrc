@@ -1,0 +1,67 @@
+#!/usr/bin/conky -d -c
+##	.conkyrc configuration
+alignment bottom_left
+background true
+border_width 5
+color0 555555			#
+color1 FCAF3E			# zolty
+color2 2a2a2a			# braz
+color3 a82553			# rozowy f71f84
+color4 5e1014			# bordowy
+color5 64574e			# braz
+color6 2a2a2a			# szary
+color7 8888CC			#  (COOL)
+color8 9d9c61			# zolto-szary
+color9 525276			# niebiesko-szary
+cpu_avg_samples 2
+default_color ffffff		# szary 5f5f5f
+default_outline_color 000000 	# Black
+default_shade_color 000000	# Black
+double_buffer yes
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+gap_x 60
+gap_y 50
+max_user_text 10000
+maximum_width 700
+minimum_size 150
+net_avg_samples 2
+no_buffers yes
+override_utf8_locale yes
+own_window yes
+own_window_colour 000000	# Black
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+own_window_type override 	## normal
+pad_percents 2			# to co nizej, miejsc po przecinku
+short_units yes			# krotka wersja podawania wielkosci dyskow np. 612.21M/3.80G
+stippled_borders 3
+text_buffer_size 8000
+total_run_times 0
+update_interval 2.0
+uppercase no
+use_spacer right
+use_xft yes
+xftalpha 1
+xftfont Freesans:pixelsize=9
+
+#${diskiograph /dev/sda 15,180 a7a7a7 a7a7a7} # wskaznik pracy dysku
+# ${image /home/didisoft/.conky/didisoft.jpg -p 0,80 -s 26x28} # obrazki w conky
+
+
+TEXT
+${color 2e3440}${font ZegoeLight-U:pixelsize=40}${time %H:%M}${font}	
+_______________________
+
+${color 2e3440}${font ZegoeLight-U:pixelsize=15}${time %A}${font} 
+${color 2e3440}${font ZegoeLight-U:pixelsize=15}${time %B %d, %Y}${font}	
+
+#${font sans-serif:bold:size=8}Stats ${hr 2}
+
+${font sans-serif:normal:size=8}RAM
+${membar 3,112}
+CPU (${platform coretemp.0/hwmon/hwmon2 temp 2}°C)
+${cpubar 3,112}
+${battery}

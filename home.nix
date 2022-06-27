@@ -8,9 +8,13 @@
 
   # Packages to install
   home.packages = with pkgs; [
+    docker
+    docker-compose
+    mr
+    arandr
+    slack
     gcc
     google-chrome
-    zsh-z
     htop
     curl
     neovim
@@ -28,13 +32,16 @@
     python3
     fail2ban
     asdf-vm
-    zsh
     tmux
     vscode
     i3lock
     i3-gaps
     i3status
+    zsh
+    zsh-z
+    zsh-autosuggestions
   ];
+
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -51,9 +58,24 @@
 
   # Raw configuration files
   home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
+  home.file.".vimrc".source = ./config/raw/vimrc;
   home.file.".tmux.conf".source = ./config/raw/tmux.conf;
+  home.file.".agignore".source = ./config/raw/agignore;
+  home.file.".compton.conf".source = ./config/raw/compton.conf;
+  home.file.".config/i3".source = ./config/raw/i3;
+  home.file.".conkyrc".source = ./config/raw/conkyrc;
+  home.file.".ctags".source = ./config/raw/ctags;
+  home.file.".dmrc".source = ./config/raw/dmrc;
+  home.file.".ideavimrc".source = ./config/raw/ideavimrc;
+  home.file.".irbrc".source = ./config/raw/irbrc;
+  home.file.".mrconfig".source = ./config/raw/mrconfig;
+  home.file.".snippets/vim/UltiSnips".source = ./config/UltiSnips;
+  home.file.".octaverc".source = ./config/raw/octaverc;
+  home.file.".Xdefaults".source = ./config/raw/Xdefaults;
+  home.file.".config/xfce4/terminal/terminalrc".source = ./config/raw/xfce_terminal;
 
   imports = [
+    ./config/zsh.nix
     ./config/git.nix
   ];
 }

@@ -1,0 +1,47 @@
+# Glossaries https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
+snippet os "If to toggle oses"
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	# Linux
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	# Mac OSX
+else
+	# Unknown.
+fi
+endsnippet
+
+snippet ce "If command exists"
+if ! [ -x "$(command -v $1)" ]; then
+	echo 'Error: $1 is not installed.' >&2
+	exit 1
+fi
+endsnippet
+
+snippet fe "If file exists"
+if [ -f /tmp/foo.txt ]; then
+    echo "File found!"
+fi
+endsnippet
+
+
+snippet de "If directory exists"
+if [ -e /tmp ]; then
+    echo "directory found!"
+fi
+endsnippet
+
+snippet ve "If variable exists"
+[ -z "$${1:VARIABLE}" ] && echo "Need to set ${1:VARIABLE}" && exit 1; 
+endsnippet
+
+snippet foreif "for each in file"
+cat $1 | while read line 
+do
+   echo $line
+done
+endsnippet
+
+snippet foreiv "for each in variable"
+while IFS= read -r 2; do
+    echo "... $2 ..."
+done <<< "$1"
+endsnippet

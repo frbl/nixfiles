@@ -1,0 +1,104 @@
+# General
+snippet ife "if else statement"
+if ($1) {
+  
+} else {
+  
+}
+endsnippet
+
+snippet ifee "if elsif else statement"
+if ($1) {
+
+} elseif{ 
+
+} else {
+  
+}
+endsnippet
+
+snippet log "debugging statements"
+print($1)
+endsnippet
+
+snippet try "try catch block"
+result = tryCatch({
+  $1
+}, warning = function(w) {
+  $2
+}, error = function(e) {
+  $3
+}, finally = {
+  $4 
+})
+endsnippet
+
+
+# S4
+snippet meth "S4 create a method"
+#' ${1:method name}
+setGeneric(name="$1", def = function($2) { standardGeneric("$1") } )
+setMethod("$1", signature($3),
+  function($2) {
+  }
+)
+endsnippet
+
+# R6
+snippet r6 "Creates an R6 class"
+#' $1
+#'
+#' @docType class
+#' @importFrom R6 R6Class
+$1 <- R6Class("$1",
+  public =
+    list(
+      initialize = function() {
+      }
+    ),
+  active =
+    list(
+    ),
+	private =
+    list(
+    )
+)
+endsnippet
+
+snippet #'' "class method comment"
+#'   \item{\code{$1($2)}}{
+#'     $3
+#'     @param param1
+#'     @return return val
+#'   }
+endsnippet
+
+snippet fn "Creates an r6 function"
+$1 = function($2) {
+	$3
+},
+endsnippet
+
+# Testthat
+snippet desc "testthat snippet for a context enty"
+context("$1")
+endsnippet
+
+snippet it "testthat snippet for a test_that enty"
+test_that("it should $1", {
+	$2
+})
+endsnippet
+
+snippet exp "testthat snippet for an expect enty"
+expect_that($1, $2)
+endsnippet
+
+snippet stub "testthat snippet for a stub"
+stub($1, '$2', function(...) $3)
+endsnippet
+
+snippet pdb "start a debugger"
+browser()
+endsnippet
+

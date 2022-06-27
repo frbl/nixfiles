@@ -1,0 +1,20 @@
+# Glossaries
+snippet glos "glossary reference"
+\newglossaryentry{$1}
+{
+  name = {$1},
+  description = {$1 description here}
+}
+endsnippet
+
+snippet glosref "Glossary with reference"
+\newglossaryentry{$1}% the label 
+{% 
+  name={\textsc{$1}},% 
+  description={$2},% 
+  first={$2~\citep[\textsc{$1};][]{$3}},% 
+  firstplural={$2s~\citep[\textsc{$1}s;][]{$3}},% 
+  text={\textsc{$1}},% 
+  plural={\textsc{$1}s}% 
+} 
+endsnippet

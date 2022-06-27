@@ -1,0 +1,99 @@
+# General
+
+snippet set "setting helper"
+Rails.application.config.settings.
+endsnippet
+
+snippet url "url helpers"
+Rails.application.routes.url_helpers
+endsnippet
+
+snippet cl "log"
+Rails.logger.info $1	
+endsnippet
+
+snippet log "log"
+Rails.logger.info $1	
+endsnippet
+
+snippet rubo "Disable rubocop"
+# rubocop:disable $1
+
+# rubocop:enable $1
+endsnippet
+
+snippet ! "!"
+Rails.logger.info '!'*100	
+endsnippet
+
+snippet pdb "debugger"
+require 'byebug'; byebug
+endsnippet
+
+
+snippet try "try catch"
+begin
+	fail 'A test exception.'
+rescue Exception => e
+	puts e.message
+	puts e.backtrace.inspect
+else
+	# other exception
+ensure
+	# always executed
+end
+endsnippet
+
+
+snippet ser "serializer spec"
+it 'should contain the correct value for the $1' do
+	expect($2.$1).to_not be_blank
+	expect(json['$1']).to eq $2.$1
+end
+endsnippet
+
+
+snippet test "test file"
+# frozen_string_literal: true
+
+require 'rails_helper'
+
+describe ${1:class_name} do
+
+end
+endsnippet
+
+
+snippet init "init"
+#!/usr/bin/ruby
+# frozen_string_literal: true
+
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'httparty'
+  gem 'json'
+end
+
+require 'json'
+require 'httparty'
+
+BASE='$1'
+HEADERS={}
+
+def make_url(path)
+  BASE + path
+end
+
+def call_url(path, method, data)
+  url = make_url(path)
+  auth = { username: '', password: '' }.freeze
+  result = HTTParty.get(url, body: data, basic_auth: auth, headers: HEADERS).body if method == 'GET'
+  result = HTTParty.get(url, body: data, basic_auth: auth, headers: HEADERS).body if method == 'POST'
+  result = JSON.parse(result) if result
+	puts result
+	result
+end
+$2
+endsnippet

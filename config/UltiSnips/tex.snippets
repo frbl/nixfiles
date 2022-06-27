@@ -1,0 +1,207 @@
+# General
+snippet sec "Section" b
+\section{${1:Section name}}
+\label{sec:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet sub "Subsection" b
+\subsection{${1:subsection name}}
+\label{sub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet subsub "Subsubsection" b
+\subsubsection{${1:subsubsection name}}
+\label{subsub:${2:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+
+$0
+endsnippet
+
+snippet cr "chapter reference"
+\charef{cha:$1}
+endsnippet
+
+snippet fr "Figure reference"
+\figref{fig:$1}
+endsnippet
+
+snippet sr "Section reference"
+\secref{sec:$1}
+endsnippet
+
+snippet sr "Eq reference"
+\eqnref{eq:$1}
+endsnippet
+
+snippet pkgdate "isodate package"
+% Consistent dates
+\usepackage[american]{isodate}
+endsnippet
+
+snippet date "Insert iso date date"
+\printdate{${1:yyyy}-${2:mm}-${3:dd}}
+endsnippet
+
+
+snippet subfig "Subfigure environment"
+\begin{figure}[!htbp]
+  \subfloat[\label{subfig-1:label1} Caption 1]{%
+    \includegraphics[width=0.5\textwidth]{images/chapterX/image}
+  }
+  \hfill
+  \subfloat[\label{subfig-2:label2} Caption 2]{%
+    \includegraphics[width=0.5\textwidth]{images/chapterX/image2}
+  }
+  \hfill
+  \caption{Caption}
+\label{fig:label}
+\end{figure}
+endsnippet
+
+
+snippet tab "description"
+\begin{table*}[ht]
+	\centering
+	\begin{tabular}{rll}
+		\toprule
+			  & 1 & 2\\\\
+		\midrule
+			1 & 1 & 1\\\\
+			2 & 1 & 1\\\\
+			3 & 1 & 1\\\\
+		\bottomrule
+	\end{tabular}
+	\caption{captiog} 
+	\label{tab:}
+\end{table*}
+endsnippet
+	
+
+snippet paper "initialize a paper"
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.85in,left=2.75in,footskip=0.75in,marginparwidth=2in]{geometry}
+
+% use Unicode characters - try changing the option if you run into troubles with special characters (e.g. umlauts)
+\usepackage[utf8]{inputenc}
+
+% clean citations
+\usepackage{cite}
+
+% hyperref makes references clicky. use \url{www.example.com} or \href{www.example.com}{description} to add a clicky url
+\usepackage{nameref,hyperref}
+
+% line numbers
+\usepackage[right]{lineno}
+
+% improves typesetting in LaTeX
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
+
+% text layout - change as needed
+\raggedright
+\setlength{\parindent}{0.5cm}
+\textwidth 5.25in 
+\textheight 8.75in
+
+% Remove % for double line spacing
+%\usepackage{setspace} 
+%\doublespacing
+
+% use adjustwidth environment to exceed text width (see examples in text)
+\usepackage{changepage}
+
+% adjust caption style
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,singlelinecheck=off]{caption}
+
+% remove brackets from references
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+% headrule, footrule and page numbers
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+\fancyheadoffset[L]{2.25in}
+\fancyfootoffset[L]{2.25in}
+
+% use \textcolor{color}{text} for colored text (e.g. highlight to-do areas)
+\usepackage{color}
+
+% define custom colors (this one is for figure captions)
+\definecolor{Gray}{gray}{.25}
+
+% this is required to include graphics
+\usepackage{graphicx}
+
+% use if you want to put caption to the side of the figure - see example in text
+\usepackage{sidecap}
+
+% use for have text wrap around figures
+\usepackage{wrapfig}
+\usepackage[pscoord]{eso-pic}
+\usepackage[fulladjust]{marginnote}
+\reversemarginpar
+
+% document begins here
+\begin{document}
+\vspace*{0.35in}
+
+% title goes here:
+\begin{flushleft}
+{\Large
+\textbf\newline{\LaTeX paper template.}
+}
+\newline
+% authors go here:
+\\
+Frank J. Blaauw\textsuperscript{a,b,*},
+Author 2\textsuperscript{a},
+Author 3\textsuperscript{b},
+Author 4\textsuperscript{b},
+Author 5\textsuperscript{a},
+Author 6\textsuperscript{b}, and
+Author 7\textsuperscript{b}
+\\
+\bigskip
+\bf{a} University of Groningen, Johann Bernoulli Institute for Mathematics and Computer Science (JBI), Distributed Systems Group, The Netherlands
+\\
+\bf{b} University of Groningen, Department of Developmental Psychology, The Netherlands<Paste>
+\\
+\bigskip
+* Corresponding author (f.j.blaauw@rug.nl)
+
+\end{flushleft}
+
+\section*{Abstract}
+
+% now start line numbers
+\linenumbers
+
+% the * after section prevents numbering
+\section*{Introduction}
+\section*{Background}
+\section*{Related work}
+\section*{Materials and Methods}
+\section*{Results}
+\section*{Discussion}
+
+\section*{Acknowledgments}
+
+\nolinenumbers
+
+%This is where your bibliography is generated. Make sure that your .bib file is actually called library.bib
+\bibliography{library}
+
+%This defines the bibliographies style. Search online for a list of available styles.
+\bibliographystyle{abbrv}
+
+\end{document}
+endsnippet

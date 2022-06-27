@@ -1,0 +1,547 @@
+##########
+# General
+##########
+[Workspace/apache/superset]
+checkout = git clone 'https://github.com/apache/superset'
+
+[Workspace/algorand/auction-demo]
+checkout = git clone "https://gitlab.com/algorand/auction-demo"
+
+
+
+##########
+# Frbl
+##########
+[Workspace/frbl/dotfiles]
+checkout = git clone 'https://github.com/frbl/dotfiles' 'dotfiles'
+
+[Workspace/frbl/ansible]
+checkout = git clone 'https://github.com/frbl/ansible' 'ansible'
+
+[Workspace/frbl/notes]
+checkout = git clone "https://github.com/frbl/notes"
+
+[Workspace/frbl/frbl.github.io-private]
+checkout = git clone "https://github.com/frbl/frbl.github.io-private"
+
+[Workspace/frbl/dotfiles-private]
+checkout = git clone "https://github.com/frbl/dotfiles-private"
+
+[Workspace/frbl/dotfiles]
+checkout = git clone "https://github.com/frbl/dotfiles"
+
+[Workspace/frbl/machine-learning-recurring-depression]
+checkout = git clone "https://github.com/frbl/machine-learning-recurring-depression"
+
+[Workspace/frbl/onlinesuperlearner]
+checkout = git clone "https://github.com/frbl/onlinesuperlearner"
+
+[Workspace/frbl/vagrant-boxes]
+checkout = git clone "https://github.com/frbl/vagrant-boxes"
+
+[Workspace/frbl/tmle-substitutes]
+checkout = git clone "https://github.com/frbl/tmle-substitutes"
+
+[Workspace/frbl/tmle-time-series]
+checkout = git clone "https://github.com/frbl/tmle-time-series"
+
+[Workspace/frbl/research-slaapproblemen-en-agitatie]
+checkout = git clone "https://github.com/frbl/research-slaapproblemen-en-agitatie"
+
+[Workspace/frbl/vars]
+checkout = git clone "https://github.com/frbl/vars"
+
+[Workspace/frbl/airaR]
+checkout = git clone "https://github.com/frbl/airaR"
+
+[Workspace/frbl/thesis]
+checkout = git clone "https://github.com/frbl/thesis"
+
+[Workspace/frbl/ecida-dev]
+checkout = git clone "https://github.com/frbl/ecida-dev"
+
+[Workspace/frbl/ecida-gis]
+checkout = git clone "https://github.com/frbl/ecida-gis"
+
+[Workspace/frbl/thesis]
+checkout = git clone "https://github.com/frbl/thesis"
+
+[Workspace/frbl/WacChat]
+checkout = git clone "https://github.com/frbl/WacChat"
+
+[Workspace/frbl/ansible]
+checkout = git clone "https://github.com/frbl/ansible"
+
+
+##########
+# Compsy
+##########
+[Workspace/compsy/vsv]
+checkout = git clone "https://github.com/compsy/vsv"
+
+[Workspace/compsy/paper-u-can-act-baseline]
+checkout = git clone "https://github.com/compsy/paper-u-can-act-baseline"
+
+[Workspace/compsy/vsv_api_js]
+checkout = git clone "https://github.com/compsy/vsv_api_js"
+
+[Workspace/compsy/hoe_gek_is]
+checkout = git clone "https://github.com/compsy/hoe_gek_is"
+
+[Workspace/compsy/personalized-coaching-app]
+checkout = git clone "https://github.com/compsy/personalized-coaching-app"
+
+[Workspace/compsy/backup-container]
+checkout = git clone "https://github.com/compsy/backup-container"
+
+[Workspace/compsy/dev-infrastructure]
+checkout = git clone "https://github.com/compsy/dev-infrastructure"
+
+[Workspace/compsy/evaluatieonderzoek]
+checkout = git clone "https://github.com/compsy/evaluatieonderzoek"
+
+[Workspace/compsy/handboek-u-can-act]
+checkout = git clone "https://github.com/compsy/handboek-u-can-act"
+
+[Workspace/compsy/yourspecialforces-public]
+checkout = git clone "https://github.com/compsy/yourspecialforces-public"
+
+##########
+# Rug DS Lab
+##########
+[Workspace/rug-ds-lab/planning-dynamic-spark]
+checkout = git clone "https://github.com/rug-ds-lab/planning-dynamic-spark"
+
+[Workspace/rug-ds-lab/ecida-main]
+checkout = git clone "https://github.com/rug-ds-lab/ecida-main"
+
+[Workspace/rug-ds-lab/ecida]
+checkout = git clone "https://github.com/rug-ds-lab/ecida"
+
+#[Workspace/rug-ds-lab/2018_Pratama_Low-intrusive-Power-Consumption-based-Occupancy-Detection-in-Office-Environment]
+#checkout = git clone "https://github.com/rug-ds-lab/2018_Pratama_Low-intrusive-Power-Consumption-based-Occupancy-Detection-in-Office-Environment
+
+[Workspace/rug-ds-lab/2021-msc-ecida-open-source]
+checkout = git clone "https://github.com/rug-ds-lab/2021-msc-ecida-open-source"
+
+[Workspace/kasperdokter/dsu]
+checkout = git clone "https://github.com/kasperdokter/dsu"
+
+[Workspace/mhadadian/ecida-mvp]
+checkout = git clone "https://github.com/mhadadian/ecida-mvp"
+
+[Workspace/ecida/docs]
+checkout = git clone "https://gitlab.com/ecida/docs"
+
+[Workspace/ecida/ecida-dashboard]
+checkout = git clone "https://gitlab.com/ecida/ecida-dashboard"
+
+
+
+
+##########
+# Researchable
+##########
+[Workspace/researchable/quest-front-end]
+checkout = git clone "https://gitlab.com/researchable/quest-front-end"
+
+[Workspace/researchable/general/landingpages/landingpage-v2]
+checkout = git clone "https://gitlab.com/researchable/general/landingpages/landingpage-v2"
+
+[Workspace/researchable/general/landingpages/landingpage]
+checkout = git clone "https://gitlab.com/researchable/general/landingpages/landingpage"
+
+[Workspace/researchable/general/landingpages/abl]
+checkout = git clone "https://gitlab.com/researchable/general/landingpages/abl"
+
+[Workspace/researchable/general/style/eslint]
+checkout = git clone "https://gitlab.com/researchable/general/style/eslint"
+
+[Workspace/researchable/general/style/rubocop]
+checkout = git clone "https://gitlab.com/researchable/general/style/rubocop"
+
+[Workspace/researchable/presentations]
+checkout = git clone "https://gitlab.com/researchable/presentations"
+
+[Workspace/researchable/renovate]
+checkout = git clone "https://gitlab.com/researchable/renovate"
+
+[Workspace/researchable/general/development-infrastructure]
+checkout = git clone "https://gitlab.com/researchable/general/development-infrastructure"
+
+[Workspace/researchable/general/researchable-infrastructure]
+checkout = git clone "https://gitlab.com/researchable/general/researchable-infrastructure"
+
+[Workspace/researchable/general/slack-bot]
+checkout = git clone "https://gitlab.com/researchable/general/slack-bot"
+
+[Workspace/researchable/general/gitlab-bot]
+checkout = git clone "https://gitlab.com/researchable/general/gitlab-bot"
+
+[Workspace/researchable/general/researchable-cli]
+checkout = git clone "https://gitlab.com/researchable/general/researchable-cli"
+
+[Workspace/researchable/general/docker-images/curl]
+checkout = git clone "https://gitlab.com/researchable/general/docker-images/curl"
+
+[Workspace/researchable/general/docker-images/kubectl]
+checkout = git clone "https://gitlab.com/researchable/general/docker-images/kubectl"
+
+[Workspace/researchable/general/docker-images/docker]
+checkout = git clone "https://gitlab.com/researchable/general/docker-images/docker"
+
+[Workspace/researchable/general/docker-images/pandoc]
+checkout = git clone "https://gitlab.com/researchable/general/docker-images/pandoc"
+
+[Workspace/researchable/general/docker-images/mongosh]
+checkout = git clone "https://gitlab.com/researchable/general/docker-images/mongosh"
+
+
+
+[Workspace/researchable/general/infrastructure/kubernetes-restart-deployments]
+checkout = git clone "https://gitlab.com/researchable/general/infrastructure/kubernetes-restart-deployments"
+
+
+[Workspace/researchable/general/gitlab/runner-infrastructure]
+checkout = git clone "https://gitlab.com/researchable/general/gitlab/runner-infrastructure"
+
+
+[Workspace/researchable/general/templates/projects/docs-template]
+checkout = git clone "https://gitlab.com/researchable/general/templates/projects/docs-template"
+
+[Workspace/researchable/general/templates/projects/react-tailwind-nextjs-typescript]
+checkout = git clone "https://gitlab.com/researchable/general/templates/projects/react-tailwind-nextjs-typescript"
+
+
+[Workspace/researchable/general/templates/gitlab/semantic-release]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/semantic-release"
+
+[Workspace/researchable/general/templates/gitlab/swagger]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/swagger"
+
+[Workspace/researchable/general/templates/gitlab/kubernetes-post-deploy]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/kubernetes-post-deploy"
+
+[Workspace/researchable/general/templates/gitlab/heroku-post-deploy]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/heroku-post-deploy"
+
+[Workspace/researchable/general/templates/gitlab/docker-deploy]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/docker-deploy"
+
+[Workspace/researchable/general/templates/gitlab/base]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/base"
+
+[Workspace/researchable/general/templates/gitlab/documentation]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/documentation"
+
+[Workspace/researchable/general/templates/gitlab/upstream-mirror]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/upstream-mirror"
+
+[Workspace/researchable/general/templates/gitlab/dependency-scanning-test]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/dependency-scanning-test"
+
+[Workspace/researchable/general/templates/gitlab/es-check-test]
+checkout = git clone "https://gitlab.com/researchable/general/templates/gitlab/es-check-test"
+
+
+[Workspace/researchable/general/security/vulnerability-scanning]
+checkout = git clone "https://gitlab.com/researchable/general/security/vulnerability-scanning"
+
+[Workspace/researchable/general/security/kubernetes-rbac]
+checkout = git clone "https://gitlab.com/researchable/general/security/kubernetes-rbac"
+
+[Workspace/researchable/general/security/gitlab-ssh-key-validations]
+checkout = git clone "https://gitlab.com/researchable/general/security/gitlab-ssh-key-validations"
+
+[Workspace/researchable/general/security/pipeline_checker]
+checkout = git clone "https://gitlab.com/researchable/general/security/pipeline_checker"
+
+[Workspace/researchable/general/security/certificate_checker]
+checkout = git clone "https://gitlab.com/researchable/general/security/certificate_checker"
+
+[Workspace/researchable/general/security/certificate_quality_checker]
+checkout = git clone "https://gitlab.com/researchable/general/security/certificate_quality_checker"
+
+[Workspace/researchable/general/security/pipeline_checker]
+checkout = git clone "https://gitlab.com/researchable/general/security/pipeline_checker"
+
+[Workspace/researchable/general/security/dmarc_checker]
+checkout = git clone "https://gitlab.com/researchable/general/security/dmarc_checker"
+
+[Workspace/researchable/general/security/postgres_backup_checker]
+checkout = git clone "https://gitlab.com/researchable/general/security/postgres_backup_checker"
+
+[Workspace/researchable/general/security/mongodb_backup_checker]
+checkout = git clone "https://gitlab.com/researchable/general/security/mongodb_backup_checker"
+
+[Workspace/researchable/general/security/general-fix-scripts]
+checkout = git clone "https://gitlab.com/researchable/general/security/general-fix-scripts"
+
+[Workspace/researchable/general/security/chaos_monkey]
+checkout = git clone "https://gitlab.com/researchable/general/security/chaos_monkey"
+
+
+[Workspace/researchable/projects/certibot/docs]
+checkout = git clone "https://gitlab.com/researchable/projects/certibot/docs"
+
+
+[Workspace/researchable/general/management/freedcamp-hour-counter]
+checkout = git clone "https://gitlab.com/researchable/general/management/freedcamp-hour-counter"
+
+[Workspace/researchable/general/management/freedcamp-hour-importer]
+checkout = git clone "https://gitlab.com/researchable/general/management/freedcamp-hour-importer"
+
+[Workspace/researchable/general/management/bookkeeper]
+checkout = git clone "https://gitlab.com/researchable/general/management/bookkeeper"
+
+[Workspace/researchable/general/management/freedcamp]
+checkout = git clone "https://gitlab.com/researchable/general/management/freedcamp"
+
+
+[Workspace/researchable/general/test-projects/pay-nl-test]
+checkout = git clone "https://gitlab.com/researchable/general/test-projects/pay-nl-test"
+
+[Workspace/researchable/general/test-projects/messagequeue-test]
+checkout = git clone "https://gitlab.com/researchable/general/test-projects/messagequeue-test"
+
+[Workspace/researchable/general/test-projects/openwhisk-test]
+checkout = git clone "https://gitlab.com/researchable/general/test-projects/openwhisk-test"
+
+[Workspace/researchable/general/test-projects/aws-lambda-ruby-test]
+checkout = git clone "https://gitlab.com/researchable/general/test-projects/aws-lambda-ruby-test"
+
+[Workspace/researchable/general/test-projects/twitter-api-test]
+checkout = git clone "https://gitlab.com/researchable/general/test-projects/twitter-api-test"
+
+[Workspace/researchable/general/test-projects/cypress-test]
+checkout = git clone "https://gitlab.com/researchable/general/test-projects/cypress-test"
+
+[Workspace/researchable/general/test-projects/polar-api-test]
+checkout = git clone "https://gitlab.com/researchable/general/test-projects/polar-api-test"
+
+
+
+[Workspace/researchable/ieder-kind-is-anders/ikia-front-end]
+checkout = git clone "https://gitlab.com/researchable/ieder-kind-is-anders/ikia-front-end"
+
+[Workspace/researchable/ieder-kind-is-anders/ikia-front-end-application]
+checkout = git clone "https://gitlab.com/researchable/ieder-kind-is-anders/ikia-front-end-application"
+
+
+
+# SDV
+[Workspace/researchable/sport-data-valley/sdv/presentation-sdv-pitch]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/sdv/presentation-sdv-pitch"
+
+[Workspace/researchable/sport-data-valley/sdv/sdv-infrastructure]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/sdv/sdv-infrastructure"
+
+[Workspace/researchable/sport-data-valley/sdv/sdv-poc]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/sdv/sdv-poc"
+
+[Workspace/researchable/sport-data-valley/sdv/volleybal-dashboard]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/sdv/volleybal-dashboard"
+
+[Workspace/researchable/sport-data-valley/sdv/svc-loader-volleybal]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/sdv/svc-loader-volleybal"
+
+[Workspace/researchable/sport-data-valley/sdv/svc-data-quality-checker]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/sdv/svc-data-quality-checker"
+
+[Workspace/researchable/sport-data-valley/sdv/feature-test]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/sdv/feature-test"
+
+
+[Workspace/researchable/sport-data-valley/MVP/base-platform]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/base-platform"
+
+[Workspace/researchable/sport-data-valley/MVP/base-frontend]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/base-frontend"
+
+[Workspace/researchable/sport-data-valley/MVP/svc-wielerfitheid]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/svc-wielerfitheid"
+
+[Workspace/researchable/sport-data-valley/MVP/infrastructure]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/infrastructure"
+
+[Workspace/researchable/sport-data-valley/MVP/integration-tests]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/integration-tests"
+
+[Workspace/researchable/sport-data-valley/MVP/svc-data-integrations]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/svc-data-integrations"
+
+[Workspace/researchable/sport-data-valley/MVP/svc-questionnaires]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/svc-questionnaires"
+
+[Workspace/researchable/sport-data-valley/MVP/jupyterhub]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/jupyterhub"
+
+[Workspace/researchable/sport-data-valley/MVP/svc-backups]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/svc-backups"
+
+[Workspace/researchable/sport-data-valley/MVP/svc-data-mining-analysis-fitbit]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/svc-data-mining-analysis-fitbit"
+
+[Workspace/researchable/sport-data-valley/MVP/test-deployment]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/test-deployment"
+
+[Workspace/researchable/sport-data-valley/MVP/loadtest]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/loadtest"
+
+[Workspace/researchable/sport-data-valley/MVP/kube-backups]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/kube-backups"
+
+[Workspace/researchable/sport-data-valley/MVP/kube-access]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/kube-access"
+
+[Workspace/researchable/sport-data-valley/MVP/notebook-executor]
+checkout = git clone "https://gitlab.com/researchable/sport-data-valley/MVP/notebook-executor"
+
+
+
+#gitlab_clone "sport-data-valley" "poc-data"
+[Workspace/sportdatavalley/data-mining-analysis-fitbit]
+checkout = git clone "https://gitlab.com/sportdatavalley/data-mining-analysis-fitbit"
+
+
+[Workspace/researchable/ieder-kind-is-anders/ikia-front-end-application]
+checkout = git clone "https://gitlab.com/researchable/ieder-kind-is-anders/ikia-front-end-application"
+
+
+# i-shared
+[Workspace/researchable/projects/i-shared/svc-visualization-js]
+checkout = git clone "https://gitlab.com/researchable/projects/i-shared/svc-visualization-js"
+
+[Workspace/researchable/projects/i-shared/infrastructure]
+checkout = git clone "https://gitlab.com/researchable/projects/i-shared/infrastructure"
+
+[Workspace/researchable/projects/i-shared/svc-pdfgenerator]
+checkout = git clone "https://gitlab.com/researchable/projects/i-shared/svc-pdfgenerator"
+
+[Workspace/researchable/projects/i-shared/svc-prediction-r]
+checkout = git clone "https://gitlab.com/researchable/projects/i-shared/svc-prediction-r"
+
+[Workspace/researchable/projects/i-shared/composer]
+checkout = git clone "https://gitlab.com/researchable/projects/i-shared/composer"
+
+[Workspace/researchable/projects/i-shared/docs]
+checkout = git clone "https://gitlab.com/researchable/projects/i-shared/docs"
+
+
+
+[Workspace/researchable/open-source/forks/materialize]
+checkout = git clone "https://gitlab.com/researchable/open-source/forks/materialize"
+
+[Workspace/researchable/open-source/forks/react-add-to-homescreen]
+checkout = git clone "https://gitlab.com/researchable/open-source/forks/react-add-to-homescreen"
+
+
+[Workspace/researchable/open-source/openapi/serverless-lambda-ruby]
+checkout = git clone "https://gitlab.com/researchable/open-source/openapi/serverless-lambda-ruby"
+
+[Workspace/researchable/open-source/openapi/serverless-lambda-node]
+checkout = git clone "https://gitlab.com/researchable/open-source/openapi/serverless-lambda-node"
+
+
+[Workspace/researchable/open-source/api-gems/polar-accesslink-api-gem]
+checkout = git clone "https://gitlab.com/researchable/open-source/api-gems/polar-accesslink-api-gem"
+
+[Workspace/researchable/open-source/quest-management-interface]
+checkout = git clone "https://gitlab.com/researchable/open-source/quest-management-interface"
+
+
+# UMO
+[Workspace/researchable/projects/umo/docs]
+checkout = git clone "https://gitlab.com/researchable/projects/umo/docs"
+
+[Workspace/researchable/projects/umo/infrastructure]
+checkout = git clone "https://gitlab.com/researchable/projects/umo/infrastructure"
+
+[Workspace/researchable/projects/umo/composer]
+checkout = git clone "https://gitlab.com/researchable/projects/umo/composer"
+
+[Workspace/researchable/projects/umo/base-frontend]
+checkout = git clone "https://gitlab.com/researchable/projects/umo/base-frontend"
+
+[Workspace/researchable/projects/umo/base-backend]
+checkout = git clone "https://gitlab.com/researchable/projects/umo/base-backend"
+
+
+# Delta Dashboard
+[Workspace/researchable/projects/delta-dashboard/base-frontend]
+checkout = git clone "https://gitlab.com/researchable/projects/delta-dashboard/base-frontend"
+
+[Workspace/researchable/projects/delta-dashboard/docs]
+checkout = git clone "https://gitlab.com/researchable/projects/delta-dashboard/docs"
+
+
+
+[Workspace/researchable/projects/ucl-recessly/docs]
+checkout = git clone "https://gitlab.com/researchable/projects/ucl-recessly/docs"
+
+[Workspace/researchable/projects/ucl-recessly/base-frontend]
+checkout = git clone "https://gitlab.com/researchable/projects/ucl-recessly/base-frontend"
+
+[Workspace/researchable/projects/ucl-recessly/base-backend]
+checkout = git clone "https://gitlab.com/researchable/projects/ucl-recessly/base-backend"
+
+
+[Workspace/researchable/projects/ev-biotech/poc]
+checkout = git clone "https://gitlab.com/researchable/projects/ev-biotech/poc"
+
+[Workspace/researchable/projects/ev-biotech/docs]
+checkout = git clone "https://gitlab.com/researchable/projects/ev-biotech/docs"
+
+[Workspace/researchable/projects/ev-biotech/base-backend]
+checkout = git clone "https://gitlab.com/researchable/projects/ev-biotech/base-backend"
+
+[Workspace/researchable/projects/ev-biotech/base-frontend]
+checkout = git clone "https://gitlab.com/researchable/projects/ev-biotech/base-frontend"
+
+[Workspace/researchable/projects/ev-biotech/data-access]
+checkout = git clone "https://gitlab.com/researchable/projects/ev-biotech/data-access"
+
+[Workspace/researchable/projects/ev-biotech/neo4j-poller]
+checkout = git clone "https://gitlab.com/researchable/projects/ev-biotech/neo4j-poller"
+
+[Workspace/researchable/projects/ev-biotech/infrastructure]
+checkout = git clone "https://gitlab.com/researchable/projects/ev-biotech/infrastructure"
+
+[Workspace/researchable/projects/ev-biotech/composer]
+checkout = git clone "https://gitlab.com/researchable/projects/ev-biotech/composer"
+
+
+# Aukati
+[Workspace/researchable/aukati/svc-auth]
+checkout = git clone "https://gitlab.com/researchable/aukati/svc-auth"
+
+[Workspace/researchable/aukati/svc-groups]
+checkout = git clone "https://gitlab.com/researchable/aukati/svc-groups"
+
+[Workspace/researchable/aukati/svc-kaikohi]
+checkout = git clone "https://gitlab.com/researchable/aukati/svc-kaikohi"
+
+[Workspace/researchable/aukati/svclss-mailer]
+checkout = git clone "https://gitlab.com/researchable/aukati/svclss-mailer"
+
+[Workspace/researchable/aukati/docs]
+checkout = git clone "https://gitlab.com/researchable/aukati/docs"
+
+[Workspace/researchable/aukati/svclss-mailer]
+checkout = git clone "https://gitlab.com/researchable/aukati/svclss-mailer"
+
+[Workspace/researchable/aukati/svc-payments]
+checkout = git clone "https://gitlab.com/researchable/aukati/svc-payments"
+
+# DeepAtlas
+[Workspace/fieldlabs/deepatlas]
+checkout = git clone "https://gitlab.com/fieldlabs/deepatlas"
+
+# Syntho
+[Workspace/syntho/Syntho-Engine-Application/syntho-engine-backend]
+checkout = git clone "https://gitlab.com/syntho/Syntho%20Engine%20Application/syntho-engine-backend"
+
+[Workspace/syntho/Syntho-Engine-Application/syntho-engine-UI]
+checkout = git clone "https://gitlab.com/syntho/Syntho%20Engine%20Application/syntho-engine-UI"
+
+
