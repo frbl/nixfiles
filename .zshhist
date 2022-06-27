@@ -1,4 +1,3 @@
-: 1656361518:0;gst
-: 1656361520:0;ga --all
-: 1656361521:0;gst
-: 1656361540:0;gc -am 'fix: added new files'
+: 1656361814:0;gst
+: 1656361816:0;ga --all
+: 1656361821:0;gc -am 'fix: remove zshhist'
