@@ -8,6 +8,7 @@
 
   # Packages to install
   home.packages = with pkgs; [
+    alacritty
     docker
     docker-compose
     mr
@@ -69,13 +70,16 @@
   home.file.".ideavimrc".source = ./config/raw/ideavimrc;
   home.file.".irbrc".source = ./config/raw/irbrc;
   home.file.".mrconfig".source = ./config/raw/mrconfig;
-  home.file.".snippets/vim/UltiSnips".source = ./config/UltiSnips;
   home.file.".octaverc".source = ./config/raw/octaverc;
   home.file.".Xdefaults".source = ./config/raw/Xdefaults;
+  home.file.".Rprofile".source = ./config/raw/Rprofile;
   home.file.".config/xfce4/terminal/terminalrc".source = ./config/raw/xfce_terminal;
+  home.file.".snippets/vim/UltiSnips".source = ./config/UltiSnips;
+  home.file.".git_template".source = ./config/raw/git_template;
 
   imports = [
     ./config/zsh.nix
     ./config/git.nix
+    ./config/ssh.nix
   ];
 }

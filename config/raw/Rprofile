@@ -1,0 +1,42 @@
+options(repos=structure(c(CRAN="https://cloud.r-project.org/")))
+Sys.setenv(TZ="Europe/Amsterdam")
+.libPaths("~/.R/library/")
+
+#plotme <- function(...){ pdf('/tmp/hoi.pdf');plot(...); dev.off()}
+
+#osls = function() {
+  #suppressWarnings(devtools::load_all()) ; a <- OnlineSuperLearner.Simulation$new()
+#}
+
+
+##' plotme.ts
+##'
+##' Function that plots each of the variables in a dataset over time.
+##' @param the data.frame to plot over time
+#plotme.ts <- function (the_data) {
+  #if (!("ggplot2" %in% rownames(installed.packages()))) { install.packages('ggplot2') }
+  #library('ggplot2')
+
+  #if (!("reshape2" %in% rownames(installed.packages()))) { install.packages('reshape2') }
+
+  #the_data[,'time'] <- seq(1,nrow(the_data))
+  #melted_data <- reshape2::melt(the_data, id='time')
+  #g <- ggplot(data = melted_data, aes(x=time, y=value, col=variable)) +
+    #facet_grid(facets = variable~., scales = "free_y")+
+    #geom_line(linetype="solid") +
+    #theme_bw() +
+    #theme(legend.position="none")
+
+  #plotme(g)
+#}
+
+#pkg.init <- function(name, packrat = TRUE) {
+  #if (is.null(name)) {
+    #stop('Name argument is mandatory') 
+  #}
+  #usethis::create_package(name)
+  #if (packrat) {
+    #install.packages('packrat')
+    #packrat::init()
+  #}
+#}

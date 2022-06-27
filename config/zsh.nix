@@ -4,9 +4,49 @@
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     shellAliases = {
-      vi = "nvim";
-      ll = "ls -l";
       update = "home-manager switch";
+      vi = "nvim";
+      vim = "nvim";
+      vimrc = "nvim ~/nixfiles/config/raw/vimrc;update";
+      profile = "nvim ~/nixfiles/config/zsh.nix;update";
+      pw = "openssl rand -base64 32";
+      dus = "du -sh -d1 * | gsort -h";
+
+      i = "mr config ~/.mrconfig co";
+      clock = "watch -t -n1 'date'";
+
+      anonymous = "tor &; pid=$!;networksetup -setsocksfirewallproxy Wi-Fi localhost 9050; read; networksetup -setsocksfirewallproxystate Wi-Fi off; kill $pid";
+
+      # Git
+      gl = "git track; git pull";
+      gv = "vim `git diff --name-only`";
+      gcob = "g cob";
+
+      # Docker / Kube
+      k = "kubectl";
+      d = "docker";
+      dc = "docker-compose";
+      dcf = "docker-compose $(find docker-compose* | sed -e 's/^/ -f /' | tr -d '\n') $1";
+      dcbu = "dcf down; dcf build; dcf up;";
+
+      swagger="echo 'Starting swagger on port 8888'; d run -p 8888:8080 swaggerapi/swagger-editor";
+
+      # Ruby
+      be = "bundle exec";
+      bu = "bundle update";
+      bec = "bundle exec rails c";
+      bes = "bundle exec rails s";
+      ber = "bundle exec rspec";
+      
+      # Keyboard
+      us = "setxkbmap us";
+      usi = "setxkbmap us -variant intl";
+      swap = "setxkbmap -option caps:swapescape";
+
+      resource = "source ~/.zshrc";
+      ":q" = "exit";
+
+      ll = "ls -l";
     };
 
 
@@ -42,6 +82,27 @@
       # Theming section
       autoload -U colors
       colors
+
+      # SSH Agent manager
+      SSH_ENV="$HOME/.ssh/environment"
+      function start_agent {
+          # Note: The  SSH_ENV (instead of {SSH_ENV}) is to make this work in
+          # home-manager.
+          /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "$SSH_ENV"
+          chmod 600 "$SSH_ENV"
+          . "$SSH_ENV" > /dev/null
+          /usr/bin/ssh-add;
+      }
+
+      # Source SSH settings, if applicable
+      if [ -f "$SSH_ENV" ]; then
+          . "$SSH_ENV" > /dev/null
+          ps -ef | grep $SSH_AGENT_PID | grep ssh-agent$ > /dev/null || {
+              start_agent;
+          }
+      else
+          start_agent;
+      fi
     '';
 
     history = {
