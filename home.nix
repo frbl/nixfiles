@@ -81,5 +81,6 @@
     ./config/zsh.nix
     ./config/git.nix
     ./config/ssh.nix
+    ./config/alacritty.nix
   ];
 }

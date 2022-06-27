@@ -5,6 +5,7 @@
     enableSyntaxHighlighting = true;
     shellAliases = {
       update = "home-manager switch";
+      alacritty = "nixGL alacritty";
       vi = "nvim";
       vim = "nvim";
       vimrc = "nvim ~/nixfiles/config/raw/vimrc;update";
