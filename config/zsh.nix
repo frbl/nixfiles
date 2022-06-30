@@ -51,15 +51,16 @@
     };
 
 
-    localVariables = {
+    sessionVariables = {
       COLORTERM = "truecolor";
       TERM = "xterm-256color";
       EDITOR = "nvim";
       LC_ALL = "en_US.utf-8";
       LANG = "$LC_ALL";
       LSCOLORS="dxfxcxdxbxegedabagacad";
-      PROMPT="$FG[008]%T%{$reset_color%} %n@%M:%~ $FG[032]%#%{$reset_color%} %{$reset_color%}";
-      #RPROMPT="%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%}";
+      GIT_PROMPT_SYMBOL="*";
+
+
     };
 
     profileExtra = ''
@@ -76,13 +77,15 @@
       if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
     '';
 
-    initExtra = ''
-      setxkbmap -option altwin:swap_alt_win
-      setxkbmap -option caps:swapescape
-
+    initExtraFirst = ''
       # Theming section
       autoload -U colors
       colors
+    '';
+
+    initExtra = ''
+      setxkbmap -option altwin:swap_alt_win
+      setxkbmap -option caps:swapescape
 
       # SSH Agent manager
       SSH_ENV="$HOME/.ssh/environment"
@@ -104,6 +107,15 @@
       else
           start_agent;
       fi
+
+      # git theming default: Variables for theming the git info prompt
+      export PROMPT="$FG[008]%T%{$reset_color%} %n@%M:%~ $FG[032]%#%{$reset_color%} %{$reset_color%}";
+      export RPROMPT="%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%}";
+
+      export ZSH_THEME_GIT_PROMPT_PREFIX="(%{$reset_color%}"         # Prefix at the very beginning of the prompt, before the branch name
+      export ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_bold[blue]%})"             # At the very end of the prompt
+      export ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[yellow]%} $GIT_PROMPT_SYMBOL"              # Text to display if the branch is dirty
+      export ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
     '';
 
     history = {
