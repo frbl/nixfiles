@@ -8,13 +8,20 @@
 
   # Packages to install
   home.packages = with pkgs; [
+    # Languages
+    gcc
+    ruby
+    nodejs
+    elixir
+    erlang
+
     alacritty
     docker
     docker-compose
     mr
     arandr
     slack
-    gcc
+    gnumake
     google-chrome
     htop
     curl
@@ -32,7 +39,6 @@
     ranger
     python3
     fail2ban
-    asdf-vm
     tmux
     vscode
     i3lock
