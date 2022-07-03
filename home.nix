@@ -14,10 +14,11 @@
     nodejs
     elixir
     erlang
+    spotify
 
     alacritty
-    docker
-    docker-compose
+    #docker
+    #docker-compose
     mr
     arandr
     slack
@@ -88,5 +89,6 @@
     ./config/git.nix
     ./config/ssh.nix
     ./config/alacritty.nix
+    ./config/direnv.nix
   ];
 }

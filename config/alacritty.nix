@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       font = {
-        size = 8.0;
+        size = 7.0;
       };
     };
   };
