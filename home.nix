@@ -16,6 +16,7 @@
     erlang
     spotify
 
+    jq
     alacritty
     #docker
     #docker-compose
@@ -48,6 +49,7 @@
     zsh
     zsh-z
     zsh-autosuggestions
+    fira-code
   ];
 
 
@@ -64,8 +66,11 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  fonts.fontconfig.enable = true;
+
   # Raw configuration files
   home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
+  home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
   home.file.".vimrc".source = ./config/raw/vimrc;
   home.file.".tmux.conf".source = ./config/raw/tmux.conf;
   home.file.".agignore".source = ./config/raw/agignore;

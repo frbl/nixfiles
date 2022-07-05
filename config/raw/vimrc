@@ -107,6 +107,8 @@ endif
 " set the runtime path to include Vundle and initialize
 call plug#begin()
 
+Plug 'ryanoasis/vim-devicons'
+
 " let Vundle manage Vundle, required
 Plug 'gmarik/Vundle.vim'
 

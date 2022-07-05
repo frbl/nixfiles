@@ -59,8 +59,6 @@
       LANG = "$LC_ALL";
       LSCOLORS="dxfxcxdxbxegedabagacad";
       GIT_PROMPT_SYMBOL="*";
-
-
     };
 
     profileExtra = ''
@@ -109,6 +107,7 @@
       fi
 
       # git theming default: Variables for theming the git info prompt
+      export BROWSER="google-chrome-stable";
       export PROMPT="$FG[008]%T%{$reset_color%} %n@%M:%~ $FG[032]%#%{$reset_color%} %{$reset_color%}";
       export RPROMPT="%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%}";
 

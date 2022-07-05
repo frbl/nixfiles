@@ -62,7 +62,7 @@ set $urgent-bg-color     #E53935
 bindsym $mod+space exec export LC_ALL="C" && rofi -show run
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #ff0000 #ff0000 #ff0000 #ff0000   #ff0000
+client.focused          #00B1E9 #00B1E9 #00B1E9 #00B1E9   #00B1E9
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -211,6 +211,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+x mode "$mode_system"
+
 
 #set $displayMode "Set display mode [p]resentation [s]plit"
 #bindsym $mod+x mode $displayMode
