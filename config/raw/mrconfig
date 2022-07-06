@@ -57,12 +57,6 @@ checkout = git clone "git@github.com:frbl/airaR.git"
 [Workspace/frbl/thesis]
 checkout = git clone "git@github.com:frbl/thesis.git"
 
-[Workspace/frbl/ecida-dev]
-checkout = git clone "git@github.com:frbl/ecida-dev.git"
-
-[Workspace/frbl/ecida-gis]
-checkout = git clone "git@github.com:frbl/ecida-gis.git"
-
 [Workspace/frbl/thesis]
 checkout = git clone "git@github.com:frbl/thesis.git"
 
@@ -137,6 +131,23 @@ checkout = git clone "git@gitlab.com:ecida/docs.git"
 checkout = git clone "git@gitlab.com:ecida/ecida-dashboard.git"
 
 
+##########
+# Ecida
+##########
+[Workspace/ecida/examples/house-prediction]
+checkout = git clone "git@gitlab.com:ecida/examples/house-prediction.git"
+
+[Workspace/frbl/ecida-dev]
+checkout = git clone "git@github.com:frbl/ecida-dev.git"
+
+[Workspace/frbl/ecida-gis]
+checkout = git clone "git@github.com:frbl/ecida-gis.git"
+
+[Workspace/ecida/ecida.admin]
+checkout = git clone "git@github.com:ecida/ecida.admin.git"
+
+[Workspace/ecida/ecida.admin.server]
+checkout = git clone "git@github.com:ecida/ecida.admin.server.git"
 
 
 ##########
