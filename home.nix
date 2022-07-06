@@ -22,6 +22,7 @@
     #docker-compose
     mr
     arandr
+    kubectl
     slack
     gnumake
     google-chrome
@@ -70,7 +71,7 @@
 
   # Raw configuration files
   home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
-  home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
+  #home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
   home.file.".vimrc".source = ./config/raw/vimrc;
   home.file.".tmux.conf".source = ./config/raw/tmux.conf;
   home.file.".agignore".source = ./config/raw/agignore;
