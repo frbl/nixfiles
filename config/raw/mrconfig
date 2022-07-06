@@ -519,6 +519,9 @@ checkout = git clone "git@gitlab.com:researchable/aukati/svclss-mailer.git"
 [Workspace/researchable/aukati/docs]
 checkout = git clone "git@gitlab.com:researchable/aukati/docs.git"
 
+[Workspace/researchable/aukati/svc-docx]
+checkout = git clone "git@gitlab.com:researchable/aukati/svc-docx.git"
+
 [Workspace/researchable/aukati/svclss-mailer]
 checkout = git clone "git@gitlab.com:researchable/aukati/svclss-mailer.git"
 
