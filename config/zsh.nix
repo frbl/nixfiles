@@ -8,8 +8,6 @@
       alacritty = "nixGL alacritty";
       vi = "nvim";
       vim = "nvim";
-      vimrc = "nvim ~/nixfiles/config/raw/vimrc;update";
-      profile = "nvim ~/nixfiles/config/zsh.nix;update";
       pw = "openssl rand -base64 32";
       dus = "du -sh -d1 * | gsort -h";
 
@@ -17,6 +15,14 @@
       clock = "watch -t -n1 'date'";
 
       anonymous = "tor &; pid=$!;networksetup -setsocksfirewallproxy Wi-Fi localhost 9050; read; networksetup -setsocksfirewallproxystate Wi-Fi off; kill $pid";
+
+      #edits
+      enix = "nvim ~/nixfiles/home.nix; update";
+      vimrc = "nvim ~/nixfiles/config/raw/vimrc;update";
+      evimrc = "nvim ~/nixfiles/config/raw/vimrc; update";
+      profile = "nvim ~/nixfiles/config/zsh.nix;update";
+      eprofile = "nvim ~/nixfiles/config/zsh.nix;update";
+
 
       # Git
       gl = "git track; git pull";
@@ -33,6 +39,7 @@
       swagger="echo 'Starting swagger on port 8888'; d run -p 8888:8080 swaggerapi/swagger-editor";
 
       # Ruby
+      bi = "bundle install -j 12";
       be = "bundle exec";
       bu = "bundle update";
       bec = "bundle exec rails c";

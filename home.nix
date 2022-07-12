@@ -10,11 +10,18 @@
   home.packages = with pkgs; [
     # Languages
     gcc
-    ruby
+    ruby_3_1
     nodejs
     elixir
     erlang
     spotify
+    R
+    python3
+    gnumake
+
+
+    entr
+    solargraph
 
     jq
     alacritty
@@ -24,11 +31,9 @@
     arandr
     kubectl
     slack
-    gnumake
     google-chrome
     htop
     curl
-    neovim
     xautolock
     fzf
     htop
@@ -40,17 +45,20 @@
     xclip
     zathura
     ranger
-    python3
     fail2ban
     tmux
-    vscode
-    i3lock
-    i3-gaps
-    i3status
     zsh
     zsh-z
     zsh-autosuggestions
-    fira-code
+
+    # Editors
+    vscode
+    neovim
+
+    # i3
+    i3lock
+    i3-gaps
+    i3status
   ];
 
 
