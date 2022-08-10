@@ -55,6 +55,8 @@
       ":q" = "exit";
 
       ll = "ls -l";
+
+      sonar = "docker run -it --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:latest";
     };
 
 
@@ -103,6 +105,16 @@
           /usr/bin/ssh-add;
       }
 
+      
+      pronkridder-screen() {
+        xrandr --output DP-1 --off
+        xrandr --newmode "5120x1440R"  469.00  5120 5168 5200 5280  1440 1443 1453 1481 +hsync -vsync
+        xrandr --addmode DP-1 "5120x1440R"
+        xrandr --output DP-1 --auto
+        xrandr --output DP-1 --mode "5120x1440R" 
+        xrandr --output DP-1 --right-of eDP-1
+      }
+
       # Source SSH settings, if applicable
       if [ -f "$SSH_ENV" ]; then
           . "$SSH_ENV" > /dev/null
@@ -112,6 +124,8 @@
       else
           start_agent;
       fi
+
+      source <(kubectl completion zsh)
 
       # git theming default: Variables for theming the git info prompt
       export BROWSER="google-chrome-stable";

@@ -291,6 +291,9 @@ checkout = git clone "git@gitlab.com:researchable/general/security/general-fix-s
 [Workspace/researchable/general/security/chaos_monkey]
 checkout = git clone "git@gitlab.com:researchable/general/security/chaos_monkey.git"
 
+[Workspace/researchable/general/security/gitlab_backup]
+checkout = git clone "git@gitlab.com:researchable/general/security/gitlab_backup.git"
+
 
 [Workspace/researchable/projects/certibot/docs]
 checkout = git clone "git@gitlab.com:researchable/projects/certibot/docs.git"
@@ -539,6 +542,9 @@ checkout = git clone "git@gitlab.com:researchable/aukati/svclss-mailer.git"
 [Workspace/researchable/aukati/svc-payments]
 checkout = git clone "git@gitlab.com:researchable/aukati/svc-payments.git"
 
+[Workspace/researchable/aukati/gem-researchable]
+checkout = git clone "git@gitlab.com:researchable/aukati/gem-researchable.git"
+
 # DeepAtlas
 [Workspace/fieldlabs/deepatlas]
 #checkout = git clone "git@gitlab.com:fieldlabs/deepatlas.git"
@@ -551,3 +557,35 @@ checkout = git clone "git@gitlab.com:researchable/aukati/svc-payments.git"
 #checkout = git clone "git@gitlab.com:syntho/Syntho%20Engine%20Application/syntho-engine-UI.git"
 
 
+
+# Tinyeye
+[Workspace/researchable/projects/tinyeye/composer]
+checkout = git clone "git@gitlab.com:researchable/projects/tinyeye/composer.git"
+
+[Workspace/researchable/projects/tinyeye/docs]
+checkout = git clone "git@gitlab.com:researchable/projects/tinyeye/docs.git"
+
+[Workspace/researchable/projects/tinyeye/base-frontend]
+checkout = git clone "git@gitlab.com:researchable/projects/tinyeye/base-frontend.git"
+
+[Workspace/researchable/projects/tinyeye/base-backend]
+checkout = git clone "git@gitlab.com:researchable/projects/tinyeye/base-backend.git"
+
+[Workspace/researchable/projects/tinyeye/infrastructure]
+checkout = git clone "git@gitlab.com:researchable/projects/tinyeye/infrastructure.git"
+
+# cia
+[Workspace/researchable/projects/cia/composer]
+checkout = git clone "git@gitlab.com:researchable/projects/cia/composer.git"
+
+[Workspace/researchable/projects/cia/docs]
+checkout = git clone "git@gitlab.com:researchable/projects/cia/docs.git"
+
+[Workspace/researchable/projects/cia/base-frontend]
+checkout = git clone "git@gitlab.com:researchable/projects/cia/base-frontend.git"
+
+[Workspace/researchable/projects/cia/base-backend]
+checkout = git clone "git@gitlab.com:researchable/projects/cia/base-backend.git"
+
+[Workspace/researchable/projects/cia/infrastructure]
+checkout = git clone "git@gitlab.com:researchable/projects/cia/infrastructure.git"
