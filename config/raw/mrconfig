@@ -541,7 +541,7 @@ checkout = git clone "git@gitlab.com:researchable/aukati/svc-payments.git"
 
 # DeepAtlas
 [Workspace/fieldlabs/deepatlas]
-#checkout = git clone "git@gitlab.com:fieldlabs/deepatlas.git"
+checkout = git clone "git@gitlab.com:fieldlabs/deepatlas.git"
 
 # Syntho
 #[Workspace/syntho/Syntho-Engine-Application/syntho-engine-backend]
