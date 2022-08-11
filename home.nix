@@ -10,11 +10,21 @@
   home.packages = with pkgs; [
     # Languages
     gcc
-    ruby
+    ruby_3_1
     nodejs
     elixir
     erlang
     spotify
+    R
+    python3
+    gnumake
+
+
+    libreoffice
+    xarchiver
+
+    entr
+    solargraph
 
     jq
     alacritty
@@ -22,12 +32,11 @@
     #docker-compose
     mr
     arandr
-    slack
-    gnumake
+    kubectl
+    # slack  # Not installing slack, as it has issues with xdg-open, and I cannot login..
     google-chrome
     htop
     curl
-    neovim
     xautolock
     fzf
     htop
@@ -39,17 +48,20 @@
     xclip
     zathura
     ranger
-    python3
     fail2ban
     tmux
-    vscode
-    i3lock
-    i3-gaps
-    i3status
     zsh
     zsh-z
     zsh-autosuggestions
-    fira-code
+
+    # Editors
+    vscode
+    neovim
+
+    # i3
+    i3lock
+    i3-gaps
+    i3status
   ];
 
 
@@ -70,7 +82,7 @@
 
   # Raw configuration files
   home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
-  home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
+  #home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
   home.file.".vimrc".source = ./config/raw/vimrc;
   home.file.".tmux.conf".source = ./config/raw/tmux.conf;
   home.file.".agignore".source = ./config/raw/agignore;

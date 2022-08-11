@@ -25,6 +25,9 @@
 #      accept-theirs = "!f() { git checkout --theirs -- \"${@:-.}\"; git add -u \"${@:-.}\"; }; f";
       ignore = "!git rm -r --cached .; git commit -a";
     };
+    ignores = [
+      ".zshhist"
+    ];
     extraConfig = {
       core = {
         editor = "nvim";

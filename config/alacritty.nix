@@ -10,7 +10,8 @@
       font = {
         size = 7.0;
         normal = {
-          #family = "Fira Code";
+          family = "monospace";
+          #family = "Consolas";
           #family = "Source Code Pro";
         };
       };

@@ -97,3 +97,24 @@ def call_url(path, method, data)
 end
 $2
 endsnippet
+
+
+
+snippet inituse "inituse"
+# frozen_string_literal: true
+
+# $2
+# @author Researchable
+class $1 < ActiveInteraction::Base
+  #object :user, class: User
+  #hash :data, strip: false, default: nil
+
+  #array :objects do
+    #object class: ObjectClass
+  #end
+
+	def execute
+
+	end
+end
+endsnippet
