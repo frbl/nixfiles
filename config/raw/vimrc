@@ -108,6 +108,7 @@ endif
 call plug#begin()
 
 "Plug 'ryanoasis/vim-devicons'
+Plug 'github/Copilot.vim'
 
 " let Vundle manage Vundle, required
 Plug 'gmarik/Vundle.vim'

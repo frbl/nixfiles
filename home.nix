@@ -23,6 +23,8 @@
     libreoffice
     xarchiver
 
+    lutris
+
     entr
     solargraph
 
