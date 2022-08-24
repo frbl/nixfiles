@@ -550,7 +550,25 @@ checkout = git clone "git@gitlab.com:researchable/aukati/gem-researchable.git"
 
 # DeepAtlas
 [Workspace/fieldlabs/deepatlas]
-#checkout = git clone "git@gitlab.com:fieldlabs/deepatlas.git"
+checkout = git clone "git@gitlab.com:fieldlabs/deepatlas.git"
+
+[Workspace/researchable/projects/deepatlas/composer]
+checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/composer.git"
+
+[Workspace/researchable/projects/deepatlas/docs]
+checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/docs.git"
+
+[Workspace/researchable/projects/deepatlas/base-frontend]
+checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/base-frontend.git"
+
+[Workspace/researchable/projects/deepatlas/base-backend]
+checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/base-backend.git"
+
+[Workspace/researchable/projects/deepatlas/infrastructure]
+checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/infrastructure.git"
+
+[Workspace/researchable/projects/deepatlas/astrowise-docker]
+checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/astrowise-docker.git"
 
 # Syntho
 #[Workspace/syntho/Syntho-Engine-Application/syntho-engine-backend]
