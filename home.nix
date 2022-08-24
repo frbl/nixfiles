@@ -19,6 +19,7 @@
     python3
     gnumake
 
+    yarn
 
     libreoffice
     xarchiver
@@ -61,7 +62,7 @@
     neovim
 
     # i3
-    i3lock
+    #i3lock
     i3-gaps
     i3status
   ];

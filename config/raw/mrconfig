@@ -361,6 +361,9 @@ checkout = git clone "git@gitlab.com:researchable/sport-data-valley/sdv/feature-
 [Workspace/researchable/sport-data-valley/MVP/base-platform]
 checkout = git clone "git@gitlab.com:researchable/sport-data-valley/MVP/base-platform.git"
 
+[Workspace/researchable/sport-data-valley/MVP/composer]
+checkout = git clone "git@gitlab.com:researchable/sport-data-valley/MVP/composer.git"
+
 [Workspace/researchable/sport-data-valley/MVP/base-frontend]
 checkout = git clone "git@gitlab.com:researchable/sport-data-valley/MVP/base-frontend.git"
 

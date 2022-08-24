@@ -94,6 +94,38 @@
       setxkbmap -option altwin:swap_alt_win
       setxkbmap -option caps:swapescape
 
+      pronkridderscreensix() {
+        xrandr --newmode "5120x1440R"  469.00  5120 5168 5200 5280  1440 1443 1453 1481 +hsync -vsync
+        xrandr --addmode DP-1 "5120x1440R"
+        xrandr --output DP-1 --auto
+        xrandr --output DP-1 --mode "5120x1440R"
+      }
+
+      ksh() {
+        echo Namepace $1
+        echo Application $2
+        pod=`kubectl get pods -n $1 -l app=$2 --field-selector=status.phase=Running --no-headers | grep Running | awk '{print $1}' | head -n1`
+        echo Pod $pod
+        kubectl exec -it -n $1 $pod -- /bin/sh
+      }
+
+      krs() {
+        echo Namepace $1
+        echo Application $2
+        kubectl rollout restart deployment $2 -n $1
+      }
+
+      klog() {
+        echo Namepace $1
+        echo Application $2
+        kubectl logs -f -l app=$2 -n $1
+      }
+
+      kreapply() {
+        kubectl delete -f $*
+        kubectl apply -f $*
+      }
+
       # SSH Agent manager
       SSH_ENV="$HOME/.ssh/environment"
       function start_agent {
@@ -108,10 +140,8 @@
       
       pronkridder-screen() {
         xrandr --output DP-1 --off
-        xrandr --newmode "5120x1440R"  469.00  5120 5168 5200 5280  1440 1443 1453 1481 +hsync -vsync
-        xrandr --addmode DP-1 "5120x1440R"
+        xrandr --output DP-1 --mode "5120x1440" 
         xrandr --output DP-1 --auto
-        xrandr --output DP-1 --mode "5120x1440R" 
         xrandr --output DP-1 --right-of eDP-1
       }
 
