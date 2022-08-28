@@ -5,6 +5,7 @@
     enableSyntaxHighlighting = true;
     shellAliases = {
       update = "home-manager switch";
+      upgrade = "nix-channel --update; home-manager switch";
       alacritty = "nixGL alacritty";
       vi = "nvim";
       vim = "nvim";
@@ -22,6 +23,7 @@
       evimrc = "nvim ~/nixfiles/config/raw/vimrc; update";
       profile = "nvim ~/nixfiles/config/zsh.nix;update";
       eprofile = "nvim ~/nixfiles/config/zsh.nix;update";
+      ezsh = "nvim ~/nixfiles/config/zsh.nix;update";
 
 
       # Git
@@ -32,8 +34,8 @@
       # Docker / Kube
       k = "kubectl";
       d = "docker";
-      dc = "docker-compose";
-      dcf = "docker-compose $(find docker-compose* | sed -e 's/^/ -f /' | tr -d '\n') $1";
+      dc = "docker compose";
+      dcf = "docker compose $(find docker-compose* | sed -e 's/^/ -f /' | tr -d '\n') $1";
       dcbu = "dcf down; dcf build; dcf up;";
 
       swagger="echo 'Starting swagger on port 8888'; d run -p 8888:8080 swaggerapi/swagger-editor";

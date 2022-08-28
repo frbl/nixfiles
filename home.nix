@@ -18,6 +18,7 @@
     R
     python3
     gnumake
+    solargraph
 
     yarn
 
@@ -27,7 +28,6 @@
     lutris
 
     entr
-    solargraph
 
     jq
     alacritty
@@ -85,6 +85,7 @@
 
   # Raw configuration files
   home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
+  home.file.".config/nvim/coc-settings.json".source = ./config/raw/coc-settings.json;
   #home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
   home.file.".vimrc".source = ./config/raw/vimrc;
   home.file.".tmux.conf".source = ./config/raw/tmux.conf;

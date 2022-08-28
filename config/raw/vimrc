@@ -108,7 +108,7 @@ endif
 call plug#begin()
 
 "Plug 'ryanoasis/vim-devicons'
-Plug 'github/Copilot.vim'
+"Plug 'github/Copilot.vim'
 
 " let Vundle manage Vundle, required
 Plug 'gmarik/Vundle.vim'
@@ -155,6 +155,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 
 " Completion
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Easy use of the system clipboard
@@ -205,43 +207,13 @@ let g:coc_global_extensions = [
   \ 'coc-css', 
   \ 'coc-yaml',
   \ 'coc-json',
+  \ 'coc-emmet',
   \ 'coc-marketplace',
   \ 'coc-snippets',
   \ 'coc-swagger',
   \ 'coc-tailwindcss',
   \ 'coc-docker',
   \ 'coc-tslint']
-
-let g:coc_user_config = {
-  \ "sorbet": {
-  \   "command": "srb",
-  \   "args": ["tc", "--lsp", "--enable-all-experimental-lsp-features"],
-  \   "filetypes": ["ruby"],
-  \   "rootPatterns": ["sorbet/config"],
-  \   "initializationOptions": {},
-  \   "settings": {}
-  \ },
-  \ "diagnostic.errorSign": '☠️',
-  \ "diagnostic.warningSign": '⚠',
-  \ "diagnostic.infoSign": '⚐',
-  \ "diagnostic.hintSign": '💡',
-  \ "snippets.ultisnips.directories":
-  \ [
-  \   "~/.snippets/vim/UltiSnips",
-  \ ],
-  \ "solargraph.autoformat": 'true',
-  \ "solargraph.formatting": 'true',
-  \ "solargraph.diagnostics": 'true',
-  \ "solargraph.hover": 'true',
-  \ "eslint.format.enable": 'true',
-  \ "eslint.autoFixOnSave": 'true',
-  \ "eslint.executeAutofix": 'true',
-  \ "eslint.filetypes": [
-  \     "javascript",
-  \     "javascriptreact",
-  \     "typescript",
-  \     "typescriptreact"
-  \ ]}
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
@@ -286,6 +258,8 @@ inoremap <silent><expr> <Tab>
       \ coc#refresh()
 
 "inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 
 " use sv to reload vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
