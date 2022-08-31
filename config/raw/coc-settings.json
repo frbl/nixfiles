@@ -1,0 +1,45 @@
+  {
+    "sorbet": {
+      "command": "srb",
+      "args": [
+        "tc",
+        "--lsp",
+        "--enable-all-experimental-lsp-features"
+      ],
+      "filetypes": [
+        "ruby"
+      ],
+      "rootPatterns": [
+        "sorbet/config"
+      ],
+      "initializationOptions": {},
+      "settings": {}
+    },
+    "diagnostic.errorSign": "☠️",
+    "diagnostic.warningSign": "⚠",
+    "diagnostic.infoSign": "⚐",
+    "diagnostic.hintSign": "💡",
+    "snippets.ultisnips.directories": [
+      "~/.snippets/vim/UltiSnips"
+    ],
+    "emmet.includeLanguages": {
+      "eruby": "html",
+      "javascriptreact": "html",
+      "typescriptreact": "html"
+    },
+    "solargraph.autoformat": true,
+    "solargraph.checkGemVersion": false,
+    "solargraph.promptDownload": false,
+    "solargraph.formatting": true,
+    "solargraph.diagnostics": true,
+    "solargraph.hover": true,
+    "eslint.format.enable": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.executeAutofix": true,
+    "eslint.filetypes": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ]
+  }
