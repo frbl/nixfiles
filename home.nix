@@ -20,6 +20,7 @@
     gnumake
     solargraph
 
+    xsel # copy pasting
     yarn
 
     libreoffice

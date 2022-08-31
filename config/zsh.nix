@@ -71,6 +71,7 @@
       LSCOLORS="dxfxcxdxbxegedabagacad";
       GIT_PROMPT_SYMBOL="*";
     };
+    
 
     profileExtra = ''
       # Don't share history between sessions
@@ -89,6 +90,10 @@
     initExtraFirst = ''
       # Theming section
       autoload -U colors
+
+      # Make sure the prompt subst option is on, so the prompt gets
+      # reevaluated.
+      setopt prompt_subst
       colors
     '';
 
@@ -162,12 +167,12 @@
       # git theming default: Variables for theming the git info prompt
       export BROWSER="google-chrome-stable";
       export PROMPT="$FG[008]%T%{$reset_color%} %n@%M:%~ $FG[032]%#%{$reset_color%} %{$reset_color%}";
-      export RPROMPT="%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%}";
 
       export ZSH_THEME_GIT_PROMPT_PREFIX="(%{$reset_color%}"         # Prefix at the very beginning of the prompt, before the branch name
       export ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_bold[blue]%})"             # At the very end of the prompt
       export ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[yellow]%} $GIT_PROMPT_SYMBOL"              # Text to display if the branch is dirty
       export ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
+      export RPROMPT='%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%}';
     '';
 
     history = {
