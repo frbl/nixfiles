@@ -20,6 +20,9 @@
     gnumake
     solargraph
 
+    vagrant
+    virtualbox
+
     xsel # copy pasting
     yarn
 

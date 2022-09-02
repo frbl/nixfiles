@@ -172,6 +172,8 @@
       export ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg_bold[blue]%})"             # At the very end of the prompt
       export ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_bold[yellow]%} $GIT_PROMPT_SYMBOL"              # Text to display if the branch is dirty
       export ZSH_THEME_GIT_PROMPT_CLEAN=""               # Text to display if the branch is clean
+
+      # Note that this propmpt requires single quotes, otherwise it will be evaluated immediately.
       export RPROMPT='%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%}';
     '';
 
