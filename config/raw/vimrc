@@ -169,7 +169,7 @@ Plug 'honza/vim-snippets'
 
 " Indent guides
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'luochen1990/rainbow'
+"Plug 'luochen1990/rainbow'
 
 " JavaScript
 Plug 'leafgarland/typescript-vim'
@@ -184,7 +184,7 @@ Plug 'LnL7/vim-nix'
 Plug 'jalvesaq/Nvim-R'
 
 " VimDiff
-Plug 'chrisbra/vim-diff-enhanced'
+"Plug 'chrisbra/vim-diff-enhanced'
 
 " Testing
 Plug 'janko-m/vim-test'
@@ -208,6 +208,7 @@ let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ 'coc-json',
   \ 'coc-emmet',
+  \ 'coc-elixir',
   \ 'coc-marketplace',
   \ 'coc-snippets',
   \ 'coc-swagger',
@@ -260,7 +261,6 @@ inoremap <silent><expr> <Tab>
 "inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-
 " use sv to reload vimrc
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
@@ -300,11 +300,7 @@ nnoremap <c-p> :Files<cr>
 
 " Testing
 " janko-m/vim-test
-if has('nvim')
-  let test#strategy = "neovim"
-else
-  let test#strategy = "dispatch"
-endif
+let test#strategy = "neovim"
 
 nnoremap <cr> :TestLast<cr>
 nnoremap <leader>T :TestNearest<cr>
@@ -341,13 +337,6 @@ let g:fold_rspec_foldminlines = 3    " disables closing of folds containing two 
 """""""""""""""
 map <leader>a :A<CR>
 map <leader>v :AV<CR>
-
-
-" Markdow / Pandoc
-"""""""""""""""""""
-autocmd BufNewFile,BufRead *.md set filetype=markdown
-autocmd BufNewFile,BufRead *.apib set filetype=markdown
-autocmd BufNewFile,BufRead *.rmd set filetype=markdown
 
 " Lightline
 """""""""""
@@ -395,16 +384,12 @@ cmap <Esc>[B <Down>
 cmap <Esc>[C <Right>
 cmap <Esc>[D <Left>
 
-" LaTeX
+" LaTeX and markdown
 """""""
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.apib set filetype=markdown
+autocmd BufNewFile,BufRead *.rmd set filetype=markdown
 autocmd BufNewFile,BufRead *.tex set filetype=tex
-
-" General mappings
-""""""""""""""""""
-" Color a line at column 80
-"set colorcolumn=80
-"highlight ColorColumn ctermbg=17 guibg=lightgrey
-"autocmd FileType markdown,latex,vimrc set colorcolumn=
 
 nnoremap ; :
 " List the contents of the registers
@@ -420,10 +405,6 @@ map <c-h> <c-w>h
 " Duplicate selected text
 map <Leader>d "dyy"dp
 vnoremap <Leader>d "dy"dP
-
-" Latex gls
-autocmd! FileType tex map <Leader>b bi\textbf{<esc>Ea}<esc>
-autocmd! FileType tex map <Leader>i bi\emph{<esc>Ea}<esc>
 
 " Show gutter, even if there is nothing there
 " From: https://superuser.com/questions/558876/how-can-i-make-the-sign-column-show-up-all-the-time-even-if-no-signs-have-been-a
@@ -471,15 +452,6 @@ nnoremap J J0
 " sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
-function! s:DiffWithSaved()
-  let filetype=&ft
-  diffthis
-  vnew | r # | normal! 1Gdd
-  diffthis
-  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
-endfunction
-com! Diff call s:DiffWithSaved()
-
 if g:os == "Darwin"
   set number
 elseif g:os == "Linux"
@@ -506,7 +478,6 @@ endif
 
 " bind \ (backward slash) to grep shortcut
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-" The leader is now ,, use \ for searching as well
 nnoremap <Leader>\ :Ag -i<SPACE>
 autocmd! FileType qf nnoremap <buffer> <C-v> <C-w><Enter><C-w>L
 
@@ -519,26 +490,7 @@ autocmd FileType tex set synmaxcol=2048
 " Set the correct color scheme
 set background=dark
 
-if has('gui_running')
-  " GUI colors
-  colorscheme twilight
-  let s:uname = system("uname")
-  if s:uname == "Darwin\n"
-    set guifont=Menlo
-  endif
-else
-  " Non-GUI (terminal) colors
-  let g:solarized_termcolors=256
-  colorscheme twilight256
-  if exists('$TMUX')
-    "let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    "let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-  else
-    "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-  endif
-
-endif
+colorscheme twilight256
 
 hi DiffAdd          ctermbg=235  ctermfg=108  guibg=#262626 guifg=#87af87 cterm=reverse        gui=reverse
 hi DiffChange       ctermbg=235  ctermfg=103  guibg=#262626 guifg=#8787af cterm=reverse        gui=reverse
@@ -580,6 +532,7 @@ hi SpellCap cterm=underline ctermfg=33 ctermbg=none
 
 " set colors for visual selection
 hi Visual term=reverse cterm=reverse ctermfg=251 ctermbg=236 gui=reverse guifg=#111111 guibg=#777777
+
 " Text wrapping
 autocmd BufNewFile,BufRead *.txt set wrap
 autocmd BufNewFile,BufRead tex set wrap
