@@ -16,7 +16,6 @@
     erlang
     spotify
     R
-    python3
     gnumake
     solargraph
 
@@ -60,6 +59,18 @@
     zsh
     zsh-z
     zsh-autosuggestions
+
+    # python packages
+    (python310.withPackages (p: with p; [
+      regex
+      pip
+      pyarrow
+      jupyter
+      pandas
+      numpy
+      matplotlib
+    ]))
+
 
     # Editors
     vscode
