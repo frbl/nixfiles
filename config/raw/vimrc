@@ -352,7 +352,7 @@ set splitright                  " Show file drawer left
 let g:NERDTreeChDirMode       = 2 "Needed for ctrlp
 let g:NERDTreeWinSize=60
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['node_modules', '\.pyc$', 'Icon\?', '\.aux$', '\.fdb_latexmk$', '\.fls$', '\.synctex.gz$', '\.docx$', '\.pdf$', '\.blg$', '\.bbl$', '\.Rd$', '\.RData$']
+let NERDTreeIgnore = ['node_modules', '\.pyc$', '\.aux$', '\.fdb_latexmk$', '\.fls$', '\.synctex.gz$', '\.docx$', '\.pdf$', '\.blg$', '\.bbl$', '\.Rd$', '\.RData$']
 
 " Netrw
 """"""""

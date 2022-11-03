@@ -15,9 +15,13 @@
       i = "mr config ~/.mrconfig co";
       clock = "watch -t -n1 'date'";
 
+      mux = "tmuxinator";
+      tx = "tmuxinator";
+
       anonymous = "tor &; pid=$!;networksetup -setsocksfirewallproxy Wi-Fi localhost 9050; read; networksetup -setsocksfirewallproxystate Wi-Fi off; kill $pid";
 
       #edits
+      emux = "nvim ~/nixfiles/config/raw/tmuxinator; update";
       enix = "nvim ~/nixfiles/home.nix; update";
       vimrc = "nvim ~/nixfiles/config/raw/vimrc;update";
       evimrc = "nvim ~/nixfiles/config/raw/vimrc; update";
@@ -34,6 +38,7 @@
       # Docker / Kube
       k = "kubectl";
       d = "docker";
+      docker-compose = "docker compose";
       dc = "docker compose";
       dcf = "docker compose $(find docker-compose* | sed -e 's/^/ -f /' | tr -d '\n') $1";
       dcbu = "dcf down; dcf build; dcf up;";
