@@ -20,6 +20,11 @@
     solargraph
     go
 
+    tmuxinator
+
+    cloc
+    ngrok
+
     vagrant
     virtualbox
 
@@ -120,6 +125,7 @@
   home.file.".config/xfce4/terminal/terminalrc".source = ./config/raw/xfce_terminal;
   home.file.".snippets/vim/UltiSnips".source = ./config/UltiSnips;
   home.file.".git_template".source = ./config/raw/git_template;
+  home.file.".tmuxinator".source = ./config/raw/tmuxinator;
 
   imports = [
     ./config/zsh.nix
