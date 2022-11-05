@@ -4,6 +4,7 @@
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
     shellAliases = {
+      switch = "setxkbmap -option caps:escape";
       update = "home-manager switch";
       upgrade = "nix-channel --update; home-manager switch";
       alacritty = "nixGL alacritty";
@@ -163,6 +164,9 @@
       fi
 
       source <(kubectl completion zsh)
+
+      chmod 700 ~/.ssh
+      [ -e $HOME/.ssh/id_rsa ] && chmod 600 ~/.ssh/id_rsa
 
       # git theming default: Variables for theming the git info prompt
       export BROWSER="google-chrome-stable";

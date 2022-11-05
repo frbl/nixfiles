@@ -18,6 +18,7 @@
     R
     gnumake
     solargraph
+    go
 
     vagrant
     virtualbox
@@ -57,8 +58,8 @@
     fail2ban
     tmux
     zsh
-    zsh-z
-    zsh-autosuggestions
+    #zsh-z 
+    #zsh-autosuggestions
 
     # python packages
     (python310.withPackages (p: with p; [

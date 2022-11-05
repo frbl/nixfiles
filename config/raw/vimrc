@@ -198,8 +198,10 @@ call plug#end() " required
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 inoremap <silent><expr> <C-space> coc#refresh()
 
-let g:coc_global_extensions = [
-  \ 'coc-solargraph', 'coc-eslint',  'coc-tsserver',
+let g:coc_global_extensions = [ 'coc-solargraph', 
+  \ 'coc-eslint',  
+  \ 'coc-tslint',  
+  \ 'coc-tsserver',
   \ 'coc-sh',
   \ 'coc-pyright',
   \ 'coc-go',
@@ -213,11 +215,10 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-swagger',
   \ 'coc-tailwindcss',
-  \ 'coc-docker',
-  \ 'coc-tslint']
+  \ 'coc-docker']
 
 " Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
+command! -nargs=0 Format :call CocActionAsync('format')
 noremap <Leader>] :Format<CR>
 
 " GoTo code navigation.
