@@ -57,10 +57,11 @@ endsnippet
 snippet initstory "initstory"
 import $1 from './';
 
-export default {
+const story = {
   component: $1,
   title: 'Atomic/$2/$1',
 };
+export default story;
 
 const Template = args => <$1 {...args}/>;
 

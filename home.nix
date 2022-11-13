@@ -37,6 +37,10 @@
 
     entr
 
+    # Fonts
+    fira-code
+    nerdfonts
+
     jq
     alacritty
     #docker

@@ -107,7 +107,7 @@ endif
 " set the runtime path to include Vundle and initialize
 call plug#begin()
 
-"Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 "Plug 'github/Copilot.vim'
 
 " let Vundle manage Vundle, required
@@ -135,6 +135,8 @@ Plug 'tpope/vim-projectionist'
 
 " nerdtree file browser
 Plug 'scrooloose/nerdtree'
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Currently gives issues with
+"Nvim 0.8
 
 " Nerdcommenter for bettercommenting
 Plug 'scrooloose/nerdcommenter'

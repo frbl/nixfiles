@@ -10,8 +10,10 @@
       font = {
         size = 7.0;
         normal = {
-          family = "monospace";
-          #family = "Consolas";
+          #family = "monospace";
+          #family = "Fira Code";
+          family = "DejaVu Sans Mono Nerd Font";
+          style = "Retina";
           #family = "Source Code Pro";
         };
       };
