@@ -46,6 +46,8 @@
     alacritty
     #docker
     #docker-compose
+
+    kubernetes-helm
     mr
     arandr
     kubectl
