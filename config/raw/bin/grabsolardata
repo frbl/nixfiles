@@ -1,0 +1,10 @@
+#!/bin/bash
+username=$1
+password=$2
+url=$3
+
+result=`curl $username:$password@$url/status.html`
+value=`echo $result | sed -e 's/.*var webdata_now_p = "\([0-9]*\).*/\1/g'`
+
+dt=$(date '+%d/%m/%Y %H:%M:%S');
+echo "$dt,$value" >> /home/frbl/result.csv

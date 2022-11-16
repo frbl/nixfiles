@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+docker run -d -p 127.0.0.1:36667:6667 -v $HOME/.znc/:/znc-data --name znc jimeh/znc

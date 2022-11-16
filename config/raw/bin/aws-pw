@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ "$#" -ne 1 ]; then
+  echo "Illegal number of parameters, correct format: aws-pw <instance-id>"
+  exit 1
+fi
+res=`aws ec2 get-password-data --instance-id $1`
+echo $res
+res=`echo $res |  tr -d '\r' | tr -d '\n' | sed -e 's/.*PasswordData": "\(.*\)".*/\1/g' | tr -d '\r' | sed -e 's/\r//g' -e 's/\n//g'`
+echo $res
+#res=`echo $res | base64 --decode |  openssl rsautl -decrypt -inkey ~/.ssh/frbl-imac.pem`
+#echo $res
+

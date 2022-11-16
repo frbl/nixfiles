@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in $(find . -maxdepth 1 -type d); do
+  x=$(ls $i | wc -l)
+  echo "$x\t$i"
+done

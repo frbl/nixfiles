@@ -1,0 +1,127 @@
+#!/usr/bin/env ruby
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'httparty'
+  gem 'dotenv'
+end
+
+include HTTParty
+require 'csv'
+
+GREEN = '1;32m'.freeze
+YELLOW = '1;33m'.freeze
+RED = '1;31m'.freeze
+DEFAULT = '1;34m'.freeze
+
+Dotenv.load('~/.researchable')
+
+FREEDCAMP_URL = ENV['FREEDCAMP_URL']
+MY_NAME = ENV['FREEDCAMP_NAME']
+CACHE_FILE = '/tmp/freedcamp.txt'.freeze
+CACHE_PERIOD = 5 * 60
+
+if !File.exist?(CACHE_FILE) || Time.now - File.mtime(CACHE_FILE) > CACHE_PERIOD
+  result = HTTParty.get(FREEDCAMP_URL, {})
+
+  File.open(CACHE_FILE, 'w') do |file|
+    file.write(result.body)
+  end
+end
+csv = CSV.read(CACHE_FILE, headers: true)
+
+def mine?(row)
+  return true if row['Assigned To'] == MY_NAME
+  return true if row['Assigned To'] == 'Everyone'
+
+  false
+end
+
+def priority_color(priority)
+  return RED if priority == 'High'
+  return YELLOW if priority == 'Medium'
+  return GREEN if priority == 'Low'
+
+  DEFAULT
+end
+
+def boolean_color(is_red)
+  return RED if is_red
+
+  GREEN
+end
+
+def colorize_string(string, color)
+  pr = "\033["
+  pr += color
+  pr += string.to_s
+  pr + "\033[0m"
+end
+
+def date_colorization(date)
+  return "\t" * 2 unless date
+
+  "\t#{colorize_string(date, boolean_color(date <= Time.now.to_date))}"
+end
+
+def status_format(status)
+  return 'N' if status == 'No Progress'
+  return 'S' if status == 'In Progress'
+end
+
+def create_task_string(tasks)
+  high_prio = []
+  medium_prio = []
+  low_prio = []
+  no_prio = []
+
+  tasks.each do |elem|
+    prio = elem[:priority]
+    pr = colorize_string(elem[:id], priority_color(prio))
+    pr += " " + status_format(elem[:status])
+    pr += date_colorization(elem[:start_date])
+    pr += date_colorization(elem[:due_date])
+    pr += "\t \e]8;;" + elem[:url] + "\a" + elem[:name] + "\e]8;;\a\n"
+
+    next high_prio << pr if prio == 'High'
+    next medium_prio << pr if prio == 'Medium'
+    next low_prio << pr if prio == 'Low'
+
+    no_prio << pr
+  end
+  no_prio + low_prio + medium_prio + high_prio
+end
+
+def id_from_url(url)
+  url.split(/\D+/).last
+end
+
+# puts csv.first
+unfiltered_hash = csv.map do |row|
+  next unless mine?(row)
+
+  {
+    id: id_from_url(row['Url']),
+    type: row[0], # No idea why, but checking for 'Type' does not work
+    name: row['Name'],
+    url: row['Url'],
+    priority: row['Priority'],
+    start_date: row['Start Date'] && Date.parse(row['Start Date']),
+    due_date: row['Due Date'] && Date.parse(row['Due Date']),
+    status: row['Status'],
+    project: row['Project'],
+    general_type: row['Type[General]']
+  }
+end.compact
+
+result = unfiltered_hash.map do |entry|
+  next if entry[:general_type] == 'Perpetual task'
+  next if entry[:status] == 'Completed'
+  next if entry[:type] != 'Task'
+
+  entry
+end.compact
+
+puts create_task_string(result)
+# puts csv.headers

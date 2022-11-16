@@ -1,0 +1,46 @@
+#!/bin/bash
+rm -rf "$1"
+mkdir "$1"
+cd "$1" || exit
+mkdir -p src/{main,test}/{java,resources,scala}
+mkdir -p src/{main,test}/{java,scala}/nl/anchormen/vitens
+mkdir lib project target
+
+mkdir -p src/{dev,prod}/resources
+
+# create an initial build.sbt file
+echo "name := \"$1\"
+version := \"0.1\"
+scalaVersion := \"2.11.8\"" >build.sbt
+
+echo "sbt.version = 0.13.15" >project/build.properties
+
+echo 'logLevel := Level.Warn
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
+addSbtPlugin("nl.anchormen.sbt" %% "sbt-build-environments" % "0.1.6")' >project/plugins.sbt
+
+mkdir -p /tmp/spark
+echo 'spark {
+  spark.master = "local[*]"
+  spark.sql.warehouse.dir = "/tmp/spark"
+}
+
+test=test' >src/dev/resources/Driver.conf
+
+echo 'spark {
+  spark.master = "local[*]"
+  spark.sql.warehouse.dir = "/tmp/spark"
+}
+
+test=prod' >src/prod/resources/Driver.conf
+
+echo 'package nl.anchormen.vitens
+
+import nl.anchormen.spark.SparkApp
+
+object Driver extends SparkApp {
+
+  override def executeApp(): Unit = {
+    val path = config.getString("test")
+  }
+}' >src/main/scala/nl/anchormen/vitens/Driver.scala

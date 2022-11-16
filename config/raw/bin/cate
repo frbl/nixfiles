@@ -1,0 +1,5 @@
+#!/bin/bash
+file=$(command -v "$1")
+if [ -f "$file" ]; then
+  cat "$file"
+fi

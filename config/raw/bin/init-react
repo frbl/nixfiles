@@ -1,0 +1,82 @@
+#/bin/sh
+
+mkdir -p $1
+cd $1
+npm init -y
+
+npm install --save react react-dom
+
+npm install --save-dev webpack webpack-cli
+
+npm install --save-dev @babel/core babel-loader @babel/preset-env @babel/preset-react
+
+
+echo ' { "presets": ["@babel/preset-env", "@babel/preset-react"] }' > .babelrc
+
+echo "module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
+};" > webpack.config.js
+
+mkdir -p src/components
+
+echo "import React, { Component } from 'react';
+
+class HelloWorld extends Component {
+  render() {
+    return (<h1>Hello World, React!</h1>); 
+  } 
+} 
+
+export default HelloWorld;" > src/components/helloworld.jsx
+
+
+echo "
+import * as React from 'react';
+
+export class App extends React.Component {
+
+  render() {
+    return (
+      <div>
+        Hello, world!
+      </div>
+    );
+  }
+}" > src/components/app.jsx
+
+
+echo "import ReactDOM from 'react-dom';
+import { App } from './components/app.jsx';
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);" > src/index.js
+
+
+
+echo "<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8' />
+        <title></title>
+    </head>
+    <body>
+        <div id='root'></div>
+        <script src='./node_modules/react/umd/react.development.js'></script>
+        <script src='./node_modules/react-dom/umd/react-dom.development.js'></script>
+        <script src='./dist/main.js'></script>
+    </body>
+</html>" > index.html
+
+node_modules/.bin/webpack --mode development --hot

@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+$(tmux has-session -t shared || tmux new-session -d -s shared "tmux new-window -n irc weechat") 2>&1 /dev/null
+if [ -n "$TMUX" ]; then
+  tmux link-window -s shared:irc -t 9
+fi

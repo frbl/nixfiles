@@ -1,0 +1,65 @@
+#!/usr/bin/env ruby
+
+require 'httparty'
+require 'byebug'
+
+GREEN = '1;32m'.freeze
+YELLOW = '1;33m'.freeze
+RED = '1;31m'.freeze
+
+current_user = 'frbl'
+
+if ENV['A2M_PAT'].nil?
+  throw('A2M_PAT environment variable needs to be set')
+end
+
+res = HTTParty.get(
+  'https://api.github.com/issues',
+  headers: {
+    'Authorization' => "token #{ENV['A2M_PAT']}",
+    'User-Agent' => 'Awesome-Octocat-App'
+  }
+)
+
+res = JSON.parse(res.body)
+my_issues = []
+my_pull_requests = []
+
+res.each do |entry|
+  is_assigned = entry['assignees'].any? do |assignee|
+    assignee['login'] == current_user
+  end
+  next unless is_assigned
+
+  next my_issues << entry if entry['pull_request'].nil?
+  my_pull_requests << entry
+end
+
+if my_pull_requests.empty?
+  File.delete('/tmp/a2m')
+  exit(0)
+end
+
+def create_issue_string(issues, color) 
+  issues.map do |elem|
+    pr = "\033["
+    pr += color
+    pr += "##{elem['number']}:"
+    pr += "\033[0m"
+    pr += "\t \e]8;;"+elem['html_url']+"\a"+ elem['title'] +"\e]8;;\a\n"
+    pr
+  end
+end
+
+my_pull_requests = create_issue_string(my_pull_requests, GREEN)
+my_issues = create_issue_string(my_issues, YELLOW)
+
+File.open('/tmp/a2m', 'w') do |file| 
+  file.write('Pull requests:')
+  file.write("\n")
+  file.write(my_pull_requests.join)
+  file.write("\n")
+  file.write('Tickets:')
+  file.write("\n")
+  file.write(my_issues.join) 
+end

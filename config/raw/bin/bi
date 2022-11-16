@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+bundle install -j 8
+#grep -e 'gem install bundler' $res
+
+#if [[ $? -eq 0 ]]; then
+ #gem install bundler
+#fi

@@ -1,0 +1,2 @@
+#!/bin/bash
+multitail /var/log/apache2/access_log /var/log/apache2/error_log

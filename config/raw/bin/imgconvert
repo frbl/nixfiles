@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sizes="64 128 256 512 1024 2048"
+for size in $sizes
+do
+  inkscape -z -e "$2_$size.png" -h $size $1
+done

@@ -22,6 +22,10 @@
 
     tmuxinator
 
+
+    scrot
+    imagemagick
+
     cloc
     ngrok
 
@@ -132,6 +136,7 @@
   home.file.".snippets/vim/UltiSnips".source = ./config/UltiSnips;
   home.file.".git_template".source = ./config/raw/git_template;
   home.file.".tmuxinator".source = ./config/raw/tmuxinator;
+  home.file.".bin".source = ./config/raw/bin;
 
   imports = [
     ./config/zsh.nix

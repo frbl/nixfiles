@@ -197,9 +197,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+exec xautolock -time 5 -locker '~/.bin/lock' &
+
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id /home/frbl/.bin/i3exit lock, mode "default"
+    bindsym l exec --no-startup-id /home/frbl/.bin/lock, mode "default"
     bindsym e exec --no-startup-id /home/frbl/.bin/i3exit logout, mode "default"
     bindsym s exec --no-startup-id /home/frbl/.bin/i3exit suspend, mode "default"
     bindsym h exec --no-startup-id /home/frbl/.bin/i3exit hibernate, mode "default"

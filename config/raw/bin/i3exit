@@ -1,0 +1,39 @@
+#!/bin/bash
+# From:
+# https://faq.i3wm.org/question/239/how-do-i-suspendlockscreen-and-logout.1.html
+lock() {
+    c0='#00000000' # clear
+    c1='#101012ff' # black
+    c2='#ffffffff' # white
+    c3='#ff0000ff' # red
+    c4='#0000ffff' # blue
+
+    # From: https://github.com/prmsrswt/dotfiles/blob/master/first-rice/Scripts/lock.sh
+    i3lock
+}
+
+case "$1" in
+    lock)
+        lock
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+        lock && systemctl suspend
+        ;;
+    hibernate)
+        lock && systemctl hibernate
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    shutdown)
+        systemctl poweroff
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+
+exit 0

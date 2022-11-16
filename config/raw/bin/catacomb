@@ -1,0 +1,32 @@
+#!/bin/bash -e
+
+main() {
+  if [[ -n "$1" ]]; then
+    PUBLIC_KEY="$HOME/.ssh/$1.pub"
+
+    if ! [[ -e "$PUBLIC_KEY" ]]; then
+      retrieve_keys "$1"
+    fi
+
+    TMP_OUT="$(mktemp "${TMPDIR:-/tmp}/$(basename "$0").XXXXXX")"
+    trap '{ rm -f "$TMP_OUT"; }' EXIT
+
+    if openssl rsautl -encrypt -pubin -inkey <(ssh-keygen -f "$PUBLIC_KEY" -e -m PKCS8) -ssl > "$TMP_OUT"; then
+      echo "-- encrypted with catacomb <https://github.com/twe4ked/catacomb>"
+      openssl base64 < "$TMP_OUT"
+    fi
+  else
+    openssl base64 -d | openssl rsautl -decrypt -inkey ~/.ssh/id_rsa_frank
+  fi
+}
+
+retrieve_keys() {
+  (curl -sf "https://github.com/${1}.keys" && echo) > "$HOME/.ssh/$1.pub"
+
+  if [[ "$(grep ^ssh < "$HOME/.ssh/$1.pub" | wc -l)" -lt 1 ]]; then
+    echo "Could not find any SSH key for $1" >&2
+    exit 1
+  fi
+}
+
+main "$1"

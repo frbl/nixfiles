@@ -1,0 +1,9 @@
+#!/bin/sh
+
+sizes="64 128 256 512 1024 2048"
+for size in $sizes
+do
+  inkscape -z -e "$2_$size.png" -h $size $1
+done
+convert -background transparent -gravity center image.png -resize 400x400 -extent 400x400 result.png
+

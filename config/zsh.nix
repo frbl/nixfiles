@@ -113,6 +113,12 @@
         xrandr --output DP-1 --auto
         xrandr --output DP-1 --mode "5120x1440R"
       }
+      
+      hnkscreen() {
+        xrandr --newmode "hnk"  533.87  3440 3712 4088 4736  1440 1441 1444 1503  -HSync +Vsync
+        xrandr --addmode HDMI-1 "hnk"
+        xrandr --output HDMI-1 --mode "hnk"
+      }
 
       ksh() {
         echo Namepace $1
