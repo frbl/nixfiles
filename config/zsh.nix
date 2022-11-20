@@ -81,11 +81,20 @@
 
     profileExtra = ''
       # Don't share history between sessions
-      unsetopt inc_append_history
       unsetopt share_history
+
+      # Immediate append history
+      setopt inc_append_history
+
+      # Add timestamp to hist
+      setopt EXTENDED_HISTORY
+      export HISTTIMEFORMAT="[%F %T] "
 
       # Don't ask for confirmation for history commands
       setopt no_hist_verify
+
+      # Dont save duplicates
+      setopt hist_ignore_all_dups
 
       setopt prompt_subst
 
@@ -193,7 +202,7 @@
     '';
 
     history = {
-      size = 10000;
+      size = 10000000;
       path = ".zshhist";
     };
     oh-my-zsh = {

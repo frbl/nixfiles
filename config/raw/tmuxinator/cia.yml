@@ -3,18 +3,21 @@ root: ~/Workspace/researchable/projects/cia/composer
 
 windows:
   - development:
-      layout: 9424,208x59,0,0[208x10,0,0{77x10,0,0,0,63x10,78,0,1,66x10,142,0,4},208x48,0,11,2]
+      layout: 7adc,213x62,0,0[213x12,0,0{78x12,0,0[78x6,0,0,0,78x5,0,7,4],68x12,79,0,1,65x12,148,0,2},213x49,0,13,3]
       panes:
-      - app-one:
+      - fe:
         - cd base-frontend
         - yarn run dev
-      - app-two:
+      - storybook:
+        - cd base-frontend
+        - yarn storybook --ci
+      - be:
         - cd base-backend
         - dcbu
-      - app-two:
+      - auth:
         - cd svc-auth
         - dcbu
-      - app-three:
+      - vim:
         - cd base-frontend
         - nvim
 

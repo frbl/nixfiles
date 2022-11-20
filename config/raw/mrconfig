@@ -15,6 +15,9 @@ checkout = git clone "git@gitlab.com:algorand/auction-demo.git"
 [Workspace/frbl/dotfiles]
 checkout = git clone 'git@github.com:frbl/dotfiles.git'
 
+[Workspace/frbl/music]
+checkout = git clone 'git@github.com:frbl/music.git'
+
 [Workspace/frbl/ansible]
 checkout = git clone 'git@github.com:frbl/ansible.git'
 
