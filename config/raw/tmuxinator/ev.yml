@@ -1,0 +1,23 @@
+name: ev
+root: ~/Workspace/researchable/projects/ev-biotech/composer
+
+windows:
+  - development:
+      layout: 7adc,213x62,0,0[213x12,0,0{78x12,0,0[78x6,0,0,0,78x5,0,7,4],68x12,79,0,1,65x12,148,0,2},213x49,0,13,3]
+      panes:
+      - fe:
+        - cd base-frontend
+        - yarn run dev
+      - storybook:
+        - cd base-frontend
+        - yarn storybook --ci
+      - be:
+        - cd data-access
+        - dcbu
+      - auth:
+        - cd svc-auth
+        - dcbu
+      - vim:
+        - cd base-frontend
+        - nvim
+

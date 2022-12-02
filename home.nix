@@ -22,6 +22,8 @@
 
     tmuxinator
 
+    tldr # shorter manual pages
+
 
     scrot
     imagemagick
@@ -46,6 +48,9 @@
     fira-code
     nerdfonts
 
+    yamlfix
+    yamllint
+    yq
     jq
     alacritty
     #docker
@@ -55,6 +60,9 @@
     mr
     arandr
     kubectl
+    kubeseal
+    kube-linter
+
     # slack  # Not installing slack, as it has issues with xdg-open, and I cannot login..
     google-chrome
     htop

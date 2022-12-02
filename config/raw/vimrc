@@ -188,7 +188,7 @@ Plug 'LnL7/vim-nix'
 Plug 'jalvesaq/Nvim-R'
 
 " VimDiff
-"Plug 'chrisbra/vim-diff-enhanced'
+Plug 'chrisbra/vim-diff-enhanced'
 
 " Testing
 Plug 'janko-m/vim-test'
@@ -505,9 +505,9 @@ hi DiffDelete       ctermbg=235  ctermfg=131  guibg=#262626 guifg=#af5f5f cterm=
 hi DiffText         ctermbg=235  ctermfg=208  guibg=#262626 guifg=#ff8700 cterm=reverse        gui=reverse
 
 " started In Diff-Mode set diffexpr (plugin not loaded yet)
-if &diff
-  let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=histogram")'
-endif
+"if &diff
+  "let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=histogram")'
+"endif
 
 "Show long lines
 " /\%81v.\+

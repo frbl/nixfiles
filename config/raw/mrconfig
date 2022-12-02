@@ -15,6 +15,9 @@ checkout = git clone "git@gitlab.com:algorand/auction-demo.git"
 [Workspace/frbl/dotfiles]
 checkout = git clone 'git@github.com:frbl/dotfiles.git'
 
+[Workspace/frbl/advent-of-code-2022]
+checkout = git clone 'git@github.com:frbl/advent-of-code-2022.git'
+
 [Workspace/frbl/music]
 checkout = git clone 'git@github.com:frbl/music.git'
 
@@ -132,6 +135,25 @@ checkout = git clone "git@gitlab.com:ecida/docs.git"
 
 [Workspace/ecida/ecida-dashboard]
 checkout = git clone "git@gitlab.com:ecida/ecida-dashboard.git"
+
+[Workspace/ecida/jecida]
+checkout = git clone "git@gitlab.com:ecida/jecida.git"
+
+[Workspace/ecida/ecida-py]
+checkout = git clone "git@gitlab.com:ecida/ecida-py.git"
+
+[Workspace/ecida/ecida.setup]
+checkout = git clone "git@gitlab.com:ecida/ecida.setup.git"
+
+[Workspace/ecida/ecida.admin]
+checkout = git clone "git@gitlab.com:ecida/ecida.admin.git"
+
+[Workspace/ecida/runtime-controller]
+checkout = git clone "git@gitlab.com:ecida/runtime-controller.git"
+
+[Workspace/ecida-gitlab/docs]
+checkout = git clone "git@gitlab.com:ecida/docs.git"
+
 
 
 ##########
@@ -301,6 +323,9 @@ checkout = git clone "git@gitlab.com:researchable/general/security/gitlab_backup
 [Workspace/researchable/projects/certibot/docs]
 checkout = git clone "git@gitlab.com:researchable/projects/certibot/docs.git"
 
+[Workspace/researchable/projects/certibot/base-backend]
+checkout = git clone "git@gitlab.com:researchable/projects/certibot/base-backend.git"
+
 
 [Workspace/researchable/general/management/freedcamp-hour-counter]
 checkout = git clone "git@gitlab.com:researchable/general/management/freedcamp-hour-counter.git"
@@ -313,6 +338,10 @@ checkout = git clone "git@gitlab.com:researchable/general/management/bookkeeper.
 
 [Workspace/researchable/general/management/freedcamp]
 checkout = git clone "git@gitlab.com:researchable/general/management/freedcamp.git"
+
+
+[Workspace/researchable/general/management/gitlab-webhooks]
+checkout = git clone "git@gitlab.com:researchable/general/management/gitlab-webhooks.git"
 
 
 [Workspace/researchable/general/test-projects/pay-nl-test]
@@ -336,6 +365,9 @@ checkout = git clone "git@gitlab.com:researchable/general/test-projects/cypress-
 [Workspace/researchable/general/test-projects/polar-api-test]
 checkout = git clone "git@gitlab.com:researchable/general/test-projects/polar-api-test.git"
 
+
+[Workspace/researchable/general/devops/infrastructure]
+checkout = git clone "git@gitlab.com:researchable/general/devops/infrastructure.git"
 
 
 # SDV
