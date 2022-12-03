@@ -40,8 +40,6 @@
     libreoffice
     xarchiver
 
-    lutris
-
     entr
 
     # Fonts
@@ -62,6 +60,8 @@
     kubectl
     kubeseal
     kube-linter
+
+    _1password
 
     # slack  # Not installing slack, as it has issues with xdg-open, and I cannot login..
     google-chrome
