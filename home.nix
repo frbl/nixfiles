@@ -24,7 +24,6 @@
 
     tldr # shorter manual pages
 
-
     scrot
     imagemagick
 
@@ -63,7 +62,10 @@
 
     _1password
 
-    # slack  # Not installing slack, as it has issues with xdg-open, and I cannot login..
+
+    # Slack might give issues with XDG open. On the latest ubuntu I did not
+    # have any issues, hence its back in the list.
+    slack 
     google-chrome
     htop
     curl

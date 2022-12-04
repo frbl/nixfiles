@@ -116,6 +116,9 @@
       setxkbmap -option altwin:swap_alt_win
       setxkbmap -option caps:swapescape
 
+      # Enable vim mode
+      bindkey -v
+
       pronkridderscreensix() {
         xrandr --newmode "5120x1440R"  469.00  5120 5168 5200 5280  1440 1443 1453 1481 +hsync -vsync
         xrandr --addmode DP-1 "5120x1440R"
