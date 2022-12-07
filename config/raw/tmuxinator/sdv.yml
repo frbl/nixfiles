@@ -18,4 +18,3 @@ windows:
       - vim:
         - cd base-platform
         - nvim
-

@@ -1,0 +1,13 @@
+name: adv
+root: ~/Workspace/frbl/advent-of-code-2022/
+
+windows:
+  - development:
+      layout: main-horizontal
+      panes:
+      - editor:
+        - nvim
+      - runner:
+        - ls *.rb | entr -r ./run.rb
+
+

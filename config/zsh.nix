@@ -35,6 +35,7 @@
       gl = "git track; git pull";
       gv = "vim `git diff --name-only`";
       gcob = "g cob";
+      gsi = "git submodule update --init --recursive -j 8";
 
       # Docker / Kube
       k = "kubectl";
@@ -206,7 +207,7 @@
 
     history = {
       size = 10000000;
-      path = ".zshhist";
+      path = "~/.zshhist";
     };
     oh-my-zsh = {
       enable = true;
