@@ -4,8 +4,8 @@
 [Workspace/apache/superset]
 checkout = git clone 'git@github.com:apache/superset.git'
 
-[Workspace/algorand/auction-demo]
-checkout = git clone "git@gitlab.com:algorand/auction-demo.git"
+#[Workspace/algorand/auction-demo]
+#checkout = git clone "git@gitlab.com:algorand/auction-demo.git"
 
 
 
@@ -130,29 +130,29 @@ checkout = git clone "git@github.com:kasperdokter/dsu.git"
 [Workspace/mhadadian/ecida-mvp]
 checkout = git clone "git@github.com:mhadadian/ecida-mvp.git"
 
-[Workspace/ecida/docs]
-checkout = git clone "git@gitlab.com:ecida/docs.git"
+#[Workspace/ecida/docs]
+#checkout = git clone "git@gitlab.com:ecida/docs.git"
 
-[Workspace/ecida/ecida-dashboard]
-checkout = git clone "git@gitlab.com:ecida/ecida-dashboard.git"
+#[Workspace/ecida/ecida-dashboard]
+#checkout = git clone "git@gitlab.com:ecida/ecida-dashboard.git"
 
 [Workspace/ecida/jecida]
-checkout = git clone "git@gitlab.com:ecida/jecida.git"
+checkout = git clone "git@github.com:ecida/jecida.git"
 
 [Workspace/ecida/ecida-py]
-checkout = git clone "git@gitlab.com:ecida/ecida-py.git"
+checkout = git clone "git@github.com:ecida/ecida-py.git"
 
 [Workspace/ecida/ecida.setup]
-checkout = git clone "git@gitlab.com:ecida/ecida.setup.git"
+checkout = git clone "git@github.com:ecida/ecida.setup.git"
 
 [Workspace/ecida/ecida.admin]
-checkout = git clone "git@gitlab.com:ecida/ecida.admin.git"
+checkout = git clone "git@github.com:ecida/ecida.admin.git"
 
 [Workspace/ecida/runtime-controller]
-checkout = git clone "git@gitlab.com:ecida/runtime-controller.git"
+checkout = git clone "git@github.com:ecida/runtime-controller.git"
 
-[Workspace/ecida-gitlab/docs]
-checkout = git clone "git@gitlab.com:ecida/docs.git"
+#[Workspace/ecida-gitlab/docs]
+#checkout = git clone "git@gitlab.com:ecida/docs.git"
 
 
 
@@ -442,14 +442,11 @@ checkout = git clone "git@gitlab.com:researchable/sport-data-valley/MVP/kube-acc
 checkout = git clone "git@gitlab.com:researchable/sport-data-valley/MVP/notebook-executor.git"
 
 
+#[Workspace/sportdatavalley/data-mining-analysis-fitbit]
+#checkout = git clone "git@gitlab.com:sportdatavalley/data-mining-analysis-fitbit.git"
 
-#gitlab_clone "sport-data-valley" "poc-data"
-[Workspace/sportdatavalley/data-mining-analysis-fitbit]
-checkout = git clone "git@gitlab.com:sportdatavalley/data-mining-analysis-fitbit.git"
-
-
-[Workspace/researchable/ieder-kind-is-anders/ikia-front-end-application]
-checkout = git clone "git@gitlab.com:researchable/ieder-kind-is-anders/ikia-front-end-application.git"
+#[Workspace/researchable/ieder-kind-is-anders/ikia-front-end-application]
+#checkout = git clone "git@gitlab.com:researchable/ieder-kind-is-anders/ikia-front-end-application.git"
 
 
 # i-shared
@@ -483,8 +480,8 @@ checkout = git clone "git@gitlab.com:researchable/open-source/forks/react-add-to
 [Workspace/researchable/open-source/openapi/serverless-lambda-ruby]
 checkout = git clone "git@gitlab.com:researchable/open-source/openapi/serverless-lambda-ruby.git"
 
-[Workspace/researchable/open-source/openapi/serverless-lambda-node]
-checkout = git clone "git@gitlab.com:researchable/open-source/openapi/serverless-lambda-node.git"
+#[Workspace/researchable/open-source/openapi/serverless-lambda-node]
+#checkout = git clone "git@gitlab.com:researchable/open-source/openapi/serverless-lambda-node.git"
 
 
 [Workspace/researchable/open-source/api-gems/polar-accesslink-api-gem]
@@ -585,7 +582,7 @@ checkout = git clone "git@gitlab.com:researchable/aukati/gem-researchable.git"
 
 # DeepAtlas
 [Workspace/fieldlabs/deepatlas]
-checkout = git clone "git@gitlab.com:fieldlabs/deepatlas.git"
+checkout = git clone "git@gitlab.astro-wise.org:fieldlabs/deepatlas.git"
 
 [Workspace/researchable/projects/deepatlas/composer]
 checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/composer.git"
@@ -613,6 +610,22 @@ checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/astrowise-d
 #checkout = git clone "git@gitlab.com:syntho/Syntho%20Engine%20Application/syntho-engine-UI.git"
 
 
+
+# 113-suicide-prevention
+[Workspace/researchable/projects/113-suicide-prevention/composer]
+checkout = git clone "git@gitlab.com:researchable/projects/113-suicide-prevention/composer.git"
+
+[Workspace/researchable/projects/113-suicide-prevention/docs]
+checkout = git clone "git@gitlab.com:researchable/projects/113-suicide-prevention/docs.git"
+
+[Workspace/researchable/projects/113-suicide-prevention/base-frontend]
+checkout = git clone "git@gitlab.com:researchable/projects/113-suicide-prevention/base-frontend.git"
+
+[Workspace/researchable/projects/113-suicide-prevention/base-backend]
+checkout = git clone "git@gitlab.com:researchable/projects/113-suicide-prevention/base-backend.git"
+
+[Workspace/researchable/projects/113-suicide-prevention/infrastructure]
+checkout = git clone "git@gitlab.com:researchable/projects/113-suicide-prevention/infrastructure.git"
 
 # Tinyeye
 [Workspace/researchable/projects/tinyeye/composer]
