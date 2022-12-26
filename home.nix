@@ -14,11 +14,15 @@
     nodejs
     elixir
     erlang
-    spotify
     R
     gnumake
     solargraph
     go
+
+
+    gimp
+
+    spotify
 
     tmuxinator
 
@@ -75,7 +79,12 @@
     patch
     git
     rofi
+
+    # Searching
     silver-searcher
+    ripgrep  # Also used by telescope nvim
+    fd # Also used by telescope nvim
+
     feh
     xclip
     zathura
@@ -125,8 +134,9 @@
   fonts.fontconfig.enable = true;
 
   # Raw configuration files
-  home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
-  home.file.".config/nvim/coc-settings.json".source = ./config/raw/coc-settings.json;
+  #home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
+  #home.file.".config/nvim/coc-settings.json".source = ./config/raw/coc-settings.json;
+
   #home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
   home.file.".vimrc".source = ./config/raw/vimrc;
   home.file.".tmux.conf".source = ./config/raw/tmux.conf;

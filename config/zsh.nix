@@ -207,7 +207,7 @@
 
     history = {
       size = 10000000;
-      path = "~/.zshhist";
+      path = "$HOME/.zshhist";
     };
     oh-my-zsh = {
       enable = true;
