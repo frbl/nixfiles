@@ -66,3 +66,13 @@ vim.keymap.set("n", "J", "J0")
 
 -- sudo to write
 vim.keymap.set("c", "w!!", "w !sudo tee % >/dev/null")
+
+-- Remove whitespace
+--function DeleteTrailingWS()
+  --vim.cmd('exe "normal mz"')
+  --vim.cmd("%s/\s\+$//ge")
+  --vim.cmd('exe "normal `z"')
+--end
+--vim.keymap.set("c", "<Leader>k", vim.cmd.call(DeleteTrailingWS))
+--map <Leader>k :call DeleteTrailingWS()<cr>
+

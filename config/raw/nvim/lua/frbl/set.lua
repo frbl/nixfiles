@@ -69,3 +69,4 @@ vim.opt.isfname:append("@-@")
 -- Fast update time
 vim.opt.updatetime = 50
 
+

@@ -56,6 +56,10 @@ return require('packer').startup(function(use)
   -- Status line
   use('itchyny/lightline.vim')
 
+  -- Surround words with open and closing sign (cs<char>, i.e., cs; -> 'helloworld')
+  use('tpope/vim-surround')
+
+
   -- System copy support 
   use('christoomey/vim-system-copy')
 
@@ -66,11 +70,20 @@ return require('packer').startup(function(use)
   -- Formatting
   use('sbdchd/neoformat')
 
+  -- Editorconfig support
+  use('editorconfig/editorconfig-vim')
+
+  -- Eaxy aligning tables etc
+  use('junegunn/vim-easy-align')
+
+  -- Seamless tmux and vim navigation
+  use('christoomey/vim-tmux-navigator')
+
   -- File navigation
   use{
     'scrooloose/nerdtree',
     requires = {
-      'ryanoasis/vim-devicons'
+      "ryanoasis/vim-devicons"
     }
   }
 
