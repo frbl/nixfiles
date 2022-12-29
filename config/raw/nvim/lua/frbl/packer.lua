@@ -1,15 +1,13 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 local packerpath = "~/.local/share/nvim/site/pack/packer/start/packer.nvim"
-if not vim.loop.fs_stat(packerpath) then
-  print('Cloning repo!')
-  vim.fn.system({
-    "git",
-    "clone",
-    "--depth 1",
-    "https://github.com/wbthomason/packer.nvim",
-    packerpath,
-  })
+
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+  is_bootstrap = true
+  vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', packerpath }
+  vim.cmd [[packadd packer.nvim]]
 end
+
+
 vim.opt.runtimepath:prepend(packerpath)
 
 -- Only required if you have packer configured as `opt`
