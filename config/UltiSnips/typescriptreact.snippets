@@ -15,11 +15,15 @@ export default $1
 endsnippet
 
 snippet con "Logging"
-import consola from 'consola/src/browser'
+import consola from 'consola'
+endsnippet
+
+snippet rl "Logging"
+consola.info($0);
 endsnippet
 
 snippet cl "Logging"
-consola.info($0);
+console.log($0);
 endsnippet
 
 snippet pdb "Debugger"

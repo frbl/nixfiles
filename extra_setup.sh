@@ -21,3 +21,6 @@ chmod 700 ~/.gnupg
 op document get "GPG f.j.blaauw@researchable.nl - private" --account abl > /tmp/researchable.key
 gpg --import /tmp/researchable.key
 rm /tmp/researchable.key
+
+
+op document get "~/.researchable.yml" --account abl > ~/.researchable.yml

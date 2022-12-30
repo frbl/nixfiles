@@ -20,6 +20,10 @@
     solargraph
     go
 
+    # npm
+    nodePackages.http-server
+    cypress
+
     tmuxinator
 
     tldr # shorter manual pages
@@ -53,7 +57,10 @@
     #docker
     #docker-compose
 
+    minikube
     kubernetes-helm
+
+
     mr
     arandr
     kubectl

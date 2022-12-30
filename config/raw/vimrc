@@ -107,6 +107,8 @@ endif
 " set the runtime path to include Vundle and initialize
 call plug#begin()
 
+Plug 'mbbill/undotree'
+
 Plug 'ryanoasis/vim-devicons'
 "Plug 'github/Copilot.vim'
 
@@ -142,6 +144,8 @@ Plug 'scrooloose/nerdtree'
 
 " Nerdcommenter for bettercommenting
 Plug 'scrooloose/nerdcommenter'
+"Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+
 
 " Status line
 Plug 'itchyny/lightline.vim'
@@ -194,6 +198,7 @@ Plug 'chrisbra/vim-diff-enhanced'
 Plug 'janko-m/vim-test'
 
 call plug#end() " required
+
 
 
 " coc.nvim

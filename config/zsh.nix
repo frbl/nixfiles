@@ -203,11 +203,13 @@
 
       # Note that this propmpt requires single quotes, otherwise it will be evaluated immediately.
       export RPROMPT='%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%}';
+
+      export PATH=$PATH:~/.bin
     '';
 
     history = {
       size = 10000000;
-      path = "~/.zshhist";
+      path = "$HOME/.zshhist";
     };
     oh-my-zsh = {
       enable = true;
