@@ -1,5 +1,7 @@
 vim.g.mapleader = ","
 
+local opt = { noremap = true, silent = true }
+
 -- The first argument is the mode (normal / visual / insert), then the key, and
 -- then the command.
 -- vim.keymap.set("n", "<C-n>", vim.cmd.Lexplore)
@@ -76,3 +78,14 @@ vim.keymap.set("c", "w!!", "w !sudo tee % >/dev/null")
 --vim.keymap.set("c", "<Leader>k", vim.cmd.call(DeleteTrailingWS))
 --map <Leader>k :call DeleteTrailingWS()<cr>
 
+
+-- move code around
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- Quickfix bindings
+-- TODO: How to move stuff to quickfix list?
+-- TODO: How to navigate 0Glog
+--vim.keymap.set('n', '<Leader>cq', '<CMD>cclose<cr>', opt)
+--vim.keymap.set('n', 'J', '<CMD>cnext<cr>', opt)
+--vim.keymap.set('n', 'K', '<CMD>cprev<cr>', opt)

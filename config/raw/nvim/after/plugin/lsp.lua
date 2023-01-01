@@ -33,6 +33,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
   ['<cr>'] = cmp.mapping.confirm({select = true}),
   ['<C-Space>'] = cmp.mapping.complete(),
+
   [",,"] = cmp.mapping(
     function(fallback)
       cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
@@ -80,6 +81,8 @@ lsp.on_attach(function(client, bufnr)
 
   vim.keymap.set("n", "g]", function () vim.diagnostic.goto_next() end, opts)
   vim.keymap.set("n", "g[", function () vim.diagnostic.goto_prev() end, opts)
+
+  vim.keymap.set('n', 'ga',         "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 end)
 
 -- If you wish to add support for your config written in lua, 
