@@ -15,6 +15,7 @@ nix-shell '<home-manager>' -A install
 # Fix opengl on nix
 nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
 nix-env -iA nixgl.auto.nixGLDefault
+sudo apt-get install i3
 sudo apt-get remove --purge -y curl
 sudo apt-get -y autoremove
 

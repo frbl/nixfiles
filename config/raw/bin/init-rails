@@ -1,0 +1,19 @@
+#!/bin/sh
+
+echo 'Creating rails project'
+init-ruby
+
+if [ $# -eq 0 ]; then
+  echo 'Supply name of package as argument'
+  exit 1
+fi
+
+bundle install rails
+
+bundle exec rails new $1 \
+ --minimal \
+ --api-only \
+ --database postgresql \
+ -m https://abl.nu/template.rb
+
+echo 'Done creating rails project'
