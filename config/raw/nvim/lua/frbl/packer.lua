@@ -1,14 +1,14 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-local packerpath = "~/.local/share/nvim/site/pack/packer/start/packer.nvim"
+local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
+print(install_path)
 
+local is_bootstrap = false
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   is_bootstrap = true
-  vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', packerpath }
+  vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
   vim.cmd [[packadd packer.nvim]]
 end
 
-
-vim.opt.runtimepath:prepend(packerpath)
+--vim.opt.runtimepath:prepend(install_path)
 
 -- Only required if you have packer configured as `opt`
 -- vim.cmd [[packadd packer.nvim]]
@@ -29,15 +29,15 @@ return require('packer').startup(function(use)
   }
 
   -- Syntax highlighting
-  use ( 
-    'nvim-treesitter/nvim-treesitter', 
+  use (
+    'nvim-treesitter/nvim-treesitter',
     {
       run = ':TSUpdate'
     }
   )
 
   -- Color schemes
-  use ({ 
+  use ({
     'vim-scripts/twilight256.vim',
     config = function ()
       vim.cmd('colorscheme twilight256')
@@ -60,7 +60,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-surround')
 
 
-  -- System copy support 
+  -- System copy support
   use('christoomey/vim-system-copy')
 
   -- Snippets! Note that ultisnips is the runtime, honza are the snippets
@@ -116,5 +116,9 @@ return require('packer').startup(function(use)
       {'rafamadriz/friendly-snippets'},
     }
   }
+
+  if is_bootstrap then
+    require('packer').sync()
+  end
 end)
 
