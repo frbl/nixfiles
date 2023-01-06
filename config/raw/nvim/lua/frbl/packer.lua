@@ -83,8 +83,13 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- Indentation lines 
-  use "lukas-reineke/indent-blankline.nvim"
+  -- Indentation lines
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    requires = {
+      'nvim-treesitter/nvim-treesitter',
+    }
+  }
 
 
   use {
