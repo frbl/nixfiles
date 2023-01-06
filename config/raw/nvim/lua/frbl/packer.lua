@@ -87,6 +87,9 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Indentation lines 
+  use "lukas-reineke/indent-blankline.nvim"
+
 
   use {
     'nvim-tree/nvim-tree.lua',
