@@ -19,6 +19,9 @@
     solargraph
     go
 
+    # npm
+    nodePackages.http-server
+    cypress
 
     gimp
 
@@ -57,7 +60,10 @@
     #docker
     #docker-compose
 
+    minikube
     kubernetes-helm
+
+
     mr
     arandr
     kubectl

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo 'Creating nix - ruby files'
+echo 'use nix;' > .envrc
+
+echo 'let pkgs = import <nixpkgs> {};
+
+in pkgs.mkShell rec {
+  name = "rubydev";
+
+  buildInputs = with pkgs; [
+    ruby_3_1
+  ];
+
+}
+' > shell.nix
+
+echo 'Done running nix - ruby files'

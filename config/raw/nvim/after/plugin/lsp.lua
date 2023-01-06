@@ -5,6 +5,8 @@ lsp.preset('recommended')
 -- Set update time for cursorhold autocommand
 vim.o.updatetime = 300
 
+
+
 -- Enable 'on hover' lsp feedback
 vim.cmd([[
   augroup holddiagnostics
@@ -20,6 +22,8 @@ lsp.ensure_installed({
   'solargraph',
 })
 
+local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
@@ -28,8 +32,14 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
   ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
   ['<cr>'] = cmp.mapping.confirm({select = true}),
-  ['<Leader>,'] = cmp.mapping.complete(),
   ['<C-Space>'] = cmp.mapping.complete(),
+
+  [",,"] = cmp.mapping(
+    function(fallback)
+      cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
+    end,
+    { "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
+  ),
 })
 
 -- Reserve space for diagnostic icons
@@ -46,6 +56,18 @@ lsp.set_preferences({
   }
 })
 
+lsp.setup_nvim_cmp({
+  mapping = cmp_mappings,
+  snippet = {
+    expand = function(args)
+      vim.fn["UltiSnips#Anon"](args.body)
+    end,
+  },
+  sources = {
+    { name = "ultisnips" }
+  }
+})
+
 
 -- Happens on each buffer that has an LSP that's associated with it
 lsp.on_attach(function(client, bufnr)
@@ -59,6 +81,8 @@ lsp.on_attach(function(client, bufnr)
 
   vim.keymap.set("n", "g]", function () vim.diagnostic.goto_next() end, opts)
   vim.keymap.set("n", "g[", function () vim.diagnostic.goto_prev() end, opts)
+
+  vim.keymap.set('n', 'ga',         "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 end)
 
 -- If you wish to add support for your config written in lua, 

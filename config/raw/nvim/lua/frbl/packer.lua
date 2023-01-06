@@ -1,5 +1,4 @@
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
-print(install_path)
 
 local is_bootstrap = false
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
@@ -63,9 +62,6 @@ return require('packer').startup(function(use)
   -- System copy support
   use('christoomey/vim-system-copy')
 
-  -- Snippets! Note that ultisnips is the runtime, honza are the snippets
-  use('SirVer/ultisnips')
-  use('honza/vim-snippets')
 
   -- Formatting
   use('sbdchd/neoformat')
@@ -114,9 +110,10 @@ return require('packer').startup(function(use)
       {'hrsh7th/cmp-nvim-lsp'},
       {'hrsh7th/cmp-nvim-lua'},
 
-      -- Snippets
-      {'L3MON4D3/LuaSnip'},
-      {'rafamadriz/friendly-snippets'},
+      -- Snippets! Note that ultisnips is the runtime, honza are the snippets,
+      { "quangnguyen30192/cmp-nvim-ultisnips"},
+      { 'SirVer/ultisnips' },
+      { 'honza/vim-snippets' }
     }
   }
 
