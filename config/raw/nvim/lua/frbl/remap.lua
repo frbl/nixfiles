@@ -77,6 +77,8 @@ vim.keymap.set("c", "w!!", "w !sudo tee % >/dev/null")
 --end
 --vim.keymap.set("c", "<Leader>k", vim.cmd.call(DeleteTrailingWS))
 --map <Leader>k :call DeleteTrailingWS()<cr>
+--
+vim.api.nvim_create_user_command('Gblame', 'Git blame', {})
 
 
 -- move code around

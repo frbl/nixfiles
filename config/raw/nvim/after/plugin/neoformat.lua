@@ -32,10 +32,10 @@ vim.api.nvim_set_keymap('x', '<Leader>]', '<CMD>Neoformat!<cr>', opt)
 
 local augroup = vim.api.nvim_create_augroup("FormatOnSave", {})
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-  group = augroup,
-  command = 'Neoformat',
-})
+--vim.api.nvim_create_autocmd("BufWritePre", {
+  --group = augroup,
+  --command = 'Neoformat',
+--})
 
 local toggleAutoformat = function()
     if #vim.api.nvim_get_autocmds({ group = augroup }) > 0 then

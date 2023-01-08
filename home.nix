@@ -62,13 +62,14 @@
 
     minikube
     kubernetes-helm
+    kubectl
+    kubeseal
+    kube-linter
+    argocd
 
 
     mr
     arandr
-    kubectl
-    kubeseal
-    kube-linter
 
     _1password
 

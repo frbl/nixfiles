@@ -4,7 +4,7 @@ local is_bootstrap = false
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   is_bootstrap = true
   vim.fn.system { 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path }
-  vim.cmd [[packadd packer.nvim]]
+  --vim.cmd [[packadd packer.nvim]]
 end
 
 --vim.opt.runtimepath:prepend(install_path)
@@ -53,7 +53,8 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
 
   -- Status line
-  use('itchyny/lightline.vim')
+  --use('itchyny/lightline.vim')
+  use('nvim-lualine/lualine.nvim')
 
   -- Surround words with open and closing sign (cs<char>, i.e., cs; -> 'helloworld')
   use('tpope/vim-surround')
