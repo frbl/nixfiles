@@ -148,6 +148,7 @@
   #home.file.".vimrc".source = ./config/raw/vimrc;
   home.file.".config/nvim".source = ./config/raw/nvim;
   home.file.".tmux.conf".source = ./config/raw/tmux.conf;
+  home.file.".config/nix/nix.conf".source = ./config/raw/nix.conf;
   home.file.".agignore".source = ./config/raw/agignore;
   home.file.".compton.conf".source = ./config/raw/compton.conf;
   home.file.".config/i3".source = ./config/raw/i3;
