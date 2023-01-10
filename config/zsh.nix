@@ -24,8 +24,8 @@
       #edits
       emux = "nvim ~/nixfiles/config/raw/tmuxinator; update";
       enix = "nvim ~/nixfiles/home.nix; update";
-      vimrc = "nvim ~/nixfiles/config/raw/vimrc;update";
-      evimrc = "nvim ~/nixfiles/config/raw/vimrc; update";
+      vimrc = "nvim ~/.config/nvim";
+      evimrc = "nvim ~/.config/nvim";
       profile = "nvim ~/nixfiles/config/zsh.nix;update";
       eprofile = "nvim ~/nixfiles/config/zsh.nix;update";
       ezsh = "nvim ~/nixfiles/config/zsh.nix;update";
