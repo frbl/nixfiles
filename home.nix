@@ -19,8 +19,14 @@
     solargraph
     go
 
+    #nixFlakes
+
+    # General
+    openssl
+
     # npm
     nodePackages.http-server
+    nodePackages.serverless
     cypress
 
     gimp
@@ -67,6 +73,8 @@
     kube-linter
     argocd
 
+    # Cloud env
+    azure-cli
 
     mr
     arandr
@@ -146,7 +154,9 @@
 
   #home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
   #home.file.".vimrc".source = ./config/raw/vimrc;
-  home.file.".config/nvim".source = ./config/raw/nvim;
+  #home.file.".config/nvim".source = ./config/raw/nvim;
+  home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ./config/raw/nvim;
+
   home.file.".tmux.conf".source = ./config/raw/tmux.conf;
   home.file.".agignore".source = ./config/raw/agignore;
   home.file.".compton.conf".source = ./config/raw/compton.conf;

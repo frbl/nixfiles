@@ -80,7 +80,7 @@ return require('packer').startup(function(use)
   use{
     'scrooloose/nerdtree',
     requires = {
-      "ryanoasis/vim-devicons"
+      "ryanoasis/vim-devicons",
     }
   }
 

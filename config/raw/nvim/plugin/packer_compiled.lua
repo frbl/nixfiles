@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  LuaSnip = {
-    loaded = true,
-    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/LuaSnip",
-    url = "https://github.com/L3MON4D3/LuaSnip"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -94,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
     url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
+  ["cmp-nvim-ultisnips"] = {
+    loaded = true,
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/cmp-nvim-ultisnips",
+    url = "https://github.com/quangnguyen30192/cmp-nvim-ultisnips"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -104,20 +104,25 @@ _G.packer_plugins = {
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["friendly-snippets"] = {
+  ["editorconfig-vim"] = {
     loaded = true,
-    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
+    url = "https://github.com/editorconfig/editorconfig-vim"
   },
-  ["lightline.vim"] = {
+  ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/lightline.vim",
-    url = "https://github.com/itchyny/lightline.vim"
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -215,6 +220,11 @@ _G.packer_plugins = {
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
   },
+  ["vim-easy-align"] = {
+    loaded = true,
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-easy-align",
+    url = "https://github.com/junegunn/vim-easy-align"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -225,10 +235,20 @@ _G.packer_plugins = {
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-snippets",
     url = "https://github.com/honza/vim-snippets"
   },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
   ["vim-system-copy"] = {
     loaded = true,
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-system-copy",
     url = "https://github.com/christoomey/vim-system-copy"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 
