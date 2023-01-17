@@ -35,6 +35,11 @@ return require('packer').startup(function(use)
     }
   )
 
+  -- Show matches on hover
+  use (
+    'RRethy/vim-illuminate'
+  )
+
   -- Color schemes
   use ({
     'vim-scripts/twilight256.vim',
@@ -82,6 +87,11 @@ return require('packer').startup(function(use)
     requires = {
       "ryanoasis/vim-devicons",
     }
+  }
+
+  -- Focus mode
+  use {
+    "folke/zen-mode.nvim",
   }
 
   -- Indentation lines

@@ -37,6 +37,9 @@ vim.opt.linebreak = tue
 -- Disable line wrap
 vim.opt.wrap = false
 
+-- Disable the weird tildes on the side
+vim.opt.fillchars = { eob = " " }
+
 --
 -- Backup stuff- disable backups, enable long running undofile
 --

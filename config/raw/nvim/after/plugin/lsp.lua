@@ -56,20 +56,21 @@ lsp.set_preferences({
   }
 })
 
-lsp.setup_nvim_cmp({
-  mapping = cmp_mappings,
-  snippet = {
-    expand = function(args)
-      vim.fn["UltiSnips#Anon"](args.body)
-    end,
-  },
-  sources = {
-    { name = "ultisnips" }
-  }
-})
+--lsp.setup_nvim_cmp({
+  --mapping = cmp_mappings,
+  --snippet = {
+    --expand = function(args)
+      --vim.fn["UltiSnips#Anon"](args.body)
+    --end,
+  --},
+  --sources = {
+    --{ name = "ultisnips" }
+  --}
+--})
 
 
 -- Happens on each buffer that has an LSP that's associated with it
+---@diagnostic disable-next-line: unused-local
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 

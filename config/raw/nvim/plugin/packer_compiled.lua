@@ -230,6 +230,11 @@ _G.packer_plugins = {
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
+  },
   ["vim-snippets"] = {
     loaded = true,
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-snippets",
@@ -249,6 +254,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["zen-mode.nvim"] = {
+    loaded = true,
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

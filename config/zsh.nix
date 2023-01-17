@@ -70,6 +70,9 @@
 
 
     sessionVariables = {
+      # No telemetry on Azure
+      FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT = "true";
+
       COLORTERM = "truecolor";
       TERM = "xterm-256color";
       EDITOR = "nvim";
