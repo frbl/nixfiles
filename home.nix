@@ -9,6 +9,7 @@
   # Packages to install
   home.packages = with pkgs; [
     # Languages
+    terraform
     gcc
     ruby_3_1
     nodejs
@@ -28,6 +29,8 @@
     nodePackages.http-server
     nodePackages.serverless
     cypress
+
+    tree
 
     gimp
 

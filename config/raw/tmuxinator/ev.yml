@@ -1,5 +1,5 @@
 name: ev
-root: ~/Workspace/researchable/projects/ev-biotech/composer
+root: ~/Workspace/researchable/projects/ev-biotech/
 
 windows:
   - development:
@@ -15,7 +15,7 @@ windows:
         - cd data-access
         - dcbu
       - auth:
-        - cd svc-auth
+        - cd composer/svc-auth
         - dcbu
       - vim:
         - cd base-frontend

@@ -54,6 +54,12 @@ return require('packer').startup(function(use)
   -- Better commenting
   use('scrooloose/nerdcommenter')
 
+  -- Help with commenting functions
+  use {
+    'kkoomen/vim-doge',
+    run = ':call doge#install()'
+  }
+
   -- Git integration
   use('tpope/vim-fugitive')
 

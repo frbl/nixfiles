@@ -220,6 +220,11 @@ _G.packer_plugins = {
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
   },
+  ["vim-doge"] = {
+    loaded = true,
+    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-doge",
+    url = "https://github.com/kkoomen/vim-doge"
+  },
   ["vim-easy-align"] = {
     loaded = true,
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-easy-align",
