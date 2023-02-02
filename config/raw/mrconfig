@@ -130,8 +130,11 @@ checkout = git clone "git@github.com:kasperdokter/dsu.git"
 [Workspace/mhadadian/ecida-mvp]
 checkout = git clone "git@github.com:mhadadian/ecida-mvp.git"
 
-#[Workspace/ecida/docs]
-#checkout = git clone "git@gitlab.com:ecida/docs.git"
+[Workspace/ecida/docs]
+checkout = git clone "git@gitlab.com:ecida/docs.git"
+
+[Workspace/ecida/admin-ui/ecida-flow-test]
+checkout = git clone "git@gitlab.com:ecida/admin-ui/ecida-flow-test.git"
 
 #[Workspace/ecida/ecida-dashboard]
 #checkout = git clone "git@gitlab.com:ecida/ecida-dashboard.git"
@@ -371,6 +374,9 @@ checkout = git clone "git@gitlab.com:researchable/general/test-projects/cypress-
 [Workspace/researchable/general/test-projects/polar-api-test]
 checkout = git clone "git@gitlab.com:researchable/general/test-projects/polar-api-test.git"
 
+[Workspace/researchable/general/test-projects/messagebird-rest]
+checkout = git clone "git@gitlab.com:researchable/general/test-projects/messagebird-rest.git"
+
 
 [Workspace/researchable/general/devops/infrastructure]
 checkout = git clone "git@gitlab.com:researchable/general/devops/infrastructure.git"
@@ -591,6 +597,9 @@ checkout = git clone "git@gitlab.com:researchable/aukati/svc-payments.git"
 
 [Workspace/researchable/aukati/gem-researchable]
 checkout = git clone "git@gitlab.com:researchable/aukati/gem-researchable.git"
+
+[Workspace/researchable/aukati/gem-jwt-auth]
+checkout = git clone "git@gitlab.com:researchable/aukati/gem-jwt-auth.git"
 
 # DeepAtlas
 [Workspace/fieldlabs/deepatlas]

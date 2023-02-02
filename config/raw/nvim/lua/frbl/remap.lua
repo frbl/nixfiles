@@ -9,6 +9,11 @@ local opt = { noremap = true, silent = true }
 -- For now; don't use ;
 vim.keymap.set("n", ";", ":")
 
+
+-- Idk why these mappings need to be here
+vim.g.doge_enable_mappings       = 1
+vim.g.doge_mapping = "<Leader>a"
+
 -- Duplicate line on leader d
 vim.keymap.set("n", "<leader>d", '"dyy"dp')
 vim.keymap.set("v", "<leader>d", '"dy"dP')

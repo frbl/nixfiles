@@ -64,6 +64,7 @@ lsp.setup_nvim_cmp({
     end,
   },
   sources = {
+    {name = "luasnip"},
     { name = 'nvim_lsp' },
     { name = "ultisnips" }
   }
@@ -74,6 +75,17 @@ lsp.setup_nvim_cmp({
 ---@diagnostic disable-next-line: unused-local
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
+
+  -- highlight word under cursor
+  if client.server_capabilities.documentHighlightProvider then
+    vim.cmd([[
+      augroup lsp_document_highlight
+        autocmd! * <buffer>
+        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
+      augroup END
+    ]])
+  end
 
   vim.keymap.set("n", "gd", function () vim.lsp.buf.definition() end, opts)
   vim.keymap.set("n", "gu", function () vim.lsp.buf.references() end, opts)

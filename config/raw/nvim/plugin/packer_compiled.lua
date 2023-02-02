@@ -235,11 +235,6 @@ _G.packer_plugins = {
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-illuminate"] = {
-    loaded = true,
-    path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-illuminate",
-    url = "https://github.com/RRethy/vim-illuminate"
-  },
   ["vim-snippets"] = {
     loaded = true,
     path = "/home/frbl/.local/share/nvim/site/pack/packer/start/vim-snippets",

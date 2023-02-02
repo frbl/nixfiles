@@ -20,6 +20,8 @@
     solargraph
     go
 
+    sonar-scanner-cli
+
     #nixFlakes
 
     # General
@@ -32,7 +34,13 @@
 
     tree
 
+    # Applications
     gimp
+    grafana
+
+    # Emulation
+    flatpak
+    bottles
 
     spotify
 
