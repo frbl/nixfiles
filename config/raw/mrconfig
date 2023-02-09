@@ -563,6 +563,9 @@ checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/infrastruc
 [Workspace/researchable/projects/ev-biotech/composer]
 checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/composer.git"
 
+[Workspace/researchable/projects/ev-biotech/ml-prediction]
+checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/ml-prediction.git"
+
 
 # Aukati
 [Workspace/researchable/aukati/svc-mail-receiver]

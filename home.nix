@@ -16,6 +16,7 @@
     elixir
     erlang
     R
+    rstudio
     gnumake
     solargraph
     go

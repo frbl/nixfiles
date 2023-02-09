@@ -48,6 +48,14 @@ return require('packer').startup(function(use)
     end
   })
 
+  -- Co pilot
+  use(
+    'github/copilot.vim',
+    {
+      run = ':Copilot setup'
+    }
+  )
+
   -- Fancy undo functionality
   use('mbbill/undotree')
 

@@ -3,3 +3,4 @@
 --vim.g['UltiSnipsJumpBackwardTrigger'] = "<C-p>"
 --
 vim.g.UltiSnipsSnippetDirectories = { "~/.snippets/vim/UltiSnips/" }
+vim.g.UltiSnipsExpandTrigger=",,"
