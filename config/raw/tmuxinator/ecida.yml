@@ -1,0 +1,25 @@
+name: ecida
+root: ~/Workspace/ecida
+
+windows:
+  - fe:
+      layout: add3,239x62,0,0[239x17,0,0{117x17,0,0,13,121x17,118,0,15},239x44,0,18,14]
+      panes:
+      - backend:
+        - cd admin-ui/ecida-flow-test/ecida-flow-ui
+        - yarn dev
+      - tsc:
+        - cd admin-ui/ecida-flow-test/ecida-flow-ui
+        - yarn tsc --watch
+      - editor:
+        - cd admin-ui/ecida-flow-test/ecida-flow-ui
+        - nvim
+  - docs:
+      panes:
+      - server:
+        - cd docs
+        - yarn dev
+      - vim:
+        - cd docs
+        - nvim
+

@@ -73,7 +73,7 @@ return require('packer').startup(function(use)
 
   -- Status line
   --use('itchyny/lightline.vim')
-  use('nvim-lualine/lualine.nvim')
+  --use('nvim-lualine/lualine.nvim')
 
   -- Surround words with open and closing sign (cs<char>, i.e., cs; -> 'helloworld')
   use('tpope/vim-surround')
