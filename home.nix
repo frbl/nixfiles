@@ -20,6 +20,7 @@
     gnumake
     solargraph
     go
+    android-tools
 
     sonar-scanner-cli
 
@@ -31,6 +32,7 @@
     # npm
     nodePackages.http-server
     nodePackages.serverless
+    nodePackages.eas-cli
     cypress
 
     tree

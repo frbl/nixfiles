@@ -73,6 +73,9 @@
       # No telemetry on Azure
       FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT = "true";
 
+      # Android installed through apt
+      ANDROID_HOME="/usr/lib/android-sdk";
+
       COLORTERM = "truecolor";
       TERM = "xterm-256color";
       EDITOR = "nvim";
