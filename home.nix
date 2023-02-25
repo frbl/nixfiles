@@ -36,6 +36,7 @@
     cypress
 
     tree
+    tree-sitter
 
     # Applications
     gimp

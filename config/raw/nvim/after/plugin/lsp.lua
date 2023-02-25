@@ -18,7 +18,6 @@ vim.cmd([[
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'sumneko_lua',
   'solargraph',
 })
 

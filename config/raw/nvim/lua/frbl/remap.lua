@@ -9,11 +9,9 @@ local opt = { noremap = true, silent = true }
 -- For now; don't use ;
 vim.keymap.set("n", ";", ":")
 
-
 vim.g.copilot_assume_mapped = true
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<Leader>.", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-
 
 -- Idk why these mappings need to be here
 vim.g.doge_enable_mappings       = 1

@@ -2,7 +2,22 @@ name: 113
 root: ~/Workspace/researchable/projects/113-suicide-prevention
 
 windows:
-  - serverless:
+  - data-ingestion:
+      layout: add3,239x62,0,0[239x17,0,0{117x17,0,0,13,121x17,118,0,15},239x44,0,18,14]
+      panes:
+      - azure-serverless:
+        - cd base-backend/data-ingestion
+        - yarn start
+      - tsc:
+        - cd base-backend/mail-ingestion
+        - yarn watch
+      - test:
+        - cd base-backend/mail-ingestion
+        - yarn test --watch
+      - editor:
+        - cd base-backend/mail-ingestion
+        - nvim
+  - mail-catcher:
       layout: add3,239x62,0,0[239x17,0,0{117x17,0,0,13,121x17,118,0,15},239x44,0,18,14]
       panes:
       - azure-serverless:
