@@ -20,7 +20,7 @@ sudo apt-get remove --purge -y curl
 sudo apt-get -y autoremove
 
 rm -rf ~/.config/nixpkgs
-ln -s ~/nixfiles ~/.config/nixpkgs
+ln -s ~/nixfiles ~/.config/home-manager
  
 home-manager build
 home-manager switch -b backup

@@ -22,12 +22,15 @@
     go
     android-tools
 
+    teleport
+
     sonar-scanner-cli
 
     #nixFlakes
 
     # General
     openssl
+    pandoc
 
     # npm
     nodePackages.http-server
@@ -73,7 +76,7 @@
     fira-code
     nerdfonts
 
-    yamlfix
+    #yamlfix
     yamllint
     yq
     jq

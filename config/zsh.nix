@@ -5,8 +5,8 @@
     enableSyntaxHighlighting = true;
     shellAliases = {
       switch = "setxkbmap -option caps:escape";
-      update = "home-manager switch";
-      upgrade = "nix-channel --update; home-manager switch";
+      update = "home-manager switch --max-jobs 8";
+      upgrade = "nix-channel --update --max-jobs 8; home-manager switch --max-jobs 8";
       alacritty = "nixGL alacritty";
       vi = "nvim";
       vim = "nvim";

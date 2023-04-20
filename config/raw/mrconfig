@@ -251,6 +251,10 @@ checkout = git clone "git@gitlab.com:researchable/general/infrastructure/kuberne
 checkout = git clone "git@gitlab.com:researchable/general/gitlab/runner-infrastructure.git"
 
 
+[Workspace/researchable/general/templates/storybook]
+checkout = git clone "git@gitlab.com:researchable/general/templates/storybook.git"
+
+
 [Workspace/researchable/general/templates/projects/docs-template]
 checkout = git clone "git@gitlab.com:researchable/general/templates/projects/docs-template.git"
 
@@ -496,6 +500,17 @@ checkout = git clone "git@gitlab.com:researchable/open-source/openapi/serverless
 #checkout = git clone "git@gitlab.com:researchable/open-source/openapi/serverless-lambda-node.git"
 
 
+# Gems
+[Workspace/researchable/general/gems/loggable]
+checkout = git clone "git@gitlab.com:researchable/general/gems/loggable"
+
+[Workspace/researchable/general/gems/ruboguide]
+checkout = git clone "git@gitlab.com:researchable/general/gems/ruboguide"
+
+[Workspace/researchable/general/gems/jwt-authenticable]
+checkout = git clone "git@gitlab.com:researchable/general/gems/jwt-authenticable"
+
+
 [Workspace/researchable/open-source/api-gems/polar-accesslink-api-gem]
 checkout = git clone "git@gitlab.com:researchable/open-source/api-gems/polar-accesslink-api-gem.git"
 
@@ -604,6 +619,9 @@ checkout = git clone "git@gitlab.com:researchable/aukati/gem-researchable.git"
 [Workspace/researchable/aukati/gem-jwt-auth]
 checkout = git clone "git@gitlab.com:researchable/aukati/gem-jwt-auth.git"
 
+[Workspace/researchable/aukati/event-driven-poc]
+checkout = git clone "git@gitlab.com:researchable/aukati/event-driven-poc.git"
+
 # DeepAtlas
 [Workspace/fieldlabs/deepatlas]
 checkout = git clone "git@gitlab.astro-wise.org:fieldlabs/deepatlas.git"
@@ -651,6 +669,16 @@ checkout = git clone "git@gitlab.com:researchable/projects/113-suicide-preventio
 [Workspace/researchable/projects/113-suicide-prevention/infrastructure]
 checkout = git clone "git@gitlab.com:researchable/projects/113-suicide-prevention/infrastructure.git"
 
+# Wyzser
+[Workspace/researchable/projects/wyzser/base-backend]
+checkout = git clone "git@gitlab.com:researchable/projects/wyzser/base-backend.git"
+
+[Workspace/researchable/projects/wyzser/base-frontend]
+checkout = git clone "git@gitlab.com:researchable/projects/wyzser/base-frontend.git"
+
+[Workspace/researchable/projects/wyzser/infrastructure]
+checkout = git clone "git@gitlab.com:researchable/projects/wyzser/infrastructure.git"
+
 # Tinyeye
 [Workspace/researchable/projects/tinyeye/composer]
 checkout = git clone "git@gitlab.com:researchable/projects/tinyeye/composer.git"
@@ -682,3 +710,7 @@ checkout = git clone "git@gitlab.com:researchable/projects/cia/base-backend.git"
 
 [Workspace/researchable/projects/cia/infrastructure]
 checkout = git clone "git@gitlab.com:researchable/projects/cia/infrastructure.git"
+
+# AIMZ
+[Workspace/researchable/projects/aimz/aimz-hackathon]
+checkout = git clone "git@gitlab.com:researchable/projects/aimz/aimz-hackathon.git"
