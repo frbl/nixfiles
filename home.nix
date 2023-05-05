@@ -23,6 +23,7 @@
     android-tools
 
     teleport
+    doctl
 
     sonar-scanner-cli
 
@@ -85,6 +86,7 @@
     #docker-compose
 
     minikube
+    k9s
     kubernetes-helm
     kubectl
     kubeseal
@@ -190,6 +192,7 @@
   home.file.".Xdefaults".source = ./config/raw/Xdefaults;
   home.file.".Rprofile".source = ./config/raw/Rprofile;
   home.file.".config/xfce4/terminal/terminalrc".source = ./config/raw/xfce_terminal;
+  home.file.".config/zathura/zathurarc".source = ./config/raw/zathurarc;
   home.file.".snippets/vim/UltiSnips".source = ./config/UltiSnips;
   home.file.".git_template".source = ./config/raw/git_template;
   home.file.".tmuxinator".source = ./config/raw/tmuxinator;
