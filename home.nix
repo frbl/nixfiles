@@ -37,6 +37,7 @@
     nodePackages.http-server
     nodePackages.serverless
     nodePackages.eas-cli
+    nodePackages.expo-cli
     cypress
 
     tree
