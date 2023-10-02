@@ -35,3 +35,11 @@ home-manager switch -b backup
 rm -rf ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# Setup ZSH as default shell
+sudo grep -qxF $(which zsh) /etc/shells \
+  || echo $(which zsh) | sudo tee -a /etc/shells
+
+cat /etc/shells
+
+chsh -s $(which zsh)

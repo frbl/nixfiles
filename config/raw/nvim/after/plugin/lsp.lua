@@ -5,8 +5,6 @@ lsp.preset('recommended')
 -- Set update time for cursorhold autocommand
 vim.o.updatetime = 300
 
-
-
 -- Enable 'on hover' lsp feedback
 vim.cmd([[
   augroup holddiagnostics
@@ -15,11 +13,26 @@ vim.cmd([[
   augroup END
 ]])
 
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'solargraph',
+local lsp_zero = require('lsp-zero')
+
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {'tsserver', 'eslint','solargraph'},
+  handlers = {
+    lsp_zero.default_setup,
+    lua_ls = function()
+      local lua_opts = lsp_zero.nvim_lua_ls()
+      require('lspconfig').lua_ls.setup(lua_opts)
+    end,
+  }
 })
+
+
+--lsp.ensure_installed({
+  --'tsserver',
+  --'eslint',
+  --'solargraph',
+--})
 
 local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
 
@@ -55,7 +68,10 @@ lsp.set_preferences({
   }
 })
 
-lsp.setup_nvim_cmp({
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+cmp.setup({
   mapping = cmp_mappings,
   snippet = {
     expand = function(args)
@@ -100,7 +116,7 @@ end)
 
 -- If you wish to add support for your config written in lua, 
 -- add this line above lsp.setup().
-lsp.nvim_workspace()
+--lsp.nvim_workspace()
 
 -- Actually set up the LSP
 lsp.setup()

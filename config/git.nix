@@ -36,6 +36,9 @@
       push = { 
         default = "current"; 
       };
+      pull = { 
+        rebase = false; 
+      };
       merge = {
         keepBackup = false;
         conflictstyle = "diff3";
