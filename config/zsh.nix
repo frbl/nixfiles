@@ -2,7 +2,10 @@
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting = {
+      enable = true;
+    };
+
     shellAliases = {
       switch = "setxkbmap -option caps:escape";
       update = "home-manager switch --max-jobs 8";
@@ -211,6 +214,8 @@
 
       # Note that this propmpt requires single quotes, otherwise it will be evaluated immediately.
       export RPROMPT='%{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%}';
+
+      export NIXPKGS_ALLOW_UNFREE=1
 
       export PATH=$PATH:~/.bin
     '';

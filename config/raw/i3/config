@@ -12,8 +12,8 @@
 set $mod Mod4
 set $term nixGL alacritty
 #set $term urxvt
-set $inner 10
-set $outer 10
+set $inner 5
+set $outer 5
 
 for_window [class="^.*"] border pixel 1
 for_window [title="^.*"] border pixel 2

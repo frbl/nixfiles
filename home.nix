@@ -37,6 +37,7 @@
     nodePackages.http-server
     nodePackages.serverless
     nodePackages.eas-cli
+    nodePackages.expo-cli
     cypress
 
     tree
@@ -100,7 +101,6 @@
     arandr
 
     _1password
-
 
     # Slack might give issues with XDG open. On the latest ubuntu I did not
     # have any issues, hence its back in the list.
