@@ -187,6 +187,10 @@ checkout = git clone "git@gitlab.com:ecida/core/runtime-operator.git"
 ##########
 # Researchable
 ##########
+
+[Workspace/researchable/researchable.gitlab.io]
+checkout = git clone "git@gitlab.com:researchable/researchable.gitlab.io.git"
+
 [Workspace/researchable/quest-front-end]
 checkout = git clone "git@gitlab.com:researchable/quest-front-end.git"
 
