@@ -190,6 +190,9 @@ checkout = git clone "git@gitlab.com:ecida/core/runtime-operator.git"
 [Workspace/researchable/quest-front-end]
 checkout = git clone "git@gitlab.com:researchable/quest-front-end.git"
 
+[Workspace/researchable/researchable.gitlab.io]
+checkout = git clone "git@gitlab.com:researchable/researchable.gitlab.io.git"
+
 [Workspace/researchable/general/landingpages/landingpage-v2]
 checkout = git clone "git@gitlab.com:researchable/general/landingpages/landingpage-v2.git"
 

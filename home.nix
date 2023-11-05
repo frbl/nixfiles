@@ -22,6 +22,8 @@
     go
     android-tools
 
+    texlive.combined.scheme-full
+
     teleport
     doctl
 
