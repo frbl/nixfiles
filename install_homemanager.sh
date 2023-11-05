@@ -22,7 +22,7 @@ sudo apt-get install -y i3
 sudo apt-get remove --purge -y curl
 sudo apt-get -y autoremove
 
-rm -rf ~/.config/nixpkgs
+rm -rf ~/.config/home-manager
 ln -s ~/nixfiles ~/.config/home-manager
  
 home-manager build
@@ -32,14 +32,17 @@ home-manager switch -b backup
 # nix-env --set-flag priority 0 nix-2.11.1
 
 # Set up NVIM packer
+echo "Installing packer"
 rm -rf ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # Setup ZSH as default shell
-sudo grep -qxF $(which zsh) /etc/shells \
-  || echo $(which zsh) | sudo tee -a /etc/shells
+echo "Setting ZSH as default shell"
+zshvar=$(which zsh)
+sudo grep -qxF $zshvar /etc/shells \
+  || echo $zshvar | sudo tee -a /etc/shells
 
 cat /etc/shells
 
-chsh -s $(which zsh)
+chsh -s $zshvar
