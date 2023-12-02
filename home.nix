@@ -22,6 +22,8 @@
     go
     android-tools
 
+    logseq
+
     texlive.combined.scheme-full
 
     obsidian
