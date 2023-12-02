@@ -18,6 +18,9 @@ checkout = git clone 'git@github.com:frbl/dotfiles.git'
 [Workspace/frbl/advent-of-code-2022]
 checkout = git clone 'git@github.com:frbl/advent-of-code-2022.git'
 
+[Workspace/frbl/advent-of-code-2023]
+checkout = git clone 'git@github.com:frbl/advent-of-code-2023.git'
+
 [Workspace/frbl/music]
 checkout = git clone 'git@github.com:frbl/music.git'
 

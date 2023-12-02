@@ -24,6 +24,8 @@
 
     texlive.combined.scheme-full
 
+    obsidian
+
     teleport
     doctl
 
