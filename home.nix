@@ -1,6 +1,14 @@
 { config, pkgs, ... }:
 
 {
+
+  nixpkgs.config = {
+    permittedInsecurePackages = [
+      "electron-25.9.0"
+    ];
+  };
+
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "frbl";
@@ -22,7 +30,9 @@
     go
     android-tools
 
+
     logseq
+    picom
 
     texlive.combined.scheme-full
 
@@ -102,6 +112,7 @@
 
     # Cloud env
     azure-cli
+    azure-functions-core-tools
 
     mr
     arandr
@@ -141,7 +152,7 @@
       regex
       pip
       pyarrow
-      jupyter
+      #jupyter
       pandas
       numpy
       matplotlib
@@ -203,6 +214,7 @@
   home.file.".git_template".source = ./config/raw/git_template;
   home.file.".tmuxinator".source = ./config/raw/tmuxinator;
   home.file.".bin".source = ./config/raw/bin;
+  home.file."Wallpapers".source = ./config/raw/wallpapers;
 
   imports = [
     ./config/zsh.nix
