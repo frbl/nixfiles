@@ -123,11 +123,14 @@
     # have any issues, hence its back in the list.
     slack 
     google-chrome
-    htop
     curl
     xautolock
     fzf
     htop
+    geekbench
+    cpupower-gui
+    conky
+    btop
     patch
     git
     rofi

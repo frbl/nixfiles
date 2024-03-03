@@ -3,7 +3,7 @@
 alignment bottom_left
 background true
 border_width 5
-color0 555555			#
+color0 ffffff			#
 color1 FCAF3E			# zolty
 color2 2a2a2a			# braz
 color3 a82553			# rozowy f71f84
@@ -52,11 +52,11 @@ xftfont Freesans:pixelsize=9
 
 
 TEXT
-${color 2e3440}${font ZegoeLight-U:pixelsize=40}${time %H:%M}${font}	
+${color ffffff}${font ZegoeLight-U:pixelsize=40}${time %H:%M}${font}	
 _______________________
 
-${color 2e3440}${font ZegoeLight-U:pixelsize=15}${time %A}${font} 
-${color 2e3440}${font ZegoeLight-U:pixelsize=15}${time %B %d, %Y}${font}	
+${color ffffff}${font ZegoeLight-U:pixelsize=15}${time %A}${font} 
+${color ffffff}${font ZegoeLight-U:pixelsize=15}${time %B %d, %Y}${font}	
 
 #${font sans-serif:bold:size=8}Stats ${hr 2}
 
