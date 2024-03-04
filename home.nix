@@ -192,7 +192,6 @@
   #home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
   #home.file.".config/nvim/coc-settings.json".source = ./config/raw/coc-settings.json;
 
-  #home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
   #home.file.".vimrc".source = ./config/raw/vimrc;
   #home.file.".config/nvim".source = ./config/raw/nvim;
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ./config/raw/nvim;
@@ -202,6 +201,7 @@
   home.file.".agignore".source = ./config/raw/agignore;
   home.file.".compton.conf".source = ./config/raw/compton.conf;
   home.file.".config/i3".source = ./config/raw/i3;
+  home.file.".config/rofi".source = ./config/raw/rofi;
   home.file.".conkyrc".source = ./config/raw/conkyrc;
   home.file.".ctags".source = ./config/raw/ctags;
   home.file.".dmrc".source = ./config/raw/dmrc;
