@@ -1,6 +1,14 @@
 { config, pkgs, ... }:
 
 {
+
+  nixpkgs.config = {
+    permittedInsecurePackages = [
+      "electron-25.9.0"
+    ];
+  };
+
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "frbl";
@@ -22,7 +30,13 @@
     go
     android-tools
 
+
+    logseq
+    picom
+
     texlive.combined.scheme-full
+
+    obsidian
 
     teleport
     doctl
@@ -98,6 +112,7 @@
 
     # Cloud env
     azure-cli
+    azure-functions-core-tools
 
     mr
     arandr
@@ -108,11 +123,14 @@
     # have any issues, hence its back in the list.
     slack 
     google-chrome
-    htop
     curl
     xautolock
     fzf
     htop
+    geekbench
+    cpupower-gui
+    conky
+    btop
     patch
     git
     rofi
@@ -137,7 +155,7 @@
       regex
       pip
       pyarrow
-      jupyter
+      #jupyter
       pandas
       numpy
       matplotlib
@@ -174,7 +192,6 @@
   #home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
   #home.file.".config/nvim/coc-settings.json".source = ./config/raw/coc-settings.json;
 
-  #home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
   #home.file.".vimrc".source = ./config/raw/vimrc;
   #home.file.".config/nvim".source = ./config/raw/nvim;
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ./config/raw/nvim;
@@ -184,6 +201,7 @@
   home.file.".agignore".source = ./config/raw/agignore;
   home.file.".compton.conf".source = ./config/raw/compton.conf;
   home.file.".config/i3".source = ./config/raw/i3;
+  home.file.".config/rofi".source = ./config/raw/rofi;
   home.file.".conkyrc".source = ./config/raw/conkyrc;
   home.file.".ctags".source = ./config/raw/ctags;
   home.file.".dmrc".source = ./config/raw/dmrc;
@@ -199,6 +217,7 @@
   home.file.".git_template".source = ./config/raw/git_template;
   home.file.".tmuxinator".source = ./config/raw/tmuxinator;
   home.file.".bin".source = ./config/raw/bin;
+  home.file."Wallpapers".source = ./config/raw/wallpapers;
 
   imports = [
     ./config/zsh.nix

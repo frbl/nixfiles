@@ -18,6 +18,9 @@ checkout = git clone 'git@github.com:frbl/dotfiles.git'
 [Workspace/frbl/advent-of-code-2022]
 checkout = git clone 'git@github.com:frbl/advent-of-code-2022.git'
 
+[Workspace/frbl/advent-of-code-2023]
+checkout = git clone 'git@github.com:frbl/advent-of-code-2023.git'
+
 [Workspace/frbl/music]
 checkout = git clone 'git@github.com:frbl/music.git'
 
@@ -187,6 +190,10 @@ checkout = git clone "git@gitlab.com:ecida/core/runtime-operator.git"
 ##########
 # Researchable
 ##########
+
+[Workspace/researchable/researchable.gitlab.io]
+checkout = git clone "git@gitlab.com:researchable/researchable.gitlab.io.git"
+
 [Workspace/researchable/quest-front-end]
 checkout = git clone "git@gitlab.com:researchable/quest-front-end.git"
 
@@ -355,6 +362,8 @@ checkout = git clone "git@gitlab.com:researchable/general/management/bookkeeper.
 [Workspace/researchable/general/management/freedcamp]
 checkout = git clone "git@gitlab.com:researchable/general/management/freedcamp.git"
 
+[Workspace/researchable/general/management/svclss-clockify-hour-checker]
+checkout = git clone "git@gitlab.com:researchable/general/management/svclss-clockify-hour-checker.git"
 
 [Workspace/researchable/general/management/gitlab-webhooks]
 checkout = git clone "git@gitlab.com:researchable/general/management/gitlab-webhooks.git"
