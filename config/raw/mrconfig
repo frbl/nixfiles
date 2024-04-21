@@ -15,6 +15,9 @@
 [Workspace/frbl/dotfiles]
 checkout = git clone 'git@github.com:frbl/dotfiles.git'
 
+[Workspace/frbl/wefitter-api-client]
+checkout = git clone 'git@github.com:frbl/wefitter-api-client'
+
 [Workspace/frbl/advent-of-code-2022]
 checkout = git clone 'git@github.com:frbl/advent-of-code-2022.git'
 
@@ -515,6 +518,9 @@ checkout = git clone "git@gitlab.com:researchable/open-source/openapi/serverless
 # Gems
 [Workspace/researchable/general/gems/loggable]
 checkout = git clone "git@gitlab.com:researchable/general/gems/loggable"
+
+[Workspace/researchable/general/gems/wefitter-gem]
+checkout = git clone "git@gitlab.com:researchable/general/gems/wefitter-gem"
 
 [Workspace/researchable/general/gems/ruboguide]
 checkout = git clone "git@gitlab.com:researchable/general/gems/ruboguide"

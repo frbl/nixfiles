@@ -30,6 +30,9 @@
     go
     android-tools
 
+    gpredict
+
+    swagger-codegen
 
     logseq
     picom
@@ -42,6 +45,9 @@
     doctl
 
     sonar-scanner-cli
+
+    # Amateur radio
+    chirp
 
     #nixFlakes
 
@@ -123,7 +129,7 @@
     # have any issues, hence its back in the list.
     slack 
     google-chrome
-    curl
+    #curl
     xautolock
     fzf
     htop
