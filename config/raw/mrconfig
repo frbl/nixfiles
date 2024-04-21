@@ -552,6 +552,9 @@ checkout = git clone "git@gitlab.com:researchable/projects/umo/base-frontend.git
 [Workspace/researchable/projects/umo/base-backend]
 checkout = git clone "git@gitlab.com:researchable/projects/umo/base-backend.git"
 
+[Workspace/researchable/projects/umo/nomad_job_files]
+checkout = git clone "git@github.com:frbl/umo_nomad_job_files.git"
+
 
 # Delta Dashboard
 [Workspace/researchable/projects/delta-dashboard/base-frontend]
