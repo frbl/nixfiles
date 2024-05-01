@@ -30,6 +30,8 @@
     go
     android-tools
 
+    extremetuxracer
+
     gpredict
 
     swagger-codegen
@@ -115,6 +117,7 @@
     kubeseal
     kube-linter
     argocd
+    trivy # Vulnerability scanner for containers
 
     # Cloud env
     azure-cli
