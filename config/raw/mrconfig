@@ -15,6 +15,9 @@
 [Workspace/frbl/dotfiles]
 checkout = git clone 'git@github.com:frbl/dotfiles.git'
 
+[Workspace/frbl/wefitter-api-client]
+checkout = git clone 'git@github.com:frbl/wefitter-api-client'
+
 [Workspace/frbl/advent-of-code-2022]
 checkout = git clone 'git@github.com:frbl/advent-of-code-2022.git'
 
@@ -548,6 +551,9 @@ checkout = git clone "git@gitlab.com:researchable/projects/umo/base-frontend.git
 
 [Workspace/researchable/projects/umo/base-backend]
 checkout = git clone "git@gitlab.com:researchable/projects/umo/base-backend.git"
+
+[Workspace/researchable/projects/umo/nomad_job_files]
+checkout = git clone "git@github.com:frbl/umo_nomad_job_files.git"
 
 
 # Delta Dashboard

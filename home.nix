@@ -30,6 +30,11 @@
     go
     android-tools
 
+    extremetuxracer
+
+    gpredict
+
+    swagger-codegen
 
     logseq
     picom
@@ -42,6 +47,9 @@
     doctl
 
     sonar-scanner-cli
+
+    # Amateur radio
+    chirp
 
     #nixFlakes
 
@@ -109,6 +117,7 @@
     kubeseal
     kube-linter
     argocd
+    trivy # Vulnerability scanner for containers
 
     # Cloud env
     azure-cli
@@ -123,7 +132,7 @@
     # have any issues, hence its back in the list.
     slack 
     google-chrome
-    curl
+    #curl
     xautolock
     fzf
     htop
