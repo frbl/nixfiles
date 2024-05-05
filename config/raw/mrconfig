@@ -516,6 +516,9 @@ checkout = git clone "git@gitlab.com:researchable/open-source/openapi/serverless
 [Workspace/researchable/general/gems/loggable]
 checkout = git clone "git@gitlab.com:researchable/general/gems/loggable"
 
+[Workspace/researchable/general/gems/wefitter-gem]
+checkout = git clone "git@gitlab.com:researchable/general/gems/wefitter-gem"
+
 [Workspace/researchable/general/gems/ruboguide]
 checkout = git clone "git@gitlab.com:researchable/general/gems/ruboguide"
 
