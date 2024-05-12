@@ -306,6 +306,9 @@ checkout = git clone "git@gitlab.com:researchable/general/templates/gitlab/depen
 checkout = git clone "git@gitlab.com:researchable/general/templates/gitlab/es-check-test.git"
 
 
+[Workspace/researchable/general/security/repository-vulnerability-scanning]
+checkout = git clone "git@gitlab.com:researchable/general/security/repository-vulnerability-scanning.git"
+
 [Workspace/researchable/general/security/vulnerability-scanning]
 checkout = git clone "git@gitlab.com:researchable/general/security/vulnerability-scanning.git"
 
@@ -317,6 +320,9 @@ checkout = git clone "git@gitlab.com:researchable/general/security/kubernetes-rb
 
 [Workspace/researchable/general/security/gitlab-ssh-key-validations]
 checkout = git clone "git@gitlab.com:researchable/general/security/gitlab-ssh-key-validations.git"
+
+[Workspace/researchable/general/security/gitlab-gpg-key-validations]
+checkout = git clone "git@gitlab.com:researchable/general/security/gitlab-gpg-key-validations.git"
 
 [Workspace/researchable/general/security/pipeline_checker]
 checkout = git clone "git@gitlab.com:researchable/general/security/pipeline_checker.git"
