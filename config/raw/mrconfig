@@ -309,6 +309,9 @@ checkout = git clone "git@gitlab.com:researchable/general/templates/gitlab/es-ch
 [Workspace/researchable/general/security/vulnerability-scanning]
 checkout = git clone "git@gitlab.com:researchable/general/security/vulnerability-scanning.git"
 
+[Workspace/researchable/general/security/repository-vulnerability-scanning]
+checkout = git clone "git@gitlab.com:researchable/general/security/repository-vulnerability-scanning.git"
+
 [Workspace/researchable/general/security/kubernetes-rbac]
 checkout = git clone "git@gitlab.com:researchable/general/security/kubernetes-rbac.git"
 

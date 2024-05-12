@@ -30,7 +30,9 @@
     go
     android-tools
 
+    # Games
     extremetuxracer
+    gcompris
 
     gpredict
 
