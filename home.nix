@@ -31,7 +31,6 @@
     android-tools
 
     # Games
-    extremetuxracer
     gcompris
 
     gpredict
@@ -52,6 +51,17 @@
 
     # Amateur radio
     chirp
+    gqrx
+    sdrangel
+    cubicsdr
+    wsjtx
+    fldigi
+    qsstv
+    gpredict
+
+    # RTL-SDR drivers
+    libusb1
+    rtl-sdr-osmocom
 
     #nixFlakes
 
