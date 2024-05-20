@@ -275,6 +275,7 @@ checkout = git clone "git@gitlab.com:researchable/general/templates/projects/doc
 checkout = git clone "git@gitlab.com:researchable/general/templates/projects/react-tailwind-nextjs-typescript.git"
 
 
+
 [Workspace/researchable/general/templates/gitlab/semantic-release]
 checkout = git clone "git@gitlab.com:researchable/general/templates/gitlab/semantic-release.git"
 
@@ -360,6 +361,9 @@ checkout = git clone "git@gitlab.com:researchable/projects/certibot/docs.git"
 
 [Workspace/researchable/projects/certibot/base-backend]
 checkout = git clone "git@gitlab.com:researchable/projects/certibot/base-backend.git"
+
+[Workspace/researchable/projects/integratable/base-backend]
+checkout = git clone "git@gitlab.com:researchable/projects/integratable/base-backend.git"
 
 
 [Workspace/researchable/general/management/freedcamp-hour-counter]
