@@ -30,6 +30,8 @@
     go
     android-tools
 
+    asciinema
+
     # Games
     gcompris
 

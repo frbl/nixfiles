@@ -748,3 +748,7 @@ checkout = git clone "git@gitlab.com:researchable/projects/cia/infrastructure.gi
 # AIMZ
 [Workspace/researchable/projects/aimz/aimz-hackathon]
 checkout = git clone "git@gitlab.com:researchable/projects/aimz/aimz-hackathon.git"
+
+# Gasunie
+[Workspace/researchable/projects/gasunie/gasunie-hackathon]
+checkout = git clone "git@gitlab.com:researchable/projects/gasunie/gasunie-hackathon.git"
