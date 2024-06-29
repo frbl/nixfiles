@@ -30,6 +30,8 @@
     go
     android-tools
 
+    zotero
+
     asciinema
 
     # Games
@@ -70,6 +72,7 @@
     # General
     openssl
     pandoc
+    flameshot # screenshot tool
 
     # npm
     nodePackages.http-server

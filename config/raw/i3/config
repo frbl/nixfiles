@@ -47,8 +47,14 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym Ctrl+Shift+3 exec xfce4-screenshooter
-bindsym Ctrl+Shift+4 exec xfce4-screenshooter -r
+
+# Screenshots
+bindsym Ctrl+Shift+3 exec flameshot full
+bindsym Ctrl+Shift+4 exec flameshot gui
+
+#bindsym Ctrl+Shift+3 exec xfce4-screenshooter
+#bindsym Ctrl+Shift+4 exec xfce4-screenshooter -r
+
 bindsym $mod+t sticky toggle
 
 set $bg-color            #2f343f
@@ -259,6 +265,7 @@ exec --no-startup-id i3-battery-popup
 
 # Turn off the touchpad
 exec --no-startup-id synclient TouchpadOff=1
+
 
 set $background ~/Wallpapers/wallpaper.jpg
 #set $background ~/Wallpapers/researchable.png
