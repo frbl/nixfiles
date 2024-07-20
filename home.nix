@@ -58,6 +58,7 @@
     chirp
     gqrx
     sdrangel
+    sdrpp
     cubicsdr
     wsjtx
     fldigi
