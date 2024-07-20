@@ -5,6 +5,7 @@
   nixpkgs.config = {
     permittedInsecurePackages = [
       "electron-25.9.0"
+      "electron-27.3.11"
     ];
   };
 
@@ -177,7 +178,7 @@
     #zsh-autosuggestions
 
     # python packages
-    (python310.withPackages (p: with p; [
+    (python3.withPackages (p: with p; [
       regex
       pip
       pyarrow
