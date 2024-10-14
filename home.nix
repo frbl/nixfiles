@@ -31,7 +31,9 @@
     go
     android-tools
 
+    #tools
     zotero
+    dbeaver-bin
 
     asciinema
 
@@ -65,6 +67,11 @@
     qsstv
     gpredict
 
+    # Noaa
+    noaa-apt
+    jack2 # Virtual audio cable
+    pulseaudioFull
+
     # RTL-SDR drivers
     libusb1
     rtl-sdr-osmocom
@@ -75,6 +82,7 @@
     openssl
     pandoc
     flameshot # screenshot tool
+    audacity # audio tool
 
     # npm
     nodePackages.http-server
@@ -94,7 +102,11 @@
     flatpak
     bottles
 
+    # Music
     spotify
+    downonspot
+    spotdl
+    musikcube
 
     tmuxinator
 
@@ -120,6 +132,9 @@
     # Fonts
     fira-code
     nerdfonts
+
+    # Antivir
+    clamav
 
     #yamlfix
     yamllint

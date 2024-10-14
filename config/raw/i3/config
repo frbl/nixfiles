@@ -49,8 +49,8 @@ bindsym $mod+Shift+q kill
 
 
 # Screenshots
-bindsym Ctrl+Shift+3 exec flameshot full
-bindsym Ctrl+Shift+4 exec flameshot gui
+bindsym Ctrl+Shift+3 exec flameshot full --no-sandbox
+bindsym Ctrl+Shift+4 exec flameshot gui --no-sandbox
 
 #bindsym Ctrl+Shift+3 exec xfce4-screenshooter
 #bindsym Ctrl+Shift+4 exec xfce4-screenshooter -r
@@ -259,6 +259,8 @@ gaps outer $outer
 
 exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always xset r rate 300 60
+# Needed for clipboard in flameshot
+exec_always --no-startup-id nohup flameshot &
 exec --no-startup-id compton -f
 exec --no-startup-id nm-applet
 exec --no-startup-id i3-battery-popup

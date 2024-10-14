@@ -44,5 +44,7 @@ sudo grep -qxF $zshvar /etc/shells \
   || echo $zshvar | sudo tee -a /etc/shells
 
 cat /etc/shells
-
 chsh -s $zshvar
+
+# Turn off sandboxing for apparmor
+sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
