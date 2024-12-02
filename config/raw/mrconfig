@@ -24,6 +24,9 @@ checkout = git clone 'git@github.com:frbl/advent-of-code-2022.git'
 [Workspace/frbl/advent-of-code-2023]
 checkout = git clone 'git@github.com:frbl/advent-of-code-2023.git'
 
+[Workspace/frbl/advent-of-code-2024]
+checkout = git clone 'git@github.com:frbl/advent-of-code-2024.git'
+
 [Workspace/frbl/music]
 checkout = git clone 'git@github.com:frbl/music.git'
 
@@ -657,8 +660,8 @@ checkout = git clone "git@gitlab.com:researchable/aukati/gem-jwt-auth.git"
 checkout = git clone "git@gitlab.com:researchable/aukati/event-driven-poc.git"
 
 # DeepAtlas
-[Workspace/fieldlabs/deepatlas]
-checkout = git clone "git@gitlab.astro-wise.org:fieldlabs/deepatlas.git"
+#[Workspace/fieldlabs/deepatlas]
+#checkout = git clone "git@gitlab.astro-wise.org:fieldlabs/deepatlas.git"
 
 [Workspace/researchable/projects/deepatlas/composer]
 checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/composer.git"

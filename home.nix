@@ -34,6 +34,15 @@
     #tools
     zotero
     dbeaver-bin
+    remmina #remotedesktop
+
+    # Ubuntu apparmor
+    apparmor-utils
+    apparmor-profiles
+    apparmor-bin-utils
+    #apparmor-easyprof
+    #apparmor-notify
+
 
     asciinema
 
@@ -99,7 +108,7 @@
     grafana
 
     # Emulation
-    flatpak
+    #flatpak
     bottles
 
     # Music
@@ -118,7 +127,7 @@
     cloc
     ngrok
 
-    vagrant
+    #vagrant
     virtualbox
 
     xsel # copy pasting
@@ -160,7 +169,7 @@
     mr
     arandr
 
-    _1password
+    _1password-cli
 
     # Slack might give issues with XDG open. On the latest ubuntu I did not
     # have any issues, hence its back in the list.
