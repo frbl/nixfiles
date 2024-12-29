@@ -263,8 +263,9 @@ exec --no-startup-id i3-battery-popup
 exec --no-startup-id synclient TouchpadOff=1
 
 #set $background ~/Wallpapers/wallpaper.jpg
-set $background ~/Wallpapers/researchable.png
-exec feh --bg-scale $background
+#set $background ~/Wallpapers/researchable.png
+set $background ~/nixfiles/config/raw/wallpapers/
+exec feh --bg-scale --randomize $background
 exec conky
 exec vmware-user --no-startup-id
 exec xrandr --output LVDS-1 --auto
