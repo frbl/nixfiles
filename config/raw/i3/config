@@ -47,8 +47,14 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym Ctrl+Shift+3 exec xfce4-screenshooter
-bindsym Ctrl+Shift+4 exec xfce4-screenshooter -r
+
+# Screenshots
+bindsym Ctrl+Shift+3 exec flameshot full --no-sandbox
+bindsym Ctrl+Shift+4 exec flameshot gui --no-sandbox
+
+#bindsym Ctrl+Shift+3 exec xfce4-screenshooter
+#bindsym Ctrl+Shift+4 exec xfce4-screenshooter -r
+
 bindsym $mod+t sticky toggle
 
 set $bg-color            #2f343f
@@ -231,20 +237,18 @@ bindsym $mod+x mode "$mode_system"
 #}
 
 
-
-
 bindsym XF86Launch1 exec --no-startup-id /home/frbl/.bin/i3exit suspend, mode "default"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    mode hide
-    hidden_state hide
-    status_command export LC_ALL="C" && i3status --config ~/.config/i3/i3status
+  mode hide
+  hidden_state hide
+  status_command export LC_ALL="C" && i3status --config ~/.config/i3/i3status
 
-    colors {
-      background $bg-color
-    }
+  colors {
+    background $bg-color
+  }
 }
 
 # Disable focus follows mouse
@@ -255,6 +259,8 @@ gaps outer $outer
 
 exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always xset r rate 300 60
+# Needed for clipboard in flameshot
+exec_always --no-startup-id nohup flameshot &
 exec --no-startup-id compton -f
 exec --no-startup-id nm-applet
 exec --no-startup-id i3-battery-popup
@@ -266,7 +272,11 @@ exec --no-startup-id synclient TouchpadOff=1
 #set $background ~/Wallpapers/researchable.png
 set $background ~/nixfiles/config/raw/wallpapers/
 exec feh --bg-scale --randomize $background
+
 exec conky
+# For x280: By default it is on power-saver mode, throtteling the CPU to
+# 1.3ghz.
+exec powerprofilesctl set performance
 exec vmware-user --no-startup-id
 exec xrandr --output LVDS-1 --auto
 

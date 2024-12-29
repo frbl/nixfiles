@@ -1,7 +1,9 @@
 {
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    autosuggestion = {
+      enable = true;
+    };
     syntaxHighlighting = {
       enable = true;
     };
@@ -18,6 +20,8 @@
 
       i = "mr config ~/.mrconfig co";
       clock = "watch -t -n1 'date'";
+
+      steamlink = "flatpak run com.valvesoftware.SteamLink";
 
       mux = "tmuxinator";
       tx = "tmuxinator";

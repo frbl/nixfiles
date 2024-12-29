@@ -15,11 +15,17 @@
 [Workspace/frbl/dotfiles]
 checkout = git clone 'git@github.com:frbl/dotfiles.git'
 
+[Workspace/frbl/wefitter-api-client]
+checkout = git clone 'git@github.com:frbl/wefitter-api-client'
+
 [Workspace/frbl/advent-of-code-2022]
 checkout = git clone 'git@github.com:frbl/advent-of-code-2022.git'
 
 [Workspace/frbl/advent-of-code-2023]
 checkout = git clone 'git@github.com:frbl/advent-of-code-2023.git'
+
+[Workspace/frbl/advent-of-code-2024]
+checkout = git clone 'git@github.com:frbl/advent-of-code-2024.git'
 
 [Workspace/frbl/music]
 checkout = git clone 'git@github.com:frbl/music.git'
@@ -190,6 +196,10 @@ checkout = git clone "git@gitlab.com:ecida/core/runtime-operator.git"
 ##########
 # Researchable
 ##########
+
+[Workspace/researchable/researchable.gitlab.io]
+checkout = git clone "git@gitlab.com:researchable/researchable.gitlab.io.git"
+
 [Workspace/researchable/quest-front-end]
 checkout = git clone "git@gitlab.com:researchable/quest-front-end.git"
 
@@ -268,6 +278,7 @@ checkout = git clone "git@gitlab.com:researchable/general/templates/projects/doc
 checkout = git clone "git@gitlab.com:researchable/general/templates/projects/react-tailwind-nextjs-typescript.git"
 
 
+
 [Workspace/researchable/general/templates/gitlab/semantic-release]
 checkout = git clone "git@gitlab.com:researchable/general/templates/gitlab/semantic-release.git"
 
@@ -299,14 +310,23 @@ checkout = git clone "git@gitlab.com:researchable/general/templates/gitlab/depen
 checkout = git clone "git@gitlab.com:researchable/general/templates/gitlab/es-check-test.git"
 
 
+[Workspace/researchable/general/security/repository-vulnerability-scanning]
+checkout = git clone "git@gitlab.com:researchable/general/security/repository-vulnerability-scanning.git"
+
 [Workspace/researchable/general/security/vulnerability-scanning]
 checkout = git clone "git@gitlab.com:researchable/general/security/vulnerability-scanning.git"
+
+[Workspace/researchable/general/security/repository-vulnerability-scanning]
+checkout = git clone "git@gitlab.com:researchable/general/security/repository-vulnerability-scanning.git"
 
 [Workspace/researchable/general/security/kubernetes-rbac]
 checkout = git clone "git@gitlab.com:researchable/general/security/kubernetes-rbac.git"
 
 [Workspace/researchable/general/security/gitlab-ssh-key-validations]
 checkout = git clone "git@gitlab.com:researchable/general/security/gitlab-ssh-key-validations.git"
+
+[Workspace/researchable/general/security/gitlab-gpg-key-validations]
+checkout = git clone "git@gitlab.com:researchable/general/security/gitlab-gpg-key-validations.git"
 
 [Workspace/researchable/general/security/pipeline_checker]
 checkout = git clone "git@gitlab.com:researchable/general/security/pipeline_checker.git"
@@ -345,6 +365,9 @@ checkout = git clone "git@gitlab.com:researchable/projects/certibot/docs.git"
 [Workspace/researchable/projects/certibot/base-backend]
 checkout = git clone "git@gitlab.com:researchable/projects/certibot/base-backend.git"
 
+[Workspace/researchable/projects/integratable/base-backend]
+checkout = git clone "git@gitlab.com:researchable/projects/integratable/base-backend.git"
+
 
 [Workspace/researchable/general/management/freedcamp-hour-counter]
 checkout = git clone "git@gitlab.com:researchable/general/management/freedcamp-hour-counter.git"
@@ -358,6 +381,8 @@ checkout = git clone "git@gitlab.com:researchable/general/management/bookkeeper.
 [Workspace/researchable/general/management/freedcamp]
 checkout = git clone "git@gitlab.com:researchable/general/management/freedcamp.git"
 
+[Workspace/researchable/general/management/svclss-clockify-hour-checker]
+checkout = git clone "git@gitlab.com:researchable/general/management/svclss-clockify-hour-checker.git"
 
 [Workspace/researchable/general/management/gitlab-webhooks]
 checkout = git clone "git@gitlab.com:researchable/general/management/gitlab-webhooks.git"
@@ -510,6 +535,9 @@ checkout = git clone "git@gitlab.com:researchable/open-source/openapi/serverless
 [Workspace/researchable/general/gems/loggable]
 checkout = git clone "git@gitlab.com:researchable/general/gems/loggable"
 
+[Workspace/researchable/general/gems/wefitter-gem]
+checkout = git clone "git@gitlab.com:researchable/general/gems/wefitter-gem"
+
 [Workspace/researchable/general/gems/ruboguide]
 checkout = git clone "git@gitlab.com:researchable/general/gems/ruboguide"
 
@@ -539,6 +567,9 @@ checkout = git clone "git@gitlab.com:researchable/projects/umo/base-frontend.git
 
 [Workspace/researchable/projects/umo/base-backend]
 checkout = git clone "git@gitlab.com:researchable/projects/umo/base-backend.git"
+
+[Workspace/researchable/projects/umo/nomad_job_files]
+checkout = git clone "git@github.com:frbl/umo_nomad_job_files.git"
 
 
 # Delta Dashboard
@@ -629,8 +660,8 @@ checkout = git clone "git@gitlab.com:researchable/aukati/gem-jwt-auth.git"
 checkout = git clone "git@gitlab.com:researchable/aukati/event-driven-poc.git"
 
 # DeepAtlas
-[Workspace/fieldlabs/deepatlas]
-checkout = git clone "git@gitlab.astro-wise.org:fieldlabs/deepatlas.git"
+#[Workspace/fieldlabs/deepatlas]
+#checkout = git clone "git@gitlab.astro-wise.org:fieldlabs/deepatlas.git"
 
 [Workspace/researchable/projects/deepatlas/composer]
 checkout = git clone "git@gitlab.com:researchable/projects/deepatlas/composer.git"
@@ -720,3 +751,7 @@ checkout = git clone "git@gitlab.com:researchable/projects/cia/infrastructure.gi
 # AIMZ
 [Workspace/researchable/projects/aimz/aimz-hackathon]
 checkout = git clone "git@gitlab.com:researchable/projects/aimz/aimz-hackathon.git"
+
+# Gasunie
+[Workspace/researchable/projects/gasunie/gasunie-hackathon]
+checkout = git clone "git@gitlab.com:researchable/projects/gasunie/gasunie-hackathon.git"

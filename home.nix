@@ -1,6 +1,15 @@
 { config, pkgs, ... }:
 
 {
+
+  nixpkgs.config = {
+    permittedInsecurePackages = [
+      "electron-25.9.0"
+      "electron-27.3.11"
+    ];
+  };
+
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "frbl";
@@ -25,7 +34,30 @@
 
     qpdf
 
+    #tools
+    zotero
+    dbeaver-bin
+    remmina #remotedesktop
+
+    # Ubuntu apparmor
+    apparmor-utils
+    apparmor-profiles
+    apparmor-bin-utils
+    #apparmor-easyprof
+    #apparmor-notify
+
+
+    asciinema
+
+    # Games
+    gcompris
+
+    gpredict
+
+    swagger-codegen
+
     logseq
+    picom
 
     texlive.combined.scheme-full
 
@@ -36,11 +68,33 @@
 
     sonar-scanner-cli
 
+    # Amateur radio
+    chirp
+    gqrx
+    sdrangel
+    sdrpp
+    cubicsdr
+    wsjtx
+    fldigi
+    qsstv
+    gpredict
+
+    # Noaa
+    noaa-apt
+    jack2 # Virtual audio cable
+    pulseaudioFull
+
+    # RTL-SDR drivers
+    libusb1
+    rtl-sdr-osmocom
+
     #nixFlakes
 
     # General
     openssl
     pandoc
+    flameshot # screenshot tool
+    audacity # audio tool
 
     # npm
     nodePackages.http-server
@@ -57,10 +111,14 @@
     grafana
 
     # Emulation
-    flatpak
+    #flatpak
     bottles
 
+    # Music
     spotify
+    downonspot
+    spotdl
+    musikcube
 
     tmuxinator
 
@@ -72,7 +130,7 @@
     cloc
     ngrok
 
-    vagrant
+    #vagrant
     virtualbox
 
     xsel # copy pasting
@@ -86,6 +144,9 @@
     # Fonts
     fira-code
     nerdfonts
+
+    # Antivir
+    clamav
 
     #yamlfix
     yamllint
@@ -102,24 +163,29 @@
     kubeseal
     kube-linter
     argocd
+    trivy # Vulnerability scanner for containers
 
     # Cloud env
     azure-cli
+    azure-functions-core-tools
 
     mr
     arandr
 
-    _1password
+    _1password-cli
 
     # Slack might give issues with XDG open. On the latest ubuntu I did not
     # have any issues, hence its back in the list.
     slack 
     google-chrome
-    htop
-    curl
+    #curl
     xautolock
     fzf
     htop
+    geekbench
+    cpupower-gui
+    conky
+    btop
     patch
     git
     rofi
@@ -140,11 +206,11 @@
     #zsh-autosuggestions
 
     # python packages
-    (python310.withPackages (p: with p; [
+    (python3.withPackages (p: with p; [
       regex
       pip
       pyarrow
-      jupyter
+      #jupyter
       pandas
       numpy
       matplotlib
@@ -181,7 +247,6 @@
   #home.file.".config/nvim/init.vim".source = ./config/raw/vimrc;
   #home.file.".config/nvim/coc-settings.json".source = ./config/raw/coc-settings.json;
 
-  #home.file.".config/rofi/config.rasi".source = ./config/raw/rofi;
   #home.file.".vimrc".source = ./config/raw/vimrc;
   #home.file.".config/nvim".source = ./config/raw/nvim;
   home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink ./config/raw/nvim;
@@ -191,6 +256,7 @@
   home.file.".agignore".source = ./config/raw/agignore;
   home.file.".compton.conf".source = ./config/raw/compton.conf;
   home.file.".config/i3".source = ./config/raw/i3;
+  home.file.".config/rofi".source = ./config/raw/rofi;
   home.file.".conkyrc".source = ./config/raw/conkyrc;
   home.file.".ctags".source = ./config/raw/ctags;
   home.file.".dmrc".source = ./config/raw/dmrc;
@@ -206,6 +272,7 @@
   home.file.".git_template".source = ./config/raw/git_template;
   home.file.".tmuxinator".source = ./config/raw/tmuxinator;
   home.file.".bin".source = ./config/raw/bin;
+  home.file."Wallpapers".source = ./config/raw/wallpapers;
 
   imports = [
     ./config/zsh.nix
