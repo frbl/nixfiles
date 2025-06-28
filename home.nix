@@ -30,6 +30,9 @@
     solargraph
     go
     android-tools
+    xorg.libX11.dev
+
+    qpdf
 
     #tools
     zotero

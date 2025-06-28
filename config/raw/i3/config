@@ -268,10 +268,11 @@ exec --no-startup-id i3-battery-popup
 # Turn off the touchpad
 exec --no-startup-id synclient TouchpadOff=1
 
-
-set $background ~/Wallpapers/wallpaper.jpg
+#set $background ~/Wallpapers/wallpaper.jpg
 #set $background ~/Wallpapers/researchable.png
-exec feh --bg-scale $background
+set $background ~/nixfiles/config/raw/wallpapers/
+exec feh --bg-scale --randomize $background
+
 exec conky
 # For x280: By default it is on power-saver mode, throtteling the CPU to
 # 1.3ghz.
