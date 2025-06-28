@@ -53,7 +53,7 @@
 
     swagger-codegen
 
-    logseq
+    #logseq
     picom
 
     texlive.combined.scheme-full
@@ -97,7 +97,7 @@
     nodePackages.http-server
     nodePackages.serverless
     nodePackages.eas-cli
-    nodePackages.expo-cli
+    #nodePackages.eas-cli
     cypress
 
     tree
@@ -113,7 +113,7 @@
 
     # Music
     spotify
-    downonspot
+    #downonspot
     spotdl
     musikcube
 
@@ -140,7 +140,8 @@
 
     # Fonts
     fira-code
-    nerdfonts
+    #nerdfonts
+    nerd-fonts.droid-sans-mono
 
     # Antivir
     clamav
@@ -174,6 +175,7 @@
     # Slack might give issues with XDG open. On the latest ubuntu I did not
     # have any issues, hence its back in the list.
     slack 
+    beeper
     google-chrome
     #curl
     xautolock

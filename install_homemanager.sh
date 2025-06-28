@@ -48,3 +48,5 @@ chsh -s $zshvar
 
 # Turn off sandboxing for apparmor
 sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+# To make it persist after reboot, add a line to /etc/sysctl.conf
+
