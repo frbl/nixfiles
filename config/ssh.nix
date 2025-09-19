@@ -1,12 +1,20 @@
 {
   programs.ssh = {
     enable = true;
-    serverAliveInterval = 10;
+    enableDefaultConfig = false;
     matchBlocks = {
+      "bandit0" = {
+        host = "bandit0";
+        hostname = "bandit.labs.overthewire.org";
+        user = "bandit0";
+        port = 2220;
+        serverAliveInterval = 10;
+      };
       "home" = {
         host = "home";
         hostname = "86.89.168.179";
         user = "frbl";
+        serverAliveInterval = 10;
         port = 1406;
         localForwards = [
           {

@@ -387,6 +387,8 @@ checkout = git clone "git@gitlab.com:researchable/general/management/svclss-cloc
 [Workspace/researchable/general/management/gitlab-webhooks]
 checkout = git clone "git@gitlab.com:researchable/general/management/gitlab-webhooks.git"
 
+[Workspace/researchable/general/management/researchable-dwh]
+checkout = git clone "git@gitlab.com:researchable/general/management/researchable-dwh.git"
 
 [Workspace/researchable/general/test-projects/pay-nl-test]
 checkout = git clone "git@gitlab.com:researchable/general/test-projects/pay-nl-test.git"

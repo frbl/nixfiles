@@ -18,10 +18,10 @@
   # Packages to install
   home.packages = with pkgs; [
     # Languages
-    terraform
+    # terraform
     gcc
     ruby_3_1
-    nodejs
+    nodejs_20
     elixir
     erlang
     R
@@ -32,8 +32,10 @@
     android-tools
     xorg.libX11.dev
 
+    libva
     qpdf
 
+    gettext
     #tools
     zotero
     dbeaver-bin
@@ -51,8 +53,6 @@
 
     # Games
     gcompris
-
-    gpredict
 
     swagger-codegen
 
@@ -77,7 +77,7 @@
     wsjtx
     fldigi
     qsstv
-    gpredict
+    # gpredict
 
     # Noaa
     noaa-apt
@@ -180,6 +180,7 @@
     slack 
     beeper
     google-chrome
+    brave
     #curl
     xautolock
     fzf
@@ -212,6 +213,7 @@
       regex
       pip
       pyarrow
+      setuptools
       #jupyter
       pandas
       numpy
