@@ -1,3 +1,5 @@
+{ config, pkgs, lib, ... } :
+
 {
   programs.zsh = {
     enable = true;
@@ -116,7 +118,20 @@
       if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
     '';
 
-    initExtraFirst = ''
+    # Before this was: 
+    #initExtraFirst = ''
+      ## Theming section
+      #autoload -U colors
+
+      ## Make sure the prompt subst option is on, so the prompt gets
+      ## reevaluated.
+      #setopt prompt_subst
+      #colors
+    #'';
+
+    #initExtra = ''
+
+    initContent = ''
       # Theming section
       autoload -U colors
 
@@ -124,9 +139,7 @@
       # reevaluated.
       setopt prompt_subst
       colors
-    '';
 
-    initExtra = ''
       setxkbmap -option altwin:swap_alt_win
       setxkbmap -option caps:swapescape
 

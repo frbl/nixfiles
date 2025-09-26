@@ -1,6 +1,6 @@
 local lsp = require('lsp-zero')
 
-lsp.preset('recommended')
+-- lsp.preset('recommended')
 
 -- Set update time for cursorhold autocommand
 vim.o.updatetime = 300
@@ -17,7 +17,7 @@ local lsp_zero = require('lsp-zero')
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'gopls', 'tsserver', 'eslint','solargraph', 'tflint'},
+  ensure_installed = {'gopls', 'ts_ls', 'eslint','solargraph', 'tflint'},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
