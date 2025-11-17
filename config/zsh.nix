@@ -148,6 +148,10 @@
       # bindkey -v
       bindkey -e
 
+      hires() {
+        xrandr --output eDP-1 --mode "1920x1200"
+      }
+
       pronkridderscreensix() {
         xrandr --newmode "5120x1440R"  469.00  5120 5168 5200 5280  1440 1443 1453 1481 +hsync -vsync
         xrandr --addmode DP-1 "5120x1440R"

@@ -1,0 +1,6 @@
+(defcfg
+  fallthrough true
+  allow-cmd false
+)
+
+(defmacro "cch" "check out")
