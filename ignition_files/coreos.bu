@@ -1,0 +1,9 @@
+# config.bu
+variant: fcos
+version: 1.6.0
+passwd:
+  users:
+    - name: core
+      groups: [ sudo, docker ]
+      ssh_authorized_keys:
+        - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGTMX/D3mGEyYxe5sNil4rho8zwGB7V9eUGR2J9BEwPq"

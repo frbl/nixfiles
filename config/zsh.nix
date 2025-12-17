@@ -1,3 +1,5 @@
+{ config, pkgs, lib, ... } :
+
 {
   programs.zsh = {
     enable = true;
@@ -116,7 +118,20 @@
       if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi
     '';
 
-    initExtraFirst = ''
+    # Before this was: 
+    #initExtraFirst = ''
+      ## Theming section
+      #autoload -U colors
+
+      ## Make sure the prompt subst option is on, so the prompt gets
+      ## reevaluated.
+      #setopt prompt_subst
+      #colors
+    #'';
+
+    #initExtra = ''
+
+    initContent = ''
       # Theming section
       autoload -U colors
 
@@ -124,9 +139,7 @@
       # reevaluated.
       setopt prompt_subst
       colors
-    '';
 
-    initExtra = ''
       setxkbmap -option altwin:swap_alt_win
       setxkbmap -option caps:swapescape
 
@@ -134,6 +147,10 @@
       # Note: that destroys ctrl-A
       # bindkey -v
       bindkey -e
+
+      hires() {
+        xrandr --output eDP-1 --mode "1920x1200"
+      }
 
       pronkridderscreensix() {
         xrandr --newmode "5120x1440R"  469.00  5120 5168 5200 5280  1440 1443 1453 1481 +hsync -vsync

@@ -40,6 +40,11 @@
     libva
     qpdf
 
+    # Signing and editing PDFs
+    xournalpp
+    pdf-sign
+    signaturepdf
+
     gettext
     #tools
     zotero
@@ -53,6 +58,10 @@
     #apparmor-easyprof
     #apparmor-notify
 
+    # Keyboard tools
+    kmonad
+    #autokey
+    espanso
 
     asciinema
 
@@ -152,7 +161,9 @@
     nerd-fonts.droid-sans-mono
 
     # Antivir
-    clamav
+    #clamav
+    #clamav-daemon
+    # Use the other script
 
     #yamlfix
     yamllint
@@ -280,6 +291,8 @@
   home.file.".Rprofile".source = ./config/raw/Rprofile;
   home.file.".config/xfce4/terminal/terminalrc".source = ./config/raw/xfce_terminal;
   home.file.".config/zathura/zathurarc".source = ./config/raw/zathurarc;
+  home.file.".config/kmonad/keyboard.kbd".source = ./config/raw/kmonad;
+  home.file.".config/espanso/match/base.yml".source = ./config/raw/espanso.yml;
   home.file.".snippets/vim/UltiSnips".source = ./config/UltiSnips;
   home.file.".git_template".source = ./config/raw/git_template;
   home.file.".tmuxinator".source = ./config/raw/tmuxinator;
