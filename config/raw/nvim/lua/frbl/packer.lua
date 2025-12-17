@@ -56,6 +56,10 @@ return require('packer').startup(function(use)
     }
   )
 
+  use(
+    'github/gemini.nvim'
+  )
+
   -- Fancy undo functionality
   use('mbbill/undotree')
 

@@ -28,7 +28,12 @@
     rstudio
     gnumake
     solargraph
+
+    # Go
     go
+    sqlc
+
+    #
     android-tools
     xorg.libX11.dev
 
@@ -156,6 +161,9 @@
     alacritty
     #docker
     #docker-compose
+
+    # Usespace docker via podman
+    #podman
 
     minikube
     k9s

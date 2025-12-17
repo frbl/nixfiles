@@ -661,6 +661,10 @@ checkout = git clone "git@gitlab.com:researchable/aukati/gem-jwt-auth.git"
 [Workspace/researchable/aukati/event-driven-poc]
 checkout = git clone "git@gitlab.com:researchable/aukati/event-driven-poc.git"
 
+### Axtion
+[Workspace/axtion/shared/researchable/scheduler]
+checkout = git clone "git@gitlab.com:axtion/shared/researchable/scheduler.git"
+
 # DeepAtlas
 #[Workspace/fieldlabs/deepatlas]
 #checkout = git clone "git@gitlab.astro-wise.org:fieldlabs/deepatlas.git"
