@@ -20,7 +20,8 @@
     # Languages
     # terraform
     gcc
-    ruby_3_1
+    #ruby_3_1
+    ruby
     nodejs_20
     elixir
     erlang
@@ -112,7 +113,7 @@
 
     # npm
     nodePackages.http-server
-    nodePackages.serverless
+    # nodePackages.serverless
     nodePackages.eas-cli
     #nodePackages.eas-cli
     cypress
@@ -132,6 +133,7 @@
     spotify
     #downonspot
     spotdl
+    yt-dlp #new version of youtube-dl
     musikcube
 
     tmuxinator
@@ -246,7 +248,7 @@
 
     # i3
     #i3lock
-    i3-gaps
+    i3
     i3status
   ];
 
