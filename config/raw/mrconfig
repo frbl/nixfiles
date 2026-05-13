@@ -277,7 +277,8 @@ checkout = git clone "git@gitlab.com:researchable/general/templates/projects/doc
 [Workspace/researchable/general/templates/projects/react-tailwind-nextjs-typescript]
 checkout = git clone "git@gitlab.com:researchable/general/templates/projects/react-tailwind-nextjs-typescript.git"
 
-
+[Workspace/researchable/general/projects/ggs/airflow-dags]
+checkout = git clone "git@gitlab.com:researchable/projects/ggs/airflow-dags.git"
 
 [Workspace/researchable/general/templates/gitlab/semantic-release]
 checkout = git clone "git@gitlab.com:researchable/general/templates/gitlab/semantic-release.git"
@@ -761,3 +762,8 @@ checkout = git clone "git@gitlab.com:researchable/projects/aimz/aimz-hackathon.g
 # Gasunie
 [Workspace/researchable/projects/gasunie/gasunie-hackathon]
 checkout = git clone "git@gitlab.com:researchable/projects/gasunie/gasunie-hackathon.git"
+
+
+# frbl  
+[Workspace/frbl/evionix]
+checkout = git clone "git@github.com:frbl/evionix.git"
