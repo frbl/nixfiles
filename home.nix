@@ -22,7 +22,7 @@
     gcc
     #ruby_3_1
     ruby
-    nodejs_20
+    nodejs
     elixir
     erlang
     R
@@ -36,7 +36,7 @@
 
     #
     android-tools
-    xorg.libX11.dev
+    libX11.dev
 
     libva
     qpdf
@@ -112,9 +112,9 @@
     audacity # audio tool
 
     # npm
-    nodePackages.http-server
+    http-server
     # nodePackages.serverless
-    nodePackages.eas-cli
+    # nodePackages.eas-cli
     #nodePackages.eas-cli
     cypress
 
@@ -215,7 +215,7 @@
     rofi
 
     # Searching
-    silver-searcher
+    #silver-searcher
     ripgrep  # Also used by telescope nvim
     fd # Also used by telescope nvim
 
@@ -245,6 +245,9 @@
     # Editors
     vscode
     neovim
+
+    # AI
+    claude-code
 
     # i3
     #i3lock
