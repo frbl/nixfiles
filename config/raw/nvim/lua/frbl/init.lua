@@ -1,4 +1,4 @@
 require('frbl.set')
 require('frbl.remap')
-require('frbl.packer')
+require('frbl.lazy')
 

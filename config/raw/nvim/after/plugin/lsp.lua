@@ -34,8 +34,7 @@ require('mason-lspconfig').setup({
   --'solargraph',
 --})
 
-local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
-
+local luasnip = require('luasnip')
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
@@ -46,12 +45,13 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<cr>'] = cmp.mapping.confirm({select = true}),
   ['<C-Space>'] = cmp.mapping.complete(),
 
-  [",,"] = cmp.mapping(
-    function(fallback)
-      cmp_ultisnips_mappings.expand_or_jump_forwards(fallback)
-    end,
-    { "i", "s", --[[ "c" (to enable the mapping in command mode) ]] }
-  ),
+  [",,"] = cmp.mapping(function(fallback)
+    if luasnip.expand_or_jumpable() then
+      luasnip.expand_or_jump()
+    else
+      fallback()
+    end
+  end, { "i", "s" }),
 })
 
 -- Reserve space for diagnostic icons
@@ -75,13 +75,14 @@ cmp.setup({
   mapping = cmp_mappings,
   snippet = {
     expand = function(args)
-      vim.fn["UltiSnips#Anon"](args.body)
+      luasnip.lsp_expand(args.body)
     end,
   },
   sources = {
-    {name = "luasnip"},
+    { name = "luasnip" },
     { name = 'nvim_lsp' },
-    { name = "ultisnips" }
+    { name = 'buffer' },
+    { name = 'path' },
   }
 })
 
