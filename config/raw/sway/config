@@ -1,0 +1,196 @@
+# Sway config
+
+set $mod Mod4
+set $term nixGL alacritty
+set $inner 5
+set $outer 5
+
+# Wayland-native keyboard config (replaces setxkbmap + xset r rate)
+input type:keyboard {
+    xkb_options caps:escape
+    repeat_delay 300
+    repeat_rate 60
+}
+
+# Disable touchpad (replaces synclient TouchpadOff=1)
+input type:touchpad {
+    events disabled
+}
+
+default_border pixel 1
+default_floating_border pixel 2
+
+# Toggle gaps (compositor is built into Sway, no compton needed)
+bindsym $mod+Shift+g gaps inner all set $inner; gaps outer all set $outer
+bindsym $mod+g gaps inner all set 0; gaps outer all set 0
+
+font pango:System San Francisco Display 10
+
+floating_modifier $mod normal
+
+bindsym $mod+Return exec $term
+bindsym $mod+Shift+q kill
+
+# Screenshots
+bindsym Ctrl+Shift+3 exec flameshot full
+bindsym Ctrl+Shift+4 exec flameshot gui
+
+bindsym $mod+t sticky toggle
+
+set $bg-color            #2f343f
+set $inactive-bg-color   #2f343f
+set $text-color          #f3f4f5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+bindsym $mod+space exec export LC_ALL="C" && rofi -show run
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #00B1E9 #00B1E9 #00B1E9 #00B1E9   #00B1E9
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+Shift+v split h
+bindsym $mod+v split v
+
+bindsym $mod+f fullscreen toggle
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+d floating toggle
+bindsym $mod+d floating toggle; resize set 700px 700px; move position center
+
+bindsym $mod+a focus parent
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Use @DEFAULT_SINK@ instead of hardcoded sink index
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+bindsym $mod+Shift+c reload
+# Sway has no restart; reload is the equivalent
+bindsym $mod+Shift+r reload
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes, exit sway' 'swaymsg exit'
+
+mode "resize" {
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
+
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Screen lock (replaces xautolock)
+exec swayidle -w timeout 300 '~/.bin/lock' before-sleep '~/.bin/lock'
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec /home/frbl/.bin/lock, mode "default"
+    bindsym e exec swaymsg exit, mode "default"
+    bindsym s exec /home/frbl/.bin/i3exit suspend, mode "default"
+    bindsym h exec /home/frbl/.bin/i3exit hibernate, mode "default"
+    bindsym r exec /home/frbl/.bin/i3exit reboot, mode "default"
+    bindsym Shift+s exec /home/frbl/.bin/i3exit shutdown, mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+x mode "$mode_system"
+
+bindsym XF86Launch1 exec /home/frbl/.bin/i3exit suspend
+
+bar {
+    mode hide
+    hidden_state hide
+    status_command export LC_ALL="C" && i3status --config ~/.config/sway/swaystatus
+
+    colors {
+        background $bg-color
+    }
+}
+
+focus_follows_mouse no
+
+gaps inner $inner
+gaps outer $outer
+
+set $background ~/nixfiles/config/raw/wallpapers
+
+# swaybg replaces feh; pick a random image from the wallpapers folder
+exec swaybg -i $(find $background -type f \( -name "*.jpg" -o -name "*.png" \) | shuf -n1) -m fill
+
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE DBUS_SESSION_BUS_ADDRESS
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_TYPE DBUS_SESSION_BUS_ADDRESS
+
+exec_always nm-applet --indicator
+exec nohup flameshot &
+exec i3-battery-popup
+for_window [class="Conky"] floating enable, border none, sticky enable
+exec conky
+exec powerprofilesctl set performance
+exec vmware-user

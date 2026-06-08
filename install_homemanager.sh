@@ -18,7 +18,31 @@ nix-shell '<home-manager>' -A install
 # Fix opengl on nix
 nix-channel --add https://github.com/guibou/nixGL/archive/main.tar.gz nixgl && nix-channel --update
 nix-env -iA nixgl.auto.nixGLDefault
-sudo apt-get install -y i3
+# Install i3 / sway
+# sudo apt install sway swayidle swaylock waybar foot -y
+
+# Create a wrapper script so GDM can launch nix sway with the correct OpenGL/EGL
+# libraries (nixGL) and the full nix profile PATH.
+SWAY_WRAPPER=/usr/local/bin/sway-nix
+sudo tee "$SWAY_WRAPPER" > /dev/null << 'EOF'
+#!/bin/bash
+export HOME=/home/frbl
+. $HOME/.nix-profile/etc/profile.d/nix.sh
+export NIXPKGS_ALLOW_UNFREE=1
+exec $HOME/.nix-profile/bin/nixGL $HOME/.nix-profile/bin/sway "$@"
+EOF
+sudo chmod +x "$SWAY_WRAPPER"
+
+# Register sway as a GDM session (nix home-manager doesn't do this automatically)
+SWAY_DESKTOP=/usr/share/wayland-sessions/sway.desktop
+sudo tee "$SWAY_DESKTOP" > /dev/null << 'EOF'
+[Desktop Entry]
+Name=Sway
+Comment=An i3-compatible Wayland compositor
+Exec=/usr/local/bin/sway-nix
+Type=Application
+DesktopNames=sway;wlroots
+EOF
 sudo apt-get remove --purge -y curl
 sudo apt-get -y autoremove
 

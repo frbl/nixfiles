@@ -76,7 +76,15 @@
 
     texlive.combined.scheme-full
 
-    obsidian
+    (pkgs.symlinkJoin {
+      name = "obsidian";
+      paths = [ pkgs.obsidian ];
+      buildInputs = [ pkgs.makeWrapper ];
+      postBuild = ''
+        wrapProgram $out/bin/obsidian \
+          --add-flags "--no-sandbox"
+      '';
+    })
 
     teleport
     doctl
@@ -201,7 +209,15 @@
     slack 
     beeper
     google-chrome
-    brave
+    (pkgs.symlinkJoin {
+      name = "brave";
+      paths = [ pkgs.brave ];
+      buildInputs = [ pkgs.makeWrapper ];
+      postBuild = ''
+        wrapProgram $out/bin/brave \
+          --add-flags "--no-sandbox"
+      '';
+    })
     #curl
     xautolock
     fzf
@@ -251,8 +267,15 @@
 
     # i3
     #i3lock
-    i3
-    i3status
+    #i3
+    #i3status
+
+    # Sway
+    sway
+    swayidle
+    swaylock
+    waybar
+    foot
   ];
 
 
@@ -283,7 +306,7 @@
   home.file.".config/nix/nix.conf".source = ./config/raw/nix.conf;
   home.file.".agignore".source = ./config/raw/agignore;
   home.file.".compton.conf".source = ./config/raw/compton.conf;
-  home.file.".config/i3".source = ./config/raw/i3;
+  home.file.".config/sway".source = ./config/raw/sway;
   home.file.".config/rofi".source = ./config/raw/rofi;
   home.file.".conkyrc".source = ./config/raw/conkyrc;
   home.file.".ctags".source = ./config/raw/ctags;
@@ -303,6 +326,17 @@
   home.file.".tmuxinator".source = ./config/raw/tmuxinator;
   home.file.".bin".source = ./config/raw/bin;
   home.file."Wallpapers".source = ./config/raw/wallpapers;
+
+  systemd.user.services.clear-downloads = {
+    Unit.Description = "Clear Downloads folder on boot and shutdown";
+    Service = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.coreutils}/bin/rm -rf %h/Downloads/*";
+      ExecStop = "${pkgs.coreutils}/bin/rm -rf %h/Downloads/*";
+      RemainAfterExit = true;
+    };
+    Install.WantedBy = [ "default.target" ];
+  };
 
   imports = [
     ./config/zsh.nix

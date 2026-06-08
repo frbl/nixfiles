@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//nix/store/wf1gk7fjprzqqy33kgylc14y1kq4hwga-hm_sway/**)",
+      "Bash(sway --version)",
+      "Read(//etc/gdm3/**)",
+      "Read(//etc/gdm/**)",
+      "Read(//usr/share/wayland-sessions/**)",
+      "Read(//usr/share/xsessions/**)",
+      "Read(//home/frbl/.local/share/**)",
+      "Read(//nix/store/**)",
+      "Bash(journalctl --user -b -n 50 --no-pager)",
+      "Bash(journalctl -b --no-pager)",
+      "Bash(systemctl --user list-units --no-pager)",
+      "Bash(sysctl kernel.unprivileged_userns_clone)",
+      "Bash(sysctl kernel.apparmor_restrict_unprivileged_userns)"
+    ]
+  }
+}

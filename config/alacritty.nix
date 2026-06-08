@@ -8,7 +8,7 @@
         };
       };
       font = {
-        size = 8.0;
+        size = 12.0;
         normal = {
           family = "monospace";
           #family = "Fira Code";

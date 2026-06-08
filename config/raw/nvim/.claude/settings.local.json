@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('nvim-treesitter'\\)\\)\")",
+      "Bash(rm -f /home/frbl/.cache/nvim/lazy/luacache_chunks /home/frbl/.cache/nvim/lazy/luacache_modpaths)",
+      "Read(//home/frbl/.cache/nvim/**)"
+    ]
+  }
+}

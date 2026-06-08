@@ -1,0 +1,2 @@
+Gtk-Message: 22:13:22.600: Failed to load module "canberra-gtk-module"
+Gdk-Message: 22:13:53.983: Error reading events from display: Broken pipe

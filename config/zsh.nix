@@ -142,7 +142,7 @@
 
       #setxkbmap -option altwin:swap_alt_win
       #setxkbmap -option caps:swapescape
-      localectl set-x11-keymap us "" "" altwin:swap_alt_win,caps:swapescape
+      #localectl set-x11-keymap us "" "" altwin:swap_alt_win,caps:swapescape
 
       # Enable vim mode
       # Note: that destroys ctrl-A
