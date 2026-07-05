@@ -15,6 +15,9 @@
 [Workspace/frbl/dotfiles]
 checkout = git clone 'git@github.com:frbl/dotfiles.git'
 
+[Workspace/frbl/personal_dashboard]
+checkout = git clone 'git@github.com:frbl/personal_dashboard.git'
+
 [Workspace/frbl/wefitter-api-client]
 checkout = git clone 'git@github.com:frbl/wefitter-api-client'
 
@@ -279,6 +282,9 @@ checkout = git clone "git@gitlab.com:researchable/general/templates/projects/rea
 
 [Workspace/researchable/general/projects/ggs/airflow-dags]
 checkout = git clone "git@gitlab.com:researchable/projects/ggs/airflow-dags.git"
+
+[Workspace/researchable/general/projects/vitaal/base-frontend]
+checkout = git clone "git@gitlab.com:researchable/projects/vitaal/base-frontend.git"
 
 [Workspace/researchable/general/templates/gitlab/semantic-release]
 checkout = git clone "git@gitlab.com:researchable/general/templates/gitlab/semantic-release.git"
@@ -594,32 +600,32 @@ checkout = git clone "git@gitlab.com:researchable/projects/ucl-recessly/base-fro
 checkout = git clone "git@gitlab.com:researchable/projects/ucl-recessly/base-backend.git"
 
 
-[Workspace/researchable/projects/ev-biotech/poc]
-checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/poc.git"
+#[Workspace/researchable/projects/ev-biotech/poc]
+#checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/poc.git"
 
-[Workspace/researchable/projects/ev-biotech/docs]
-checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/docs.git"
+#[Workspace/researchable/projects/ev-biotech/docs]
+#checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/docs.git"
 
-[Workspace/researchable/projects/ev-biotech/base-backend]
-checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/base-backend.git"
+#[Workspace/researchable/projects/ev-biotech/base-backend]
+#checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/base-backend.git"
 
-[Workspace/researchable/projects/ev-biotech/base-frontend]
-checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/base-frontend.git"
+#[Workspace/researchable/projects/ev-biotech/base-frontend]
+#checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/base-frontend.git"
 
-[Workspace/researchable/projects/ev-biotech/data-access]
-checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/data-access.git"
+#[Workspace/researchable/projects/ev-biotech/data-access]
+#checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/data-access.git"
 
-[Workspace/researchable/projects/ev-biotech/neo4j-poller]
-checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/neo4j-poller.git"
+#[Workspace/researchable/projects/ev-biotech/neo4j-poller]
+#checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/neo4j-poller.git"
 
-[Workspace/researchable/projects/ev-biotech/infrastructure]
-checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/infrastructure.git"
+#[Workspace/researchable/projects/ev-biotech/infrastructure]
+#checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/infrastructure.git"
 
-[Workspace/researchable/projects/ev-biotech/composer]
-checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/composer.git"
+#[Workspace/researchable/projects/ev-biotech/composer]
+#checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/composer.git"
 
-[Workspace/researchable/projects/ev-biotech/ml-prediction]
-checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/ml-prediction.git"
+#[Workspace/researchable/projects/ev-biotech/ml-prediction]
+#checkout = git clone "git@gitlab.com:researchable/projects/ev-biotech/ml-prediction.git"
 
 
 # Aukati

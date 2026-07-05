@@ -30,6 +30,9 @@
     gnumake
     solargraph
 
+
+    ansible
+
     # Go
     go
     sqlc
@@ -206,7 +209,15 @@
 
     # Slack might give issues with XDG open. On the latest ubuntu I did not
     # have any issues, hence its back in the list.
-    slack 
+    (pkgs.symlinkJoin {
+      name = "slack";
+      paths = [ pkgs.slack ];
+      buildInputs = [ pkgs.makeWrapper ];
+      postBuild = ''
+        wrapProgram $out/bin/slack \
+          --add-flags "--no-sandbox"
+      '';
+    })
     beeper
     google-chrome
     (pkgs.symlinkJoin {
@@ -261,6 +272,7 @@
     # Editors
     vscode
     neovim
+    antigravity
 
     # AI
     claude-code
